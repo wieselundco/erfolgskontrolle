@@ -72,6 +72,17 @@ youtube <- function(id, text = ""){
   
   if(knitr::is_html_output()){
     glue::glue('<div class="container"> <iframe src="//www.youtube.com/embed/{id}" frameborder="0" allowfullscreen class="video"></iframe> </div><caption class = "caption">{text}</caption>')
+  } else{
+    thumbnail <- glue("images/youtube/{id}.jpg")
+    if(!file.exists(thumbnail)){
+      download.file(glue("https://img.youtube.com/vi/{id}/0.jpg"),thumbnail, mode = 'wb')
+    }
+    
+    cat("\\begin{figure}[hbt!]",
+        "\\centering",
+        paste0("\\includegraphics{",thumbnail,"}"),
+        paste0("\\caption{Der Video ist in voller Länge hier abgespeichert: \\url{https://youtu.be/",id,"}}"),
+        "\\end{figure}")
   }
 }
 ```
@@ -296,9 +307,9 @@ options(tinytex.verbose = TRUE)
 
 ```
 
-# Zusammenfassung
+# Zusammenfassung {-}
 
-Im Projekt «Wiesel &amp; Co am Zimmerberg» werden die Tierarten Hermelin, Mauswiesel und Iltis mit gezielten Massnahmen gefördert. Dabei werden im Wesentlichen fünf Arten Typen von Aufwertungsmassnahmen umgesetzt: Winterquartiere, Ast- und Steinhaufen, Gebüschgruppen sowie Grossstrukturen. Von diesen Massnahmen sind bis heute über 450 realisiert worden.
+Im Projekt "Wiesel &amp; Co am Zimmerberg" werden die Tierarten Hermelin, Mauswiesel und Iltis mit gezielten Massnahmen gefördert. Dabei werden im Wesentlichen fünf Arten Typen von Aufwertungsmassnahmen umgesetzt: Winterquartiere, Ast- und Steinhaufen, Gebüschgruppen sowie Grossstrukturen. Von diesen Massnahmen sind bis heute über 450 realisiert worden.
 
 Das Ziel der vorliegenden Wirkungskontrolle ist festzustellen, ob diese Aufwertungsmassnahmen von den Zielarten genutzt werden. Dafür wurden Ast- und Steinhaufen mit Spurentunnel und Winterquartieren mit Fotofallen systematisch beobachtet. Zudem wurden zur Beurteilung zwei weitere Datensätzen zugezogen, die im Rahmen des Naturschutz-Projekts erhoben wurden: Dabei handelt es sich die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
 

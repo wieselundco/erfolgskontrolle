@@ -1,16 +1,24 @@
 # Ausgangslage
 
-Das Projekt "Wiesel &amp; Co am Zimmerberg" ist eine gemeinsame Aktion der Naturschutzvereine des Bezirks Horgen. Im Zentrum dieses Naturschutzprojekts steht die Förderung der Tierarten Hermelin, Mauswiesel und Iltis.
+Das Projekt "Wiesel & Co am Zimmerberg" ist eine gemeinsame Aktion der Naturschutzvereine des Bezirks Horgen. Im Zentrum dieses Naturschutzprojekts steht die Förderung der Tierarten Hermelin, Mauswiesel und Iltis.
 
 Zur Förderung dieser Zielarten werden in erster Linie ihre Lebensräume aufgewertet. Dazu werden natürliche Strukturen wie Asthaufen und Hecken geschaffen, um mehr Deckungsmöglichkeiten, grösseren Beuteerfolg und bessere Bedingungen für die Aufzucht von Jungen zu schaffen.
 
-Konkret werden im Projekt Massnahmen gefördert, welche in der Broschüre _Fördermassnahmen für Wiesel im Landwirtschaftsgebiet_^[Verfügbar unter http://wieselnetz.ch/de/uber-win/downloads/] (Stiftung WIN Wieselnetz / Agrofutura) beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und bei ausgewählten Massnahmen zudem finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (mehr Details zu den Massnahmen sind in Anhang \@ref(anhang-massnahmen) sowie unter [wieselundco.ch/bonus](http://www.wieselundco.ch/bonus) erläutert):
+Konkret werden im Projekt Massnahmen gefördert, welche in der Broschüre _Fördermassnahmen für Wiesel im Landwirtschaftsgebiet_^[Verfügbar unter http://wieselnetz.ch/de/uber-win/downloads/] beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und teilweise finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (Abbildung \@ref(fig:massnahmen)):
 
-1. Winterquartiere
-2. Ast- / Steinhaufen
+1. Ast- / Steinhaufen
+2. Winterquartiere
 3. Gebüschgruppen
 4. Grossstrukturen
+5. Sanierung von Feldscheunen
 
 Von den etwa 450 Massnahmen, die im Rahmen des Naturschutzprojekts umgesetzt wurden, handelt es sich bei über 60 % um Asthaufen. Etwa 20 % der Massnahmen sind Gebüschgruppen und weitere 10 % Steinhaufen. Winterquartiere und Grossstrukturen bilden die restlichen 10 % zu jeweils gleichen Teilen.
 
 Das Ziel der vorliegenden Wirkungskontrolle ist festzustellen, ob die Aufwertungsmassnahmen für die Zielarten attraktiv sind und von ihnen genutzt werden. Dafür werden Ast- und Steinhaufen mit Spurentunnel und Winterquartieren mit Fotofallen systematisch beobachtet. Zudem werden zur Beurteilung zwei weitere Datensätzen zugezogen, die bereits vorliegen und nicht erhoben werden müssen. Dabei handelt es sich die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
+
+
+(ref:massnahmen) Massnahmen, die im Projekt gefördert werden (Quelle: [wieselundco.ch/bonus](http://www.wieselundco.ch/bonus))
+
+```{r massnahmen, out.width="100%", fig.cap="(ref:massnahmen)", fig.pos = "H"}
+knitr::include_graphics("images/massnahmen.jpg")
+```

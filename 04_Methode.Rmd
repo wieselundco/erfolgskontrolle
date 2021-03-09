@@ -29,7 +29,7 @@ knitr::include_graphics("images/Layout_Strukturen.png")
 
 ## Erhebung 1: Attraktivitätskontrolle von Asthaufen mittels Spurentunneln
 
-In diesem Ansatz sind 39 Asthaufen in zwei Jahren über einen Zeitraum von je 6 Wochen systematisch mit Spurentunneln untersucht worden (siehe Anhang III). Die Untersuchungen fanden im Herbst 2019 sowie im Frühling 2020 statt (nähere Angaben vgl. Abbildung \@ref(fig:erhebungswoche)). Details zu dieser Erhebungsmethode können aus King et al. (1977) entnommen werden.
+In diesem Ansatz sind 39 Asthaufen in zwei Jahren über einen Zeitraum von je 6 Wochen systematisch mit Spurentunneln untersucht worden. Die Untersuchungen fanden im Herbst 2019 sowie im Frühling 2020 statt (nähere Angaben siehe Abbildung \@ref(fig:erhebungswoche)). Details zu dieser Erhebungsmethode können aus King et al. (1977) entnommen werden.
 
 Von den 39 beobachteten Asthaufen liegen 11 im Nordwesten (Gemeinde Kilchberg) und 28 im Südosten (Gemeinde Wädenswil) des Bezirks Horgen (siehe Abbildung \@ref(fig:layoutstrukturen)). Bei der Standortwahl wurde darauf geachtet, dass sie in der jeweiligen Region möglichst gut auf die Gesamtheit aller Standorte verteilt wurden. Ausserdem wurden Standorte bevorzugt, die wenig begangen werden, um das Risiko von Fremdmanipulationen zu reduzieren.
 

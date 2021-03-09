@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  9 MAR 2021 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  9 MAR 2021 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -984,6 +984,9 @@ Overfull \hbox (142.2637pt too wide) in paragraph at lines 163--192
 [3
 
 
+] [4
+
+
 ]
 chapter 1.
 
@@ -1001,279 +1004,323 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface.
 
-[4
-
-
-]
-chapter 2.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 232.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 232.
+(Font)              <9> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 232.
+(Font)              <5> on input line 233.
+<images/massnahmen.jpg, id=77, 2333.71875pt x 981.6675pt>
+File: images/massnahmen.jpg Graphic file (type jpg)
+<use images/massnahmen.jpg>
+Package pdftex.def Info: images/massnahmen.jpg  used on input line 257.
+(pdftex.def)             Requested size: 455.23357pt x 191.49179pt.
 [5
 
 
-]
-chapter 3.
+ <./images/massnahmen.jpg>]
+chapter 2.
 [6
 
 
 ]
-chapter 4.
+chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
+Underfull \hbox (badness 10000) in paragraph at lines 297--297
 []|\T1/lmss/m/n/10.95 Spurentunnel
  []
 
 
-Overfull \hbox (5.08127pt too wide) in paragraph at lines 289--289
+Overfull \hbox (5.08127pt too wide) in paragraph at lines 298--298
 []|\T1/lmss/m/n/10.95 Beobachtungs-
  []
 
 
-Overfull \hbox (24.6748pt too wide) in paragraph at lines 282--292
+Overfull \hbox (24.6748pt too wide) in paragraph at lines 291--301
  [][] 
  []
 
-<images/Layout_Strukturen.png, id=101, 597.432pt x 845.0772pt>
+<images/Layout_Strukturen.png, id=103, 597.432pt x 845.0772pt>
 File: images/Layout_Strukturen.png Graphic file (type png)
 <use images/Layout_Strukturen.png>
-Package pdftex.def Info: images/Layout_Strukturen.png  used on input line 297.
+Package pdftex.def Info: images/Layout_Strukturen.png  used on input line 306.
 (pdftex.def)             Requested size: 455.25636pt x 643.96747pt.
 [7
 
 
 ] [8 <./images/Layout_Strukturen.png>]
-<images/Erhebungswochen.png, id=120, 614.295pt x 93.951pt>
+<images/Erhebungswochen.png, id=122, 614.295pt x 93.951pt>
 File: images/Erhebungswochen.png Graphic file (type png)
 <use images/Erhebungswochen.png>
-Package pdftex.def Info: images/Erhebungswochen.png  used on input line 314.
+Package pdftex.def Info: images/Erhebungswochen.png  used on input line 323.
 (pdftex.def)             Requested size: 455.24606pt x 69.62587pt.
 [9 <./images/Erhebungswochen.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-334.
+343.
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<images/wirkungskontrolle_spontan_effort.png, id=130, 580.3281pt x 307.1475pt>
+<images/wirkungskontrolle_spontan_effort.png, id=132, 580.3281pt x 307.1475pt>
 File: images/wirkungskontrolle_spontan_effort.png Graphic file (type png)
 <use images/wirkungskontrolle_spontan_effort.png>
 Package pdftex.def Info: images/wirkungskontrolle_spontan_effort.png  used on i
-nput line 346.
+nput line 355.
 (pdftex.def)             Requested size: 455.24863pt x 240.94728pt.
-<images/beobachtungsmeldungen_histogramm.png, id=132, 469.2732pt x 250.2951pt>
+<images/beobachtungsmeldungen_histogramm.png, id=134, 469.2732pt x 250.2951pt>
 File: images/beobachtungsmeldungen_histogramm.png Graphic file (type png)
 <use images/beobachtungsmeldungen_histogramm.png>
 Package pdftex.def Info: images/beobachtungsmeldungen_histogramm.png  used on i
-nput line 359.
+nput line 368.
 (pdftex.def)             Requested size: 455.2589pt x 242.82031pt.
 [10 <./images/wirkungskontrolle_spontan_effort.png>] [11 <./images/beobachtungs
 meldungen_histogramm.png>]
-chapter 5.
-<images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png, id=150, 677.
+chapter 4.
+<images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png, id=152, 677.
 1699pt x 198.9834pt>
 File: images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png Graphic 
 file (type png)
 <use images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png>
 Package pdftex.def Info: images/wirkungskontrolle_systematisch_einzelnachweise_
-waffle.png  used on input line 373.
+waffle.png  used on input line 382.
 (pdftex.def)             Requested size: 455.2514pt x 133.77362pt.
-<images/strukturen_mit_zielart.png, id=152, 578.16pt x 216.81pt>
+<images/strukturen_mit_zielart.png, id=154, 578.16pt x 216.81pt>
 File: images/strukturen_mit_zielart.png Graphic file (type png)
 <use images/strukturen_mit_zielart.png>
 Package pdftex.def Info: images/strukturen_mit_zielart.png  used on input line 
-381.
+390.
 (pdftex.def)             Requested size: 455.24165pt x 170.7156pt.
-<images/str196/capture.jpg, id=153, 2569.6pt x 1445.4pt>
+<images/str196/capture.jpg, id=155, 2569.6pt x 1445.4pt>
 File: images/str196/capture.jpg Graphic file (type jpg)
 <use images/str196/capture.jpg>
-Package pdftex.def Info: images/str196/capture.jpg  used on input line 387.
+Package pdftex.def Info: images/str196/capture.jpg  used on input line 396.
 (pdftex.def)             Requested size: 455.2152pt x 256.05855pt.
+<images/youtube/4gVpcvPIrNA.jpg, id=156, 481.8pt x 361.35pt>
+File: images/youtube/4gVpcvPIrNA.jpg Graphic file (type jpg)
+<use images/youtube/4gVpcvPIrNA.jpg>
+Package pdftex.def Info: images/youtube/4gVpcvPIrNA.jpg  used on input line 399
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
 [12
 
 
  <./images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png>] [13 <./i
 mages/strukturen_mit_zielart.png> <./images/str196/capture.jpg>]
-<images/winterquartiere_resultate.jpg, id=174, 580.3281pt x 520.8258pt>
+<images/winterquartiere_resultate.jpg, id=177, 580.3281pt x 520.8258pt>
 File: images/winterquartiere_resultate.jpg Graphic file (type jpg)
 <use images/winterquartiere_resultate.jpg>
 Package pdftex.def Info: images/winterquartiere_resultate.jpg  used on input li
-ne 400.
+ne 411.
 (pdftex.def)             Requested size: 455.24863pt x 408.571pt.
-<images/str238/10040255.jpg, id=175, 2457.18pt x 1842.885pt>
+<images/str238/10040255.jpg, id=178, 2457.18pt x 1842.885pt>
 File: images/str238/10040255.jpg Graphic file (type jpg)
 <use images/str238/10040255.jpg>
-Package pdftex.def Info: images/str238/10040255.jpg  used on input line 404.
+Package pdftex.def Info: images/str238/10040255.jpg  used on input line 415.
 (pdftex.def)             Requested size: 223.04883pt x 167.28662pt.
-<images/str238/10040261.jpg, id=176, 2457.18pt x 1842.885pt>
+<images/str238/10040261.jpg, id=179, 2457.18pt x 1842.885pt>
 File: images/str238/10040261.jpg Graphic file (type jpg)
 <use images/str238/10040261.jpg>
-Package pdftex.def Info: images/str238/10040261.jpg  used on input line 404.
+Package pdftex.def Info: images/str238/10040261.jpg  used on input line 415.
 (pdftex.def)             Requested size: 223.04883pt x 167.28662pt.
-<images/str238/10040263.jpg, id=177, 2457.18pt x 1842.885pt>
+<images/str238/10040263.jpg, id=180, 2457.18pt x 1842.885pt>
 File: images/str238/10040263.jpg Graphic file (type jpg)
 <use images/str238/10040263.jpg>
-Package pdftex.def Info: images/str238/10040263.jpg  used on input line 404.
+Package pdftex.def Info: images/str238/10040263.jpg  used on input line 415.
 (pdftex.def)             Requested size: 223.04883pt x 167.28662pt.
-<images/str238/10040267.jpg, id=178, 2457.18pt x 1842.885pt>
+<images/str238/10040267.jpg, id=181, 2457.18pt x 1842.885pt>
 File: images/str238/10040267.jpg Graphic file (type jpg)
 <use images/str238/10040267.jpg>
-Package pdftex.def Info: images/str238/10040267.jpg  used on input line 404.
+Package pdftex.def Info: images/str238/10040267.jpg  used on input line 415.
 (pdftex.def)             Requested size: 223.04883pt x 167.28662pt.
 
-Underfull \hbox (badness 2726) in paragraph at lines 404--404
+Underfull \hbox (badness 2726) in paragraph at lines 415--415
 [][] []
  []
 
-<images/str13956/09280317.jpg, id=179, 2457.18pt x 1842.885pt>
+<images/youtube/YomCsy1olBs.jpg, id=182, 481.8pt x 361.35pt>
+File: images/youtube/YomCsy1olBs.jpg Graphic file (type jpg)
+<use images/youtube/YomCsy1olBs.jpg>
+Package pdftex.def Info: images/youtube/YomCsy1olBs.jpg  used on input line 418
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
+<images/youtube/ttv-LHkzc18.jpg, id=185, 481.8pt x 361.35pt>
+File: images/youtube/ttv-LHkzc18.jpg Graphic file (type jpg)
+<use images/youtube/ttv-LHkzc18.jpg>
+Package pdftex.def Info: images/youtube/ttv-LHkzc18.jpg  used on input line 418
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
+<images/str13956/09280317.jpg, id=188, 2457.18pt x 1842.885pt>
 File: images/str13956/09280317.jpg Graphic file (type jpg)
 <use images/str13956/09280317.jpg>
-Package pdftex.def Info: images/str13956/09280317.jpg  used on input line 408.
+Package pdftex.def Info: images/str13956/09280317.jpg  used on input line 421.
 (pdftex.def)             Requested size: 455.24608pt x 341.43456pt.
-<images/str13956/capture.jpg, id=180, 2569.6pt x 1445.4pt>
+<images/str13956/capture.jpg, id=189, 2569.6pt x 1445.4pt>
 File: images/str13956/capture.jpg Graphic file (type jpg)
 <use images/str13956/capture.jpg>
-Package pdftex.def Info: images/str13956/capture.jpg  used on input line 408.
+Package pdftex.def Info: images/str13956/capture.jpg  used on input line 421.
 (pdftex.def)             Requested size: 455.2152pt x 256.05855pt.
-<images/wirkungskontrolle_spontan_einzelnachweise_waffle.png, id=182, 677.1699p
+<images/youtube/O5la_63_u_w.jpg, id=190, 481.8pt x 361.35pt>
+File: images/youtube/O5la_63_u_w.jpg Graphic file (type jpg)
+<use images/youtube/O5la_63_u_w.jpg>
+Package pdftex.def Info: images/youtube/O5la_63_u_w.jpg  used on input line 424
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
+<images/youtube/VCjIpFX3TO0.jpg, id=193, 481.8pt x 361.35pt>
+File: images/youtube/VCjIpFX3TO0.jpg Graphic file (type jpg)
+<use images/youtube/VCjIpFX3TO0.jpg>
+Package pdftex.def Info: images/youtube/VCjIpFX3TO0.jpg  used on input line 424
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
+File: images/youtube/VCjIpFX3TO0.jpg Graphic file (type jpg)
+<use images/youtube/VCjIpFX3TO0.jpg>
+Package pdftex.def Info: images/youtube/VCjIpFX3TO0.jpg  used on input line 424
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
+<images/youtube/Hi7ddE5r7B4.jpg, id=198, 481.8pt x 361.35pt>
+File: images/youtube/Hi7ddE5r7B4.jpg Graphic file (type jpg)
+<use images/youtube/Hi7ddE5r7B4.jpg>
+Package pdftex.def Info: images/youtube/Hi7ddE5r7B4.jpg  used on input line 424
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
+<images/youtube/ISg0ZA5Fvgo.jpg, id=201, 481.8pt x 361.35pt>
+File: images/youtube/ISg0ZA5Fvgo.jpg Graphic file (type jpg)
+<use images/youtube/ISg0ZA5Fvgo.jpg>
+Package pdftex.def Info: images/youtube/ISg0ZA5Fvgo.jpg  used on input line 424
+.
+(pdftex.def)             Requested size: 455.2593pt x 341.44447pt.
+<images/wirkungskontrolle_spontan_einzelnachweise_waffle.png, id=205, 677.1699p
 t x 198.9834pt>
 File: images/wirkungskontrolle_spontan_einzelnachweise_waffle.png Graphic file 
 (type png)
 <use images/wirkungskontrolle_spontan_einzelnachweise_waffle.png>
 Package pdftex.def Info: images/wirkungskontrolle_spontan_einzelnachweise_waffl
-e.png  used on input line 419.
+e.png  used on input line 434.
 (pdftex.def)             Requested size: 455.2514pt x 133.77362pt.
-<images/wirkungskontrolle_spontan_strukturen_mit_zielart.png, id=183, 455.0601p
+<images/wirkungskontrolle_spontan_strukturen_mit_zielart.png, id=206, 455.0601p
 t x 113.7048pt>
 File: images/wirkungskontrolle_spontan_strukturen_mit_zielart.png Graphic file 
 (type png)
 <use images/wirkungskontrolle_spontan_strukturen_mit_zielart.png>
 Package pdftex.def Info: images/wirkungskontrolle_spontan_strukturen_mit_zielar
-t.png  used on input line 427.
+t.png  used on input line 442.
 (pdftex.def)             Requested size: 455.05899pt x 113.70451pt.
-[14 <./images/winterquartiere_resultate.jpg>] [15 <./images/str238/10040255.JPG
-> <./images/str238/10040261.JPG> <./images/str238/10040263.JPG> <./images/str23
-8/10040267.JPG>] [16 <./images/str13956/09280317.JPG> <./images/str13956/captur
-e.jpg>]
-Overfull \hbox (10.98335pt too wide) in paragraph at lines 437--438
+[14 <./images/youtube/4gVpcvPIrNA.jpg>] [15 <./images/winterquartiere_resultate
+.jpg>] [16 <./images/str238/10040255.JPG> <./images/str238/10040261.JPG> <./ima
+ges/str238/10040263.JPG> <./images/str238/10040267.JPG>]
+Overfull \hbox (10.98335pt too wide) in paragraph at lines 452--453
 []\T1/lmss/m/n/10.95 Die grösste Un-sicher-heit in Bezug auf ihre Plau-si-bil-i
 tät beste-ht bei den Mauswiesel-Sichtungsmeldungen.
  []
 
-<images/beobachtungsmeldungen_filter.png, id=201, 569.0058pt x 142.131pt>
+<images/beobachtungsmeldungen_filter.png, id=225, 569.0058pt x 142.131pt>
 File: images/beobachtungsmeldungen_filter.png Graphic file (type png)
 <use images/beobachtungsmeldungen_filter.png>
 Package pdftex.def Info: images/beobachtungsmeldungen_filter.png  used on input
- line 442.
+ line 457.
 (pdftex.def)             Requested size: 455.23999pt x 113.71361pt.
-[17 <./images/wirkungskontrolle_spontan_einzelnachweise_waffle.png> <./images/w
-irkungskontrolle_spontan_strukturen_mit_zielart.png>]
-<images/Layout_Beobachtungsmeldungen.png, id=212, 597.432pt x 421.0932pt>
+[17 <./images/youtube/YomCsy1olBs.jpg>]
+<images/Layout_Beobachtungsmeldungen.png, id=234, 597.432pt x 421.0932pt>
 File: images/Layout_Beobachtungsmeldungen.png Graphic file (type png)
 <use images/Layout_Beobachtungsmeldungen.png>
 Package pdftex.def Info: images/Layout_Beobachtungsmeldungen.png  used on input
- line 454.
+ line 469.
 (pdftex.def)             Requested size: 455.25636pt x 320.8823pt.
-[18 <./images/beobachtungsmeldungen_filter.png>] [19 <./images/Layout_Beobachtu
-ngsmeldungen.png>]
-chapter 6.
-<images/ampel_gelb.png, id=227, 879.285pt x 312.16624pt>
+[18 <./images/youtube/ttv-LHkzc18.jpg>] [19 <./images/str13956/09280317.JPG> <.
+/images/str13956/capture.jpg>] [20 <./images/youtube/O5la_63_u_w.jpg>] [21 <./i
+mages/youtube/VCjIpFX3TO0.jpg>] [22] [23 <./images/youtube/Hi7ddE5r7B4.jpg>] [2
+4 <./images/youtube/ISg0ZA5Fvgo.jpg> <./images/wirkungskontrolle_spontan_einzel
+nachweise_waffle.png> <./images/wirkungskontrolle_spontan_strukturen_mit_zielar
+t.png>] [25 <./images/beobachtungsmeldungen_filter.png> <./images/Layout_Beobac
+htungsmeldungen.png>]
+chapter 5.
+<images/ampel_gelb.png, id=283, 879.285pt x 312.16624pt>
 File: images/ampel_gelb.png Graphic file (type png)
 <use images/ampel_gelb.png>
-Package pdftex.def Info: images/ampel_gelb.png  used on input line 475.
+Package pdftex.def Info: images/ampel_gelb.png  used on input line 490.
 (pdftex.def)             Requested size: 48.40778pt x 17.18587pt.
 
-Underfull \hbox (badness 2012) in paragraph at lines 475--476
+Underfull \hbox (badness 2012) in paragraph at lines 490--491
 []|\T1/lmss/m/n/10.95 Es kon-nten zwar Her-me-line, aber
  []
 
 File: images/ampel_gelb.png Graphic file (type png)
 <use images/ampel_gelb.png>
-Package pdftex.def Info: images/ampel_gelb.png  used on input line 476.
+Package pdftex.def Info: images/ampel_gelb.png  used on input line 491.
 (pdftex.def)             Requested size: 48.40778pt x 17.18587pt.
-<images/ampel_gruen.png, id=228, 879.285pt x 313.17pt>
+<images/ampel_gruen.png, id=284, 879.285pt x 313.17pt>
 File: images/ampel_gruen.png Graphic file (type png)
 <use images/ampel_gruen.png>
-Package pdftex.def Info: images/ampel_gruen.png  used on input line 477.
+Package pdftex.def Info: images/ampel_gruen.png  used on input line 492.
 (pdftex.def)             Requested size: 48.40778pt x 17.24112pt.
-<images/ampel_rot.png, id=229, 879.285pt x 312.16624pt>
+<images/ampel_rot.png, id=285, 879.285pt x 312.16624pt>
 File: images/ampel_rot.png Graphic file (type png)
 <use images/ampel_rot.png>
-Package pdftex.def Info: images/ampel_rot.png  used on input line 478.
+Package pdftex.def Info: images/ampel_rot.png  used on input line 493.
 (pdftex.def)             Requested size: 48.40778pt x 17.18587pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
 []|\T1/lmss/m/n/10.95 In Er-he-bung 1 kon-nten keine
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 479--479
+Underfull \hbox (badness 3199) in paragraph at lines 494--494
 \T1/lmss/m/n/10.95 (min-destens Her-me-line) nachgewiesen
  []
 
 File: images/ampel_gelb.png Graphic file (type png)
 <use images/ampel_gelb.png>
-Package pdftex.def Info: images/ampel_gelb.png  used on input line 479.
+Package pdftex.def Info: images/ampel_gelb.png  used on input line 494.
 (pdftex.def)             Requested size: 48.40778pt x 17.18587pt.
 
-Overfull \hbox (12.32085pt too wide) in paragraph at lines 471--482
+Overfull \hbox (12.32085pt too wide) in paragraph at lines 486--497
  [][] 
  []
 
-<images/kontext.png, id=232, 569.0058pt x 426.6339pt>
+<images/kontext.png, id=288, 569.0058pt x 426.6339pt>
 File: images/kontext.png Graphic file (type png)
 <use images/kontext.png>
-Package pdftex.def Info: images/kontext.png  used on input line 489.
+Package pdftex.def Info: images/kontext.png  used on input line 504.
 (pdftex.def)             Requested size: 455.23999pt x 341.3336pt.
-[20
+[26
 
 
-] [21 <./images/ampel_gelb.png> <./images/ampel_gruen.png> <./images/ampel_rot.
-png> <./images/kontext.png>] [22]
-chapter 7.
-<images/massnahmen.jpg, id=257, 2333.71875pt x 981.6675pt>
-File: images/massnahmen.jpg Graphic file (type jpg)
-<use images/massnahmen.jpg>
-Package pdftex.def Info: images/massnahmen.jpg  used on input line 514.
-(pdftex.def)             Requested size: 455.23357pt x 191.49179pt.
-[23
-
-
- <./images/massnahmen.jpg>]
+] [27 <./images/ampel_gelb.png> <./images/ampel_gruen.png> <./images/ampel_rot.
+png> <./images/kontext.png>] [28]
+chapter 6.
 <Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktur-1.pdf, id
-=264, 469.755pt x 325.215pt>
+=314, 469.755pt x 325.215pt>
 File: Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktur-1.pd
 f Graphic file (type pdf)
 <use Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktur-1.pdf
 >
 Package pdftex.def Info: Wiesel_und_Co_Schlussbericht_files/figure-latex/nachwe
-iseprostruktur-1.pdf  used on input line 600.
+iseprostruktur-1.pdf  used on input line 606.
 (pdftex.def)             Requested size: 455.24608pt x 315.17035pt.
-[24] [25 <./Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktu
-r-1.pdf>]
+[29
+
+
+] [30 <./Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktur-1
+.pdf>]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     604.
+(LaTeX3)     610.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     604.
+(LaTeX3)     610.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     604.
+(LaTeX3)     610.
 
 (./Wiesel_und_Co_Schlussbericht.aux) ) 
 Here is how much of TeX's memory you used:
- 17429 strings out of 480971
- 294642 string characters out of 5906341
+ 17482 strings out of 480971
+ 296071 string characters out of 5906341
  783300 words of memory out of 5000000
- 34214 multiletter control sequences out of 15000+600000
+ 34247 multiletter control sequences out of 15000+600000
  452452 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 111i,13n,116p,10643b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,13n,116p,10643b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rata/AppData/Roaming/TinyTeX/te
 xmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/Users/rata/AppData/Roaming/TinyTeX/t
 exmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/rata/AppData/Roaming/TinyTeX/t
@@ -1283,10 +1330,10 @@ inyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/Users/rata/AppData/Roamin
 g/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss9.pfb><c:/Users/rata/AppData/Roa
 ming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/rata/AppDa
 ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsso10.pfb>
-Output written on Wiesel_und_Co_Schlussbericht.pdf (25 pages, 10583429 bytes).
+Output written on Wiesel_und_Co_Schlussbericht.pdf (30 pages, 10691733 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
- 315 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 342 words of extra memory for PDF output out of 10000 (max. 10000000)
 

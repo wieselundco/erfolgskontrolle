@@ -105,7 +105,7 @@ if(run_full){
 ```
 
 
-(ref:hermelinstr196) Ein Hermelin, welches einen im Projekt erstellten Asthaufen als Deckungsstruktur nutzt (Video auf [youtube](https://youtu.be/4gVpcvPIrNA)).
+(ref:hermelinstr196) Ein Hermelin, welches einen im Projekt erstellten Asthaufen als Deckungsstruktur nutzt.
 
 ```{r hermelinstr196, fig.cap="(ref:hermelinstr196)", out.width="100%"}
 knitr::include_graphics("images/str196/capture.jpg")

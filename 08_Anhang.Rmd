@@ -1,17 +1,7 @@
 
 # Anhang
 
-
-## Anhang A: Förderungsmassnahmen im Projekt {#anhang-massnahmen}
-
-
-(ref:massnahmen) Eine Zusammenstellung aller Massnahmen, die im Projekt gefördert werden. 
-
-```{r massnahmen, out.width="100%", fig.cap="(ref:massnahmen)", fig.pos = "H"}
-knitr::include_graphics("images/massnahmen.jpg")
-```
-
-## Anhang B: Nachweiserfolge anderer Studien {#anhang-zusammenstellung}
+## Anhang A: Nachweiserfolge anderer Studien {#anhang-zusammenstellung}
 
 
 ```{r}
@@ -39,7 +29,7 @@ nachweiserfolge_zusammenstellung %>%
 
 ```
 
-## Anhang C: Erhebung 1 (Rohdaten)
+## Anhang B: Erhebung 1 (Rohdaten)
 
 <!-- Systematische Wirkungskontrolle -->
 
@@ -73,7 +63,7 @@ if(!knitr::is_html_output()){
 
 
 
-## Anhang D: Datensatz A (Rohdaten)
+## Anhang C: Datensatz A (Rohdaten)
 ```{r}
 nachweise_spontan2 <- nachweise_spontan %>%
   select(Jahr,KW,Struktur,Mäuse:Ratte) %>%
@@ -106,7 +96,7 @@ if(!knitr::is_html_output()){
 ```
 
 
-## Anhang E: Hermelin-Nachweise nach Struktur
+## Anhang D: Hermelin-Nachweise nach Struktur
 
 
 (ref:nachweiseprostruktur) Anzahl Hermelinnachweise pro untersuchte Struktur in Erhebung 1.
