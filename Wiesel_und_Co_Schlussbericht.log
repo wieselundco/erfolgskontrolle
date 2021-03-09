@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  9 MAR 2021 14:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  9 MAR 2021 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -123,6 +123,12 @@ Package: tocbasic 2020/09/21 v3.32 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: babel extension for `toc' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 137.
+Class scrbook Info: You've used standard option `oneside'.
+(scrbook)           This is correct!
+(scrbook)           Internally I'm using `twoside=false'.
+(scrbook)           If you'd like to set the option with \KOMAoptions,
+(scrbook)           you'd have to use `twoside=false' there
+(scrbook)           instead of `oneside', too.
 Class scrbook Info: File `scrsize11pt.clo' used instead of
 (scrbook)           file `scrsize11.clo' to setup font sizes on input line 2437
 .
@@ -137,6 +143,12 @@ a.sty
 Package: typearea 2020/09/21 v3.32 KOMA-Script package (type area)
 \ta@bcor=\skip48
 \ta@div=\count179
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
 \ta@hblk=\skip49
 \ta@vblk=\skip50
 \ta@temp=\skip51
@@ -147,8 +159,8 @@ Package typearea Info: These are the values describing the layout:
 (typearea)             \paperwidth      = 597.50793pt
 (typearea)              \textwidth      = 418.25555pt
 (typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 47.2316pt
-(typearea)              \oddsidemargin  = -12.5192pt
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
 (typearea)             \paperheight     = 845.04694pt
 (typearea)              \textheight     = 595.80026pt
 (typearea)              \topmargin      = -25.16531pt
@@ -686,38 +698,38 @@ t.
 Package babel Info: \l@german = using hyphenrules for english
 (babel)             (\language0) on input line 63.
 Package babel Info: Making " an active character on input line 139.
-))) (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+))) (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count298
+\float@exts=\toks25
+\float@box=\box56
+\@float@everytoks=\toks26
+\@floatcapt=\box57
+) (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen187
-\ar@mcellbox=\box56
+\ar@mcellbox=\box58
 \extrarowheight=\dimen188
-\NC@list=\toks25
+\NC@list=\toks27
 \extratabsurround=\skip75
 \backup@length=\skip76
-\ar@cellbox=\box57
+\ar@cellbox=\box59
 )
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.s
 ty
 Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 \multirow@colwidth=\skip77
-\multirow@cntb=\count298
+\multirow@cntb=\count299
 \multirow@dima=\skip78
 \bigstrutjot=\dimen189
 )
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen190
 \WF@size=\dimen191
-\c@WF@wrappedlines=\count299
-\WF@box=\box58
-\WF@everypar=\toks26
+\c@WF@wrappedlines=\count300
+\WF@box=\box60
+\WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
-) (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count300
-\float@exts=\toks27
-\float@box=\box59
-\@float@everytoks=\toks28
-\@floatcapt=\box60
 )
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.s
 ty
@@ -804,7 +816,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \TeXr@lab=\toks33
 )
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-26.
+30.
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -816,27 +828,27 @@ File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
 ) (./Wiesel_und_Co_Schlussbericht.aux)
 \openout1 = `Wiesel_und_Co_Schlussbericht.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-Package scrbase Info: activating german \contentsname on input line 126.
-Package scrbase Info: activating german \listfigurename on input line 126.
-Package scrbase Info: activating german \listtablename on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+Package scrbase Info: activating german \contentsname on input line 130.
+Package scrbase Info: activating german \listfigurename on input line 130.
+Package scrbase Info: activating german \listtablename on input line 130.
 
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstop
 df-base.sty
@@ -849,7 +861,7 @@ f-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 126.
+Package hyperref Info: Link coloring OFF on input line 130.
 
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.st
 y
@@ -865,9 +877,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count311
 )
-LaTeX Info: Redefining \ref on input line 126.
-LaTeX Info: Redefining \pageref on input line 126.
-LaTeX Info: Redefining \nameref on input line 126.
+LaTeX Info: Redefining \ref on input line 130.
+LaTeX Info: Redefining \pageref on input line 130.
+LaTeX Info: Redefining \nameref on input line 130.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -875,7 +887,7 @@ LaTeX Info: Redefining \nameref on input line 126.
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(71.13188pt, 455.24417pt, 71.13188pt)
 * v-part:(T,H,B)=(56.9055pt, 731.23593pt, 56.9055pt)
 * \paperwidth=597.50793pt
@@ -889,7 +901,7 @@ LaTeX Info: Redefining \nameref on input line 126.
 * \headsep=20.40001pt
 * \topskip=11.0pt
 * \footskip=47.6pt
-* \marginparwidth=89.62619pt
+* \marginparwidth=59.7508pt
 * \marginparsep=12.8401pt
 * \columnsep=10.0pt
 * \skip\footins=10.0pt plus 4.0pt minus 2.0pt
@@ -897,8 +909,8 @@ LaTeX Info: Redefining \nameref on input line 126.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -911,56 +923,53 @@ Package caption Info: End \AtBeginDocument code.
 File: images/zhaw_lsfm_iunr_schwarz.jpg Graphic file (type jpg)
 <use images/zhaw_lsfm_iunr_schwarz.jpg>
 Package pdftex.def Info: images/zhaw_lsfm_iunr_schwarz.jpg  used on input line 
-134.
+138.
 (pdftex.def)             Requested size: 273.14162pt x 125.11787pt.
 <images/Fuchs_2_Str_60_WK04.JPG, id=5, 5299.8pt x 3974.85pt>
 File: images/Fuchs_2_Str_60_WK04.JPG Graphic file (type jpg)
 <use images/Fuchs_2_Str_60_WK04.JPG>
-Package pdftex.def Info: images/Fuchs_2_Str_60_WK04.JPG  used on input line 138
+Package pdftex.def Info: images/Fuchs_2_Str_60_WK04.JPG  used on input line 142
 .
 (pdftex.def)             Requested size: 455.20784pt x 341.40588pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-63.
+67.
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-63.
+67.
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-163.
+167.
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-163.
+167.
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 163.
+(Font)              <10.95> on input line 167.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 163.
+(Font)              <8> on input line 167.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 163.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 163
+(Font)              <6> on input line 167.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 167
 .
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 163
+LaTeX Font Info:    Trying to load font information for U+msb on input line 167
 .
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (142.2637pt too wide) in paragraph at lines 159--188
+Overfull \hbox (142.2637pt too wide) in paragraph at lines 163--192
 []$  
  []
-
-
-Underfull \vbox (badness 4886) has occurred while \output is active []
 
 [1
 
@@ -973,9 +982,6 @@ Underfull \vbox (badness 4886) has occurred while \output is active []
 \openout3 = `Wiesel_und_Co_Schlussbericht.toc'.
 
 [3
-
-
-] [4
 
 
 ]
@@ -995,83 +1001,78 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface.
 
-[5] [6
+[4
 
 
 ]
 chapter 2.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 228.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 232.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 228.
+(Font)              <9> on input line 232.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 228.
-[7] [8
+(Font)              <5> on input line 232.
+[5
 
 
 ]
 chapter 3.
-[9] [10
+[6
 
 
 ]
 chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []|\T1/lmss/m/n/10.95 Spurentunnel
  []
 
 
-Overfull \hbox (5.08127pt too wide) in paragraph at lines 285--285
+Overfull \hbox (5.08127pt too wide) in paragraph at lines 289--289
 []|\T1/lmss/m/n/10.95 Beobachtungs-
  []
 
 
-Overfull \hbox (24.6748pt too wide) in paragraph at lines 278--288
+Overfull \hbox (24.6748pt too wide) in paragraph at lines 282--292
  [][] 
  []
 
-<images/Layout_Strukturen.png, id=120, 597.432pt x 845.0772pt>
+<images/Layout_Strukturen.png, id=101, 597.432pt x 845.0772pt>
 File: images/Layout_Strukturen.png Graphic file (type png)
 <use images/Layout_Strukturen.png>
-Package pdftex.def Info: images/Layout_Strukturen.png  used on input line 293.
+Package pdftex.def Info: images/Layout_Strukturen.png  used on input line 297.
 (pdftex.def)             Requested size: 455.25636pt x 643.96747pt.
-[11] [12 <./images/Layout_Strukturen.png>]
-<images/Erhebungswochen.png, id=138, 614.295pt x 93.951pt>
+[7
+
+
+] [8 <./images/Layout_Strukturen.png>]
+<images/Erhebungswochen.png, id=120, 614.295pt x 93.951pt>
 File: images/Erhebungswochen.png Graphic file (type png)
 <use images/Erhebungswochen.png>
-Package pdftex.def Info: images/Erhebungswochen.png  used on input line 310.
+Package pdftex.def Info: images/Erhebungswochen.png  used on input line 314.
 (pdftex.def)             Requested size: 455.24606pt x 69.62587pt.
-[13 <./images/Erhebungswochen.png>]
+[9 <./images/Erhebungswochen.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-330.
+334.
 (c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-41.
-(c:/Users/rata/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-<images/wirkungskontrolle_spontan_effort.png, id=150, 580.3281pt x 307.1475pt>
+<images/wirkungskontrolle_spontan_effort.png, id=130, 580.3281pt x 307.1475pt>
 File: images/wirkungskontrolle_spontan_effort.png Graphic file (type png)
 <use images/wirkungskontrolle_spontan_effort.png>
 Package pdftex.def Info: images/wirkungskontrolle_spontan_effort.png  used on i
 nput line 346.
 (pdftex.def)             Requested size: 455.24863pt x 240.94728pt.
-<images/beobachtungsmeldungen_histogramm.png, id=152, 469.2732pt x 250.2951pt>
+<images/beobachtungsmeldungen_histogramm.png, id=132, 469.2732pt x 250.2951pt>
 File: images/beobachtungsmeldungen_histogramm.png Graphic file (type png)
 <use images/beobachtungsmeldungen_histogramm.png>
 Package pdftex.def Info: images/beobachtungsmeldungen_histogramm.png  used on i
 nput line 359.
 (pdftex.def)             Requested size: 455.2589pt x 242.82031pt.
-[14 <./images/wirkungskontrolle_spontan_effort.png>] [15 <./images/beobachtungs
-meldungen_histogramm.png>] [16
-
-
-]
+[10 <./images/wirkungskontrolle_spontan_effort.png>] [11 <./images/beobachtungs
+meldungen_histogramm.png>]
 chapter 5.
-<images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png, id=174, 677.
+<images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png, id=150, 677.
 1699pt x 198.9834pt>
 File: images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png Graphic 
 file (type png)
@@ -1079,41 +1080,44 @@ file (type png)
 Package pdftex.def Info: images/wirkungskontrolle_systematisch_einzelnachweise_
 waffle.png  used on input line 373.
 (pdftex.def)             Requested size: 455.2514pt x 133.77362pt.
-<images/strukturen_mit_zielart.png, id=176, 578.16pt x 216.81pt>
+<images/strukturen_mit_zielart.png, id=152, 578.16pt x 216.81pt>
 File: images/strukturen_mit_zielart.png Graphic file (type png)
 <use images/strukturen_mit_zielart.png>
 Package pdftex.def Info: images/strukturen_mit_zielart.png  used on input line 
 381.
 (pdftex.def)             Requested size: 455.24165pt x 170.7156pt.
-<images/str196/capture.jpg, id=177, 2569.6pt x 1445.4pt>
+<images/str196/capture.jpg, id=153, 2569.6pt x 1445.4pt>
 File: images/str196/capture.jpg Graphic file (type jpg)
 <use images/str196/capture.jpg>
 Package pdftex.def Info: images/str196/capture.jpg  used on input line 387.
 (pdftex.def)             Requested size: 455.2152pt x 256.05855pt.
-[17 <./images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png>] [18 <
-./images/strukturen_mit_zielart.png> <./images/str196/capture.jpg>]
-<images/winterquartiere_resultate.jpg, id=197, 580.3281pt x 520.8258pt>
+[12
+
+
+ <./images/wirkungskontrolle_systematisch_einzelnachweise_waffle.png>] [13 <./i
+mages/strukturen_mit_zielart.png> <./images/str196/capture.jpg>]
+<images/winterquartiere_resultate.jpg, id=174, 580.3281pt x 520.8258pt>
 File: images/winterquartiere_resultate.jpg Graphic file (type jpg)
 <use images/winterquartiere_resultate.jpg>
 Package pdftex.def Info: images/winterquartiere_resultate.jpg  used on input li
 ne 400.
 (pdftex.def)             Requested size: 455.24863pt x 408.571pt.
-<images/str238/10040255.jpg, id=198, 2457.18pt x 1842.885pt>
+<images/str238/10040255.jpg, id=175, 2457.18pt x 1842.885pt>
 File: images/str238/10040255.jpg Graphic file (type jpg)
 <use images/str238/10040255.jpg>
 Package pdftex.def Info: images/str238/10040255.jpg  used on input line 404.
 (pdftex.def)             Requested size: 223.04883pt x 167.28662pt.
-<images/str238/10040261.jpg, id=199, 2457.18pt x 1842.885pt>
+<images/str238/10040261.jpg, id=176, 2457.18pt x 1842.885pt>
 File: images/str238/10040261.jpg Graphic file (type jpg)
 <use images/str238/10040261.jpg>
 Package pdftex.def Info: images/str238/10040261.jpg  used on input line 404.
 (pdftex.def)             Requested size: 223.04883pt x 167.28662pt.
-<images/str238/10040263.jpg, id=200, 2457.18pt x 1842.885pt>
+<images/str238/10040263.jpg, id=177, 2457.18pt x 1842.885pt>
 File: images/str238/10040263.jpg Graphic file (type jpg)
 <use images/str238/10040263.jpg>
 Package pdftex.def Info: images/str238/10040263.jpg  used on input line 404.
 (pdftex.def)             Requested size: 223.04883pt x 167.28662pt.
-<images/str238/10040267.jpg, id=201, 2457.18pt x 1842.885pt>
+<images/str238/10040267.jpg, id=178, 2457.18pt x 1842.885pt>
 File: images/str238/10040267.jpg Graphic file (type jpg)
 <use images/str238/10040267.jpg>
 Package pdftex.def Info: images/str238/10040267.jpg  used on input line 404.
@@ -1123,17 +1127,17 @@ Underfull \hbox (badness 2726) in paragraph at lines 404--404
 [][] []
  []
 
-<images/str13956/09280317.jpg, id=202, 2457.18pt x 1842.885pt>
+<images/str13956/09280317.jpg, id=179, 2457.18pt x 1842.885pt>
 File: images/str13956/09280317.jpg Graphic file (type jpg)
 <use images/str13956/09280317.jpg>
 Package pdftex.def Info: images/str13956/09280317.jpg  used on input line 408.
 (pdftex.def)             Requested size: 455.24608pt x 341.43456pt.
-<images/str13956/capture.jpg, id=203, 2569.6pt x 1445.4pt>
+<images/str13956/capture.jpg, id=180, 2569.6pt x 1445.4pt>
 File: images/str13956/capture.jpg Graphic file (type jpg)
 <use images/str13956/capture.jpg>
 Package pdftex.def Info: images/str13956/capture.jpg  used on input line 408.
 (pdftex.def)             Requested size: 455.2152pt x 256.05855pt.
-<images/wirkungskontrolle_spontan_einzelnachweise_waffle.png, id=205, 677.1699p
+<images/wirkungskontrolle_spontan_einzelnachweise_waffle.png, id=182, 677.1699p
 t x 198.9834pt>
 File: images/wirkungskontrolle_spontan_einzelnachweise_waffle.png Graphic file 
 (type png)
@@ -1141,7 +1145,7 @@ File: images/wirkungskontrolle_spontan_einzelnachweise_waffle.png Graphic file
 Package pdftex.def Info: images/wirkungskontrolle_spontan_einzelnachweise_waffl
 e.png  used on input line 419.
 (pdftex.def)             Requested size: 455.2514pt x 133.77362pt.
-<images/wirkungskontrolle_spontan_strukturen_mit_zielart.png, id=206, 455.0601p
+<images/wirkungskontrolle_spontan_strukturen_mit_zielart.png, id=183, 455.0601p
 t x 113.7048pt>
 File: images/wirkungskontrolle_spontan_strukturen_mit_zielart.png Graphic file 
 (type png)
@@ -1149,33 +1153,33 @@ File: images/wirkungskontrolle_spontan_strukturen_mit_zielart.png Graphic file
 Package pdftex.def Info: images/wirkungskontrolle_spontan_strukturen_mit_zielar
 t.png  used on input line 427.
 (pdftex.def)             Requested size: 455.05899pt x 113.70451pt.
-[19 <./images/winterquartiere_resultate.jpg>] [20 <./images/str238/10040255.JPG
+[14 <./images/winterquartiere_resultate.jpg>] [15 <./images/str238/10040255.JPG
 > <./images/str238/10040261.JPG> <./images/str238/10040263.JPG> <./images/str23
-8/10040267.JPG>] [21 <./images/str13956/09280317.JPG> <./images/str13956/captur
+8/10040267.JPG>] [16 <./images/str13956/09280317.JPG> <./images/str13956/captur
 e.jpg>]
 Overfull \hbox (10.98335pt too wide) in paragraph at lines 437--438
 []\T1/lmss/m/n/10.95 Die grösste Un-sicher-heit in Bezug auf ihre Plau-si-bil-i
 tät beste-ht bei den Mauswiesel-Sichtungsmeldungen.
  []
 
-<images/beobachtungsmeldungen_filter.png, id=225, 569.0058pt x 142.131pt>
+<images/beobachtungsmeldungen_filter.png, id=201, 569.0058pt x 142.131pt>
 File: images/beobachtungsmeldungen_filter.png Graphic file (type png)
 <use images/beobachtungsmeldungen_filter.png>
 Package pdftex.def Info: images/beobachtungsmeldungen_filter.png  used on input
  line 442.
 (pdftex.def)             Requested size: 455.23999pt x 113.71361pt.
-[22 <./images/wirkungskontrolle_spontan_einzelnachweise_waffle.png> <./images/w
+[17 <./images/wirkungskontrolle_spontan_einzelnachweise_waffle.png> <./images/w
 irkungskontrolle_spontan_strukturen_mit_zielart.png>]
-<images/Layout_Beobachtungsmeldungen.png, id=236, 597.432pt x 421.0932pt>
+<images/Layout_Beobachtungsmeldungen.png, id=212, 597.432pt x 421.0932pt>
 File: images/Layout_Beobachtungsmeldungen.png Graphic file (type png)
 <use images/Layout_Beobachtungsmeldungen.png>
 Package pdftex.def Info: images/Layout_Beobachtungsmeldungen.png  used on input
  line 454.
 (pdftex.def)             Requested size: 455.25636pt x 320.8823pt.
-[23 <./images/beobachtungsmeldungen_filter.png>] [24 <./images/Layout_Beobachtu
+[18 <./images/beobachtungsmeldungen_filter.png>] [19 <./images/Layout_Beobachtu
 ngsmeldungen.png>]
 chapter 6.
-<images/ampel_gelb.png, id=250, 879.285pt x 312.16624pt>
+<images/ampel_gelb.png, id=227, 879.285pt x 312.16624pt>
 File: images/ampel_gelb.png Graphic file (type png)
 <use images/ampel_gelb.png>
 Package pdftex.def Info: images/ampel_gelb.png  used on input line 475.
@@ -1189,12 +1193,12 @@ File: images/ampel_gelb.png Graphic file (type png)
 <use images/ampel_gelb.png>
 Package pdftex.def Info: images/ampel_gelb.png  used on input line 476.
 (pdftex.def)             Requested size: 48.40778pt x 17.18587pt.
-<images/ampel_gruen.png, id=251, 879.285pt x 313.17pt>
+<images/ampel_gruen.png, id=228, 879.285pt x 313.17pt>
 File: images/ampel_gruen.png Graphic file (type png)
 <use images/ampel_gruen.png>
 Package pdftex.def Info: images/ampel_gruen.png  used on input line 477.
 (pdftex.def)             Requested size: 48.40778pt x 17.24112pt.
-<images/ampel_rot.png, id=252, 879.285pt x 312.16624pt>
+<images/ampel_rot.png, id=229, 879.285pt x 312.16624pt>
 File: images/ampel_rot.png Graphic file (type png)
 <use images/ampel_rot.png>
 Package pdftex.def Info: images/ampel_rot.png  used on input line 478.
@@ -1218,86 +1222,71 @@ Overfull \hbox (12.32085pt too wide) in paragraph at lines 471--482
  [][] 
  []
 
-<images/kontext.png, id=255, 569.0058pt x 426.6339pt>
+<images/kontext.png, id=232, 569.0058pt x 426.6339pt>
 File: images/kontext.png Graphic file (type png)
 <use images/kontext.png>
 Package pdftex.def Info: images/kontext.png  used on input line 489.
 (pdftex.def)             Requested size: 455.23999pt x 341.3336pt.
-[25
+[20
 
 
-] [26 <./images/ampel_gelb.png> <./images/ampel_gruen.png> <./images/ampel_rot.
-png> <./images/kontext.png>] [27] [28
-
-
-]
+] [21 <./images/ampel_gelb.png> <./images/ampel_gruen.png> <./images/ampel_rot.
+png> <./images/kontext.png>] [22]
 chapter 7.
-[29] [30
-
-
-]
-chapter 8.
-<images/massnahmen.jpg, id=298, 2333.71875pt x 981.6675pt>
+<images/massnahmen.jpg, id=257, 2333.71875pt x 981.6675pt>
 File: images/massnahmen.jpg Graphic file (type jpg)
 <use images/massnahmen.jpg>
-Package pdftex.def Info: images/massnahmen.jpg  used on input line 545.
+Package pdftex.def Info: images/massnahmen.jpg  used on input line 514.
 (pdftex.def)             Requested size: 455.23357pt x 191.49179pt.
+[23
 
-Underfull \hbox (badness 2005) in paragraph at lines 553--553
-[][][]|[]\T1/lmss/m/n/10.95 Zusam-men-stel-lung der Re-sul-tate ver-schieden-er
- Spurentunnel-Untersuchungen. n$[]$
- []
 
+ <./images/massnahmen.jpg>]
 <Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktur-1.pdf, id
-=299, 469.755pt x 325.215pt>
+=264, 469.755pt x 325.215pt>
 File: Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktur-1.pd
 f Graphic file (type pdf)
 <use Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktur-1.pdf
 >
 Package pdftex.def Info: Wiesel_und_Co_Schlussbericht_files/figure-latex/nachwe
-iseprostruktur-1.pdf  used on input line 627.
+iseprostruktur-1.pdf  used on input line 600.
 (pdftex.def)             Requested size: 455.24608pt x 315.17035pt.
-[31 <./images/massnahmen.jpg>] [32] [33 <./Wiesel_und_Co_Schlussbericht_files/f
-igure-latex/nachweiseprostruktur-1.pdf>]
+[24] [25 <./Wiesel_und_Co_Schlussbericht_files/figure-latex/nachweiseprostruktu
+r-1.pdf>]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     631.
-
-
-LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     631.
+(LaTeX3)     604.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     631.
+(LaTeX3)     604.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     604.
 
 (./Wiesel_und_Co_Schlussbericht.aux) ) 
 Here is how much of TeX's memory you used:
- 17476 strings out of 480971
- 295373 string characters out of 5906341
- 781035 words of memory out of 5000000
- 34249 multiletter control sequences out of 15000+600000
- 452771 words of font info for 67 fonts, out of 8000000 for 9000
+ 17429 strings out of 480971
+ 294642 string characters out of 5906341
+ 783300 words of memory out of 5000000
+ 34214 multiletter control sequences out of 15000+600000
+ 452452 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  111i,13n,116p,10643b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rata/AppData/Roaming/TinyTeX/te
-xmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/rata/AppData/Roaming/TinyTe
-X/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/rata/AppData/Roaming/TinyTe
-X/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/rata/AppData/Roaming/TinyTe
-X/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/rata/AppData/Roaming/TinyT
-eX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/rata/AppData/Roaming/Ti
-nyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/rata/AppData/Roaming/
-TinyTeX/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/Users/rata/AppData/Roam
-ing/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/Users/rata/AppData/
-Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/Users/rata/AppDa
-ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss9.pfb><c:/Users/rata/Ap
-pData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/r
-ata/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsso10.pfb><c:/Us
-ers/rata/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Wiesel_und_Co_Schlussbericht.pdf (33 pages, 10610968 bytes).
+xmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/Users/rata/AppData/Roaming/TinyTeX/t
+exmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/rata/AppData/Roaming/TinyTeX/t
+exmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/Users/rata/AppData/Roaming/TinyT
+eX/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/Users/rata/AppData/Roaming/T
+inyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/Users/rata/AppData/Roamin
+g/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss9.pfb><c:/Users/rata/AppData/Roa
+ming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/rata/AppDa
+ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsso10.pfb>
+Output written on Wiesel_und_Co_Schlussbericht.pdf (25 pages, 10583429 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 108 named destinations out of 1000 (max. 500000)
- 323 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 315 words of extra memory for PDF output out of 10000 (max. 10000000)
 

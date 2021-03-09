@@ -5,7 +5,7 @@ rmd_files:
  - "04_Methode.Rmd"
  - "05_Resultate.Rmd"
  - "06_Diskussion.Rmd"
- - "07_Literaturverzeichnis.Rmd"
+ # - "07_Literaturverzeichnis.Rmd"
  - "08_Anhang.Rmd"
 delete_merged_file: true
 language:

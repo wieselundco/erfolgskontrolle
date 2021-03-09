@@ -7,7 +7,7 @@
 
 (ref:massnahmen) Eine Zusammenstellung aller Massnahmen, die im Projekt gefördert werden. 
 
-```{r massnahmen, out.width="100%", fig.cap="(ref:massnahmen)"}
+```{r massnahmen, out.width="100%", fig.cap="(ref:massnahmen)", fig.pos = "H"}
 knitr::include_graphics("images/massnahmen.jpg")
 ```
 
@@ -31,9 +31,9 @@ nachweiserfolge_zusammenstellung <- nachweiserfolge_zusammenstellung %>%
 
 nachweiserfolge_zusammenstellung %>%
   select(c(1:4,6)) %>%
-  kbl(
-    col.names = c("Region","Jahr","n$_{+}$","n$_{Σ}$","Quelle"),
-    caption = "Zusammenstellung der Resultate verschiedener Spurentunnel-Untersuchungen. n$_{+}$ entspricht der Anzahl Spurentunnel mit Positivnachweisen, n$_{Σ}$ der Anzahl Spurentunnel der entsprechenden Untersuchung."
+  kbl(position = "H",
+    col.names = c("Region","Jahr","npos","ntot","Quelle"),
+    caption = "Zusammenstellung der Resultate verschiedener Spurentunnel-Untersuchungen. npos entspricht der Anzahl Spurentunnel mit Positivnachweisen, ntot der Anzahl Spurentunnel der entsprechenden Untersuchung."
     ) %>%
   kableExtra::group_rows(index = group_row_indices(nachweiserfolge_zusammenstellung$Typ))
 
@@ -51,18 +51,24 @@ spurenpapiere_systematisch2 <- spurenpapiere_systematisch %>%
 
 
 if(knitr::is_html_output()){
+  
+  spurenpapiere_systematisch2 %>%
+    select(-c(phase,struktur_id)) %>%
+    kbl(
+      col.names = c("Woche","Tierart","von","bis"),
+      caption = "Tabellarische Darstellung aller Nachweise aus Erhebung 1"
+    ) %>%
+    kableExtra::group_rows(index = group_row_indices(spurenpapiere_systematisch2$phase, prefix = "Phase: "), bold = TRUE) %>%
+    kableExtra::group_rows(index = group_row_indices(spurenpapiere_systematisch2$struktur_id,prefix = "Str"), bold = FALSE,italic = TRUE, hline_after = FALSE)
+  
+} 
 
-spurenpapiere_systematisch2 %>%
-  select(-c(phase,struktur_id)) %>%
-  kbl(
-    col.names = c("Woche","Tierart","von","bis"),
-    caption = "Tabellarische Darstellung aller Nachweise aus Erhebung 1"
-  ) %>%
-  kableExtra::group_rows(index = group_row_indices(spurenpapiere_systematisch2$phase, prefix = "Phase: "), bold = TRUE) %>%
-  kableExtra::group_rows(index = group_row_indices(spurenpapiere_systematisch2$struktur_id,prefix = "Str"), bold = FALSE,italic = TRUE, hline_after = FALSE)
+```
 
+```{r, results = "asis"}
+if(!knitr::is_html_output()){
+  pander::pandoc.p("Diese Tabelle ist nur in der Online-Version dieses Dokumentes Verfügbar.")
 }
-
 ```
 
 
@@ -90,6 +96,13 @@ if(knitr::is_html_output()){
 }
 
 
+```
+
+
+```{r, results = "asis"}
+if(!knitr::is_html_output()){
+  pander::pandoc.p("Diese Tabelle ist nur in der Online-Version dieses Dokumentes Verfügbar.")
+}
 ```
 
 

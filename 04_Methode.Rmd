@@ -102,11 +102,11 @@ if(run_full){
   
   ggsave("images/wirkungskontrolle_spontan_effort.png",height = 9,width = 17,units = "cm",scale = 1.2)
 } else{
-  
+  knitr::include_graphics("images/wirkungskontrolle_spontan_effort.png")
 }
 
 
-knitr::include_graphics("images/wirkungskontrolle_spontan_effort.png")
+
 ```
 
 

@@ -5,6 +5,7 @@ date: "Wädenswil, 9. März 2021"
 author: "Nils Ratnaweera, Inga Laas, Silvio Aegerter, Patrick Laube"
 site: "bookdown::bookdown_site"
 documentclass: scrbook
+classoption: oneside
 geometry: "left=2.5cm, right=2.5cm, top=2cm, bottom=2cm" 
 output: 
   bookdown::gitbook:
@@ -14,7 +15,6 @@ output:
         before: |
           <img src="images/zhaw_lsfm_schwarz.png" alt="ZHAW Logo" width="300">
         after: |
-      download: ["Wiesel_und_Co_Schlussbericht.pdf"]
   bookdown::pdf_book:
     keep_tex: yes
     includes:
@@ -291,7 +291,7 @@ erhebungswochen <- tribble(
 
 ```{r, echo = FALSE}
 # https://yihui.org/tinytex/r/#debugging
-# options(tinytex.verbose = TRUE)
+options(tinytex.verbose = TRUE)
 # You can, and perhaps should, remove this option after you finish debugging (to silence LaTeX, because you no longer need to read the full log).
 
 ```
