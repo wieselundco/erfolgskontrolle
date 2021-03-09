@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-]{scrbook}
+  oneside]{scrbook}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -94,6 +94,10 @@
 
 
 % \setcapindent{0em}
+
+
+% so we can use "H" in floats
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -338,10 +342,6 @@ Da der Datensatz mit beachtlichem Aufwand erhoben wurde, wird er in den vorliege
 
 
 
-\begin{verbatim}
-## NULL
-\end{verbatim}
-
 \begin{figure}
 \includegraphics[width=1\linewidth]{images/wirkungskontrolle_spontan_effort} \caption{Visualisierung der fortlaufend kontrollierten Asthaufen (nach Ansatz 1). Jedes Quadrat stellt eine Kalenderwoche aus einem Jahr einer Struktur dar. Das Quadrat ist gelb eingefärbt, wenn in der entsprechenden Kalenderwoche ein Spurenpapier vorhanden ist und grau, wenn keines vorhanden ist.}\label{fig:wirkungskontrollespontaneffort}
 \end{figure}
@@ -502,37 +502,6 @@ Das Projekt Wiesel \& Co am Zimmerberg hat einen nennenswerten Beitrag zur Förd
 
 Es ist sehr wünschenswert, dass die positiven Errungenschaften des Projektes, sowohl in sozialer wie auch ökologischer Sicht, auch nach Beendigung weitergetragen und gepflegt werden.
 
-\hypertarget{literaturverzeichnis}{%
-\chapter{Literaturverzeichnis}\label{literaturverzeichnis}}
-
-Blant, M. (2019): Biodiversite et rongeurs module 2: Suivi des populations de petits carnivores, paysage diversifié versus paysage pauvre - Rapport final novembre 2019. Unveröffentlichter Projektbericht.
-
-Boschi, C und Krummenacher, J (2018): Fördermassnahmen für Wiesel im Landwirtschaftsgebiet - Ein Ansatz zur Erhaltung der Biodiversität und zur Reduktion von Wühlmausschäden im Wiesland. WIN Wieselnetz und Agrofutura (Hrsg.) (\href{http://wieselnetz.ch/wp-content/uploads/2018/02/Heft_Wieselfoerdermassnahmen_D_Ed2_CMYK.pdf}{download})
-
-Capt, S. und Marchesi, P. (2010): Rapport du projet pilote 2009 - Koordination des Pilotprojets und der Vorbereitungen zu einem schweizweiten Musteliden Monitoring (Mustela nivalis, Mustela erminea, Mustela putorius) (unveröffentlicht)
-
-Capt, S. und Marchesi, P. (2012): Monitoring der Kleinmusteliden in der Schweiz -- Resultate der Erhebung 2010, Centre Suisse de Cartographie de la Faune (CSCF), Neuchâtel (\href{http://wieselnetz.ch/wp-content/uploads/2016/03/CSCF_Bericht_Monitoring_2010.pdf}{download})
-
-Dürst, A. C. und Vogler, H. (2019): Zustandsaufnahme der Kleinmustelidenfauna im Gebiet Wauwilermoos. Erhebung 2018 und Methodenvergleich. Landwirtschaft und Wald, Luzern (\href{https://lawa.lu.ch/-/media/LAWA/Dokumente/njf/jagd/wildhut/BE_Kleinmusteliden.pdf?la=de-CH\&hash=36F5693ABEA00418BC192264A90DDDC4D95D10A0}{download})
-
-Engler, D. (2013): Untersuchung der Nutzung unterschiedliche strukturierter Lebensräume durch Kleinmusteliden und Schläfer. Bachelorarbeit an der Zürcher Hochschule für Angewandte Wissenschaften (ZHAW), Wädenswil (unveröffentlicht)
-
-King, C. M und Edgar, R. L. (1977): Techniques for trapping and tracking stoats (\emph{Mustela erminea}); a review, and a new system, New Zealand Journal of Zoology, 4(2): 193-212
-
-Laas, I. (2017): Validierung eines Habitatmodells für das Hermelin (Mustela erminea) in der Region Zimmerberg. Semesterarbeit an der Zürcher Hochschule für Angewandte Wissenschafte (ZHAW), Wädenswil (unveröffentlicht)
-
-Müri, H. und Weinberger, I. (2013): Konzept Erfolgskontrolle Umsetzungskontrolle -- Attraktivitätskontrolle -- Populationskontrolle. WIN Wieselnetz - Erfolgskontrolle Wiesellandschaft (unveröffentlicht)
-
-Müri, H. und Weinberger, I. (2015): Wiesellandschaft Schweiz: Erfolgskontrolle für intensive Wieselförderprojekte Kurzfassung für Projektleiter. WIN Wieselnetz - Erfolgskontrolle Wiesellandschaft (unveröffentlicht)
-
-Steffen (2018) Erfolgskontrolle Wieselburgen 2018. Projektbericht (unveröffentlicht)
-
-Steffen, F. (2020): Nachweiswahrscheinlichkeit von Hermelinen (Mustela erminea) mittels Spurentunnel. Bachelorarbeit. Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil (noch nicht veröffentlicht)
-
-Ratnaweera, N. (2015): Lebensraumanalyse für Hermelin (\emph{Mustela erminea}), Mauswiesel (\emph{Mustela nivalis}) und Iltis (\emph{Mustela putorius}) am Zimmerberg. Projektarbeit. Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil
-
-Ratnaweera, N., Sigrist, B., Graf, R. (2020): Wieselfördermassnahmen in intensiven Obstkulturen in der Region Martigny VS - Erfolgskontrolle mittels Spurentunnel und Fotofallenboxen. Projektbericht. Zürcher Hochschule für Angewandte Wissenschaften ZHAW, Wädenswil (nicht veröffentlicht)
-
 \hypertarget{anhang}{%
 \chapter{Anhang}\label{anhang}}
 
@@ -541,20 +510,20 @@ Ratnaweera, N., Sigrist, B., Graf, R. (2020): Wieselfördermassnahmen in intensi
 
 
 
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[width=1\linewidth]{images/massnahmen} \caption{Eine Zusammenstellung aller Massnahmen, die im Projekt gefördert werden.}\label{fig:massnahmen}
 \end{figure}
 
 \hypertarget{anhang-zusammenstellung}{%
 \section{Anhang B: Nachweiserfolge anderer Studien}\label{anhang-zusammenstellung}}
 
-\begin{table}
+\begin{table}[H]
 
-\caption{\label{tab:unnamed-chunk-9}Zusammenstellung der Resultate verschiedener Spurentunnel-Untersuchungen. n$_{+}$ entspricht der Anzahl Spurentunnel mit Positivnachweisen, n$_{S}$ der Anzahl Spurentunnel der entsprechenden Untersuchung.}
+\caption{\label{tab:unnamed-chunk-9}Zusammenstellung der Resultate verschiedener Spurentunnel-Untersuchungen. npos entspricht der Anzahl Spurentunnel mit Positivnachweisen, ntot der Anzahl Spurentunnel der entsprechenden Untersuchung.}
 \centering
 \begin{tabular}[t]{l|l|r|r|l}
 \hline
-Region & Jahr & n\$\_\{+\}\$ & n\$\_\{S\}\$ & Quelle\\
+Region & Jahr & npos & ntot & Quelle\\
 \hline
 \multicolumn{5}{l}{\textbf{Sonstige Studie}}\\
 \hline
@@ -614,8 +583,12 @@ Region & Jahr & n\$\_\{+\}\$ & n\$\_\{S\}\$ & Quelle\\
 \hypertarget{anhang-c-erhebung-1-rohdaten}{%
 \section{Anhang C: Erhebung 1 (Rohdaten)}\label{anhang-c-erhebung-1-rohdaten}}
 
+Diese Tabelle ist nur in der Online-Version dieses Dokumentes Verfügbar.
+
 \hypertarget{anhang-d-datensatz-a-rohdaten}{%
 \section{Anhang D: Datensatz A (Rohdaten)}\label{anhang-d-datensatz-a-rohdaten}}
+
+Diese Tabelle ist nur in der Online-Version dieses Dokumentes Verfügbar.
 
 \hypertarget{anhang-e-hermelin-nachweise-nach-struktur}{%
 \section{Anhang E: Hermelin-Nachweise nach Struktur}\label{anhang-e-hermelin-nachweise-nach-struktur}}
