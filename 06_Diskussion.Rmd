@@ -1,0 +1,105 @@
+# Diskussion und Fazit
+
+## Vergleich mit den Zielsetzungen von WIN Wieselnetz und anderen Studien
+
+Müri und Weinberger (2015) legen für Projekte im Rahmen von «Wiesellandschaft Schweiz» der Stiftung WIN Wieselnetz Ziele fest, um Erfolgskontrollen quantitativ messen zu können. Dabei wird davon ausgegangen, dass Spurentunnel jeweils beködert werden. Sollte diese Beköderung nicht stattfinden, müssten die Ziele gemäss dem Bericht «nach unten angepasst werden» (Müri und Weinberger, 2014).
+
+In der vorliegenden Untersuchung wurde auf eine Beköderung verzichtet. In diesem Sinne wurden die Ziele für die vorliegende Wirkungskontrolle folgendermassen adaptiert: Anstatt dass die Ziele für jedes Jahr getrennt beurteilt werden, werden die Daten aus beiden Jahren zusammen geführt und über beide Jahre beurteilt (siehe Tabelle \@ref(tab:winziele)). Dieser Ansatz trägt auch den starken Schwankungen in den Wieselpopulationen Rechnung.
+
+
+```{r winziele, fig.cap="Zieldefinition in Anlehnung an Müri und Weinberger (2014) sowie ihre Beurteilung und Bemerkungen."}
+
+win_ziele <- read_csv("input/WIN_ziele.csv") %>%
+  mutate(Beurteilung = case_when(
+    Beurteilung == -1~"rot",
+    Beurteilung == 0~"gelb",
+    Beurteilung == 1~"gruen",
+  ))
+
+
+ampel_ratio = 311/876
+
+
+ampel_width = 200
+win_ziele %>%
+  mutate(Beurteilung = "") %>%
+  kbl(booktabs = TRUE, caption = "Zieldefinition in Anlehnung an Müri und Weinberger (2014) sowie ihre Beurteilung und Bemerkungen.") %>%
+  kable_styling(latex_options = "striped") %>%
+  column_spec(2, latex_column_spec = "p{65mm}") %>%
+  column_spec(4, latex_column_spec = "p{60mm}") %>%
+  column_spec(3, image = spec_image(paste0("images/ampel_", win_ziele$Beurteilung, ".png"), ampel_width,ampel_width*ampel_ratio),latex_valign = "m")
+
+```
+
+
+Der Zielvergleich fällt folgendermassen aus: Ein Ziel wurden erreicht (Ziel 3), drei Ziele wurden teils erreicht (Ziel 1, 2 und 5) und ein weiteres Ziel konnte nicht erreicht werden (Ziel 4). Grund für die Nicht- bzw. Teilerreichung der Ziele 1 und 4 ist das Fehlen von Mauswieselnachweisen in Erhebung 1 (Systematische Beobachtung der Asthaufen). Dabei ist jedoch zu betonen, dass der Nachweis bei kleinen, fragilen Populationen ungleich schwieriger zu erbringen ist als in Gebieten mit höherem Mauswiesel Vorkommen. Das Projekt hat, insbesondere in der kurzen Laufzeit, nur einen kleinen Einfluss auf die Mauswiesel-Populationsstärke. In diesem Sinne ist das Teilerreichen der Ziele 1 und 5 nicht durch Fehler im Projekt zu erklären, sondern vielmehr eine ökologische Gegebenheit. Zudem zeigt der Austausch mit Projektleitern und Ökologen anderer Wieselprojekte in der Schweiz, dass die gesetzten Ziele (Tabelle \@ref(tab:winziele)) sehr hochgesteckt sind. Aus diesem Grund wurden die Resultate anderer Studien zusammengetragen und in Abbildung \@ref(fig:kontext) visualisiert. Dargestellt sind die «Nachweiserfolge» von verschiedenen Studien, definiert als der Anteil der Spurentunnel, die mindestens einen Hermelinnachweis erbracht haben. Die Abbildung macht deutlich, dass die vorliegende Studie einen sehr hohen Nachweiserfolg zu verzeichnen hat.
+
+(ref:kontext) Der Nachweiserfolg aus Spurentunneluntersuchungen anderer Studien (für Quellenangaben siehe Anhang \@ref(anhang-zusammenstellung))
+
+```{r kontext, fig.cap="(ref:kontext)", out.width="100%"}
+if(run_full){
+  nachweiserfolg_ref <- read_delim("input/nachweiserfolge_zusammenstellung.csv", ";") %>%
+    mutate(
+      Studie = paste(Bezeichnung,Jahr),
+      nachweiserfolg = tunnel_mit_nachweisen / tunnel_total,
+      erfolgskontrolle_name = ifelse(erfolgskontrolle,"Erfolgskontrollen","andere Untersuchungen"),
+    )
+  
+  vorliegende_studie <- c("Horgen 2019", "Horgen 2020", "Horgen 2014 - 2019")
+  
+  
+  nachweiserfolg_smry <- nachweiserfolg_ref %>%
+    group_by(erfolgskontrolle_name) %>%
+    summarise(
+      tunnel = median(tunnel_total),
+      nachweiserfolg_median = median(nachweiserfolg),
+      nachweiserfolg_q75 = quantile(nachweiserfolg, 0.75),
+      nachweiserfolg_q25 = quantile(nachweiserfolg, 0.25),
+    ) %>%
+    mutate(
+      Studie = "Verteilung"
+    )
+  
+  nachweiserfolg_ref2 <- bind_rows(nachweiserfolg_ref, nachweiserfolg_smry) %>%
+    mutate(
+      Studie = fct_reorder(Studie,nachweiserfolg),
+      erfolgskontrolle_name = fct_rev(erfolgskontrolle_name),
+      Studie = fct_relevel(Studie,"Verteilung",after = 0)
+    )
+  
+  
+  
+  nachweiserfolg_ref2%>%
+    ggplot(aes(nachweiserfolg,Studie, size = tunnel_total)) +
+    geom_point() +
+    geom_point(data = ~filter(.,Studie %in% vorliegende_studie),colour = "red") +
+    geom_point(data = ~filter(.,!Studie %in% vorliegende_studie)) +
+    geom_pointrange(aes(x = nachweiserfolg_median, xmin = nachweiserfolg_q25, xmax = nachweiserfolg_q75, y = Studie),inherit.aes = FALSE) +
+    labs(size = "Anzahl Spurentunnel", y = "", x = "Nachweiserfolg") +
+    scale_x_continuous(labels = scales::percent_format(),limits = c(0,1)) +
+    # scale_size(limits = c(20,100)) +
+    # lims(x = c(0,100)) +
+    theme_light() +
+    theme(legend.position = "bottom") +
+    facet_grid(erfolgskontrolle_name~., scales = "free_y",space = "free")
+  
+  
+  ggsave("images/kontext.png",height = 15, width = 20, units = "cm")
+} else{
+  knitr::include_graphics("images/kontext.png")
+}
+
+
+```
+
+## Fazit
+
+Die Fördermassnahmen, die im Rahmen des Projektes realisiert wurden, werden von den Zielarten deutlich genutzt. Der Anteil der Spurentunnel mit Hermelinnachweisen im Vergleich zur totalen Anzahl eingesetzter Spurentunnel ist ausserordentlich hoch und liegt bei 49 % bzw. 36 % über die beiden Jahre 2019 / 2020 und bei knapp 70 % über beide Jahre kummuliert. Diese Tatsache wiederspiegelt die sinnvolle Planung und Umsetzung der Strukturen. Es existieren nach unserem Wissen wenige Projekte in der Schweiz, wo eine solch hohe Anzahl an Asthaufen zur Förderung von Kleinraubtieren erstellt wurden.
+
+Zu bedenken ist die extrem kurze Lebensdauer der realisierten Asthaufen: Nach ein paar Jahren ohne Pflege zerfallen selbst massive Asthaufen zu wirkungslosen Kleinststrukturen. Nur eine periodische Aufstockung durch Zusatzmaterial verhindert diesen Zerfall. Dieser Tatsache wurde im Projekt folgendermassen entgegengewirkt: Massnahmen, die sich nach zwei Jahren noch in einem guten Zustanden befanden, wurden durch eine zweite Bonusauszahlung finanziell vergütet. Für eine langfristige Instandhaltung der Naturschutzmassnahmen fehlen jedoch konkrete Strukturen und finanzielle Ressourcen. Die Projektträgerschaft ist sich diesem Problem bewusst und ist bemüht, das Projekt nach Abschluss in eine nachhaltige und beständige Form zu überführen. Konkrete Details dazu stehen zum Zeitpunkt der Verfassung dieses Berichtes noch nicht vor.
+
+Ein Wermutstropfen des Projektes ist die Unklarheit in Bezug auf die lokale Mauswieselpopulation. Das Wissen über die Verbreitung von Mauswieseln in der Schweiz ist aufgrund der schlechten Fassbarkeit dieser Tierart sehr lückenhaft. Auch nach Durchführung des Projekts ist über die Ausdehnung der Population im Projektperimeter sowie ihrer Beständigkeit über die Zeit nicht viel bekannt. Das Projekt hat aber wesentlich dazu beigetragen, dass einige sichere Mauswiesel-Beobachtungen und Nachweise erbracht werden konnten. Das Projekt hat auch weiter dazu beigetragen, dass effektivere Methoden für den Nachweis von Mauswieseln und anderen Kleinsäugern weiterentwickelt und getestet werden (siehe [zhaw.ch/iunr/tubecam](http://www.zhaw.ch/iunr/tubecam)).
+
+Das Projekt Wiesel &amp; Co am Zimmerberg hat einen nennenswerten Beitrag zur Förderung der Tierarten im Bezirk Horgen geleistet. In sozialer Hinsicht ist es der Trägerschaft gelungen, die Kräfte aller lokalen Naturschutzvereine zu bündeln und den Kontakt zu zahlreichen Landwirten\*innen, Jäger\*innen, Förster\*innen, Schulklassen und Freiwilligen zu finden und die Sensibilisierung auf die Zielarten zu fördern. Aus ökologischer Hinsicht ist die Umsetzung einer beachtlichen Anzahl von Aufwertungsmassnahmen gelungen, welche nachweislich durch zwei der drei im Projekt festgesetzten Tierarten genutzt wurden.
+
+Es ist sehr wünschenswert, dass die positiven Errungenschaften des Projektes, sowohl in sozialer wie auch ökologischer Sicht, auch nach Beendigung weitergetragen und gepflegt werden.

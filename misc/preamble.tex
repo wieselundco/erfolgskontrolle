@@ -1,0 +1,24 @@
+% for tables
+\usepackage{booktabs}
+
+% To change fontsize of table and figure captions and temporarily add caption to the bottom
+% https://tex.stackexchange.com/questions/234777/changing-figure-caption-text-size
+\usepackage{caption}
+% \captionsetup[figure]{font=small}
+
+
+% Set the language for "Figure" (Abbildung), Table (Tabelle) etc in Latex
+\usepackage[german]{babel}
+
+% make a custom titlepage
+% https://stackoverflow.com/questions/45963505/coverpage-and-copyright-notice-before-title-in-r-bookdown
+\let\oldmaketitle\maketitle
+\AtBeginDocument{\let\maketitle\relax}
+
+
+% Changes the font to arial 
+% https://stackoverflow.com/questions/877597/how-do-you-change-the-document-font-in-latex
+\renewcommand{\familydefault}{\sfdefault}
+
+
+% \setcapindent{0em}

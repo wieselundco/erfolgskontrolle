@@ -1,0 +1,313 @@
+---
+title: "Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg"
+subtitle: "Schlussbericht"
+date: "Wädenswil, 9. März 2021"
+author: "Nils Ratnaweera, Inga Laas, Silvio Aegerter, Patrick Laube"
+site: "bookdown::bookdown_site"
+documentclass: scrbook
+geometry: "left=2.5cm, right=2.5cm, top=2cm, bottom=2cm" 
+output: 
+  bookdown::gitbook:
+    css: "misc/mystyle.css"
+    config:
+      toc:
+        before: |
+          <img src="images/zhaw_lsfm_schwarz.png" alt="ZHAW Logo" width="300">
+        after: |
+      download: ["Wiesel_und_Co_Schlussbericht.pdf"]
+  bookdown::pdf_book:
+    keep_tex: yes
+    includes:
+      in_header: misc/preamble.tex
+      before_body: misc/titlepage.tex
+    
+---
+
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+run_full = FALSE
+get_remote = FALSE
+
+if(!run_full){
+  if(get_remote){
+    warning("if run_full is set to FALSE, get remote set to FALSE automaically")
+    get_remote <- FALSE
+  }
+}
+
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+require(kableExtra)
+require(dplyr)
+require(readr)
+require(tidyr)
+require(stringr)
+require(ggplot2)
+require(forcats)  
+require(lubridate)
+require(glue)
+
+group_row_indices <- function(col, prefix = "", suffix = "", sep = ""){
+  setNames(rle(col)[[1]],paste(prefix,rle(col)[[2]],suffix,sep = sep))
+}
+
+youtube <- function(id, text = ""){
+  require(knitr)
+  require(glue)
+  # Careful, you must set the css accordingly (.container and .video)
+  # https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed
+  # .container {
+  #     position: relative;
+  #     width: 100%;
+  #     height: 0;
+  #     padding-bottom: 56.25%;
+  #  }
+  # .video {
+  #     position: absolute;
+  #     top: 0;
+  #     left: 0;
+  #     width: 100%;
+  #     height: 100%;
+  # }
+  
+  if(knitr::is_html_output()){
+    glue::glue('<div class="container"> <iframe src="//www.youtube.com/embed/{id}" frameborder="0" allowfullscreen class="video"></iframe> </div><caption class = "caption">{text}</caption>')
+  }
+}
+```
+
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+if(run_full){
+  
+  
+  require(sf)
+  require(readxl)  
+  require(tidyr)
+  require(purrr)
+  require(ggplot2)
+  require(forcats)
+  require(ggwaffle)
+  
+  require(cowplot)
+
+  
+}
+
+
+if(get_remote){
+  require(RPostgres)
+  
+  conn = DBI::dbConnect(
+    RPostgres::Postgres(),
+    host = "svma-s-01348.zhaw.ch", 
+    dbname = "wieselundco",
+    user = rstudioapi::askForPassword("Database user"),
+    password = rstudioapi::askForPassword("Database password")
+  )
+  
+  if(!DBI::dbIsValid(conn)){
+      stop("Databaseconnection could not be established")
+  } else{
+      
+    ############################################################################    
+    ## Run this part only if database connection can be established ############
+    ############################################################################ 
+
+    
+    
+    
+    ## Beobachtungsmeldungen ################################################### 
+    
+    beobachtungsmeldungen <- read_sf(conn, 
+                                     query = "SELECT datum, name,name_genauigkeit_datum, name_sichtungsart,name_lagegenauigkeit, status,erfassungsdatum, geom  FROM wico.beobachtungsmeldungen_joined", 
+                                     crs = 2056)
+    
+    st_write(beobachtungsmeldungen, "input_sensitive/beobachtungsmeldungen.gpkg",append = FALSE)
+  
+    
+    ## Strukturen ############################################################## 
+
+    strukturen_alle <- DBI::dbGetQuery(conn, "SELECT * FROM wico.strukturen WHERE datum IS NOT NULL and x IS NOT NULL") %>%
+      st_as_sf(coords = c("x","y"), crs = 2056)
+    
+    st_write(strukturen_alle, "input_sensitive/strukturen_alle.gpkg", append = FALSE)
+    
+    }
+}
+
+
+if(run_full){
+  
+  beobachtungsmeldungen <- read_sf("input_sensitive/beobachtungsmeldungen.gpkg")
+    
+  strukturen_alle <- read_sf("input_sensitive/strukturen_alle.gpkg")
+  
+  ## Bezirksgrenze Horgen ###################################################### 
+
+  horgen <- read_sf("input/bezirksgrenze_horgen.gpkg")
+  
+  
+  ## Wirkungskontrolle Informell ##############################################
+  sheetpath <- "input_sensitive/Wirkungskontrolle_informell_2019-11-09.xlsx"
+  
+  sheets <- excel_sheets(sheetpath)
+  
+  sheets <- sheets[!str_detect(sheets, "MASTER|blanko")]
+  
+  nachweise_spontan <- sheets %>%
+    map_dfr(function(x){
+      
+      sheet_i <- read_xlsx(sheetpath, x) %>%
+        dplyr::select(1:16) %>%
+        mutate(
+          Struktur = x,
+          Jahr = as.integer(Jahr)
+        ) %>%
+        fill(Jahr)
+      
+      sheet_fil <- sheet_i %>%
+        filter(Ctrl != 0, Jahr != "Summe", Jahr != "Anz Ctrl") 
+      
+      sheet_fil
+    }) 
+  
+  
+  date_from_week <- function(year, week, weekday = 1){
+    require(ISOweek)
+    w <- paste0(year, "-W", sprintf("%02d", week), "-", weekday)
+    ISOweek2date(w)
+  }
+    
+  nachweise_spontan <- nachweise_spontan %>%
+    filter(!is.na(KW)) %>%
+    mutate(date = date_from_week(Jahr,KW))
+  
+  write_csv(nachweise_spontan, "input_sensitive/wirkungskontrolle_informell_cleand.csv")
+  
+  
+  ## Beobachtete Strukturen (Formell) ##########################################
+  
+  asthaufen_monitoring <- read_csv("input_sensitive/Standorte_Monitoring_Asthaufen_2019-2020.csv") %>%
+    transmute(struktur_id = spurentunnel_nummer, monitoring = TRUE)
+  
+  winterquartier_monitoring <- read_csv("input_sensitive/winterquartiere.csv") %>%
+    transmute(struktur_id, monitoring = TRUE)
+  
+  monitoring <- rbind(asthaufen_monitoring, winterquartier_monitoring) 
+  
+  strukturen_alle <- strukturen_alle %>%
+    full_join(monitoring, by = "struktur_id") %>%
+    mutate(monitoring = !is.na(monitoring)) %>%
+    arrange((monitoring))
+
+  
+  ## Farben ####################################################################
+
+  janein_cols <- c("cornflowerblue","coral3") %>%
+    set_names(c("ja","nein"))
+  
+  tierart_farben <- RColorBrewer::brewer.pal(6, "Set2") %>%
+  magrittr::set_names(c("Hermelin","Mauswiesel","Iltis","Baummarder","Steinmarder","andere Arten"))
+  
+  
+  ## Erhebung Formell #########################################################
+  
+  sheets <- c("Phase_1_2019", "Phase_2_2020")
+  
+  spurenpapiere_systematisch <- map_dfr(sheets, function(sheet_i){
+    spurenpapiere_systematisch <-read_xlsx("input//Rohdaten_Erhebung_2019_2020.xlsx",sheet = sheet_i,  skip = 0) %>%
+      as_tibble()
+    
+    periode_int <- as.character(spurenpapiere_systematisch[1,])[!is.na(as.integer(spurenpapiere_systematisch[1,]))]
+    periode_dat <- as.character(spurenpapiere_systematisch[2,])[!is.na(as.integer(spurenpapiere_systematisch[1,]))]
+    perioden <- tibble(periode_int = periode_int, periode_dat = periode_dat) %>%
+      separate(periode_dat, c("von","bis")," - ") %>%
+      mutate_at(2:3,~as.Date(.,format = "%d.%m.%Y"))
+    
+    
+    spurenpapiere_systematisch <- as.data.frame(spurenpapiere_systematisch)
+    spurenpapiere_systematisch[1,] <- zoo::na.locf(as.character(spurenpapiere_systematisch[1,]))
+    
+    spurenpapiere_systematisch <- as_tibble(spurenpapiere_systematisch)
+    
+    spurenpapiere_systematisch <- spurenpapiere_systematisch[,which(str_detect(as.character(as.vector(spurenpapiere_systematisch[3,])),"Struktur ID|Hermelin|Mauswiesel|Iltis|Mäuse|Steinmarder|Siebenschläfer|Hauskatze|Frosch|Igel|Vogel|Eichhörnchen|Fuchs|Dachs|unbekannt"))]
+    # |Ratte|||
+    
+    cnames <- paste(spurenpapiere_systematisch[1,],spurenpapiere_systematisch[3,],sep = "_")
+    cnames[1] <- "struktur_id"
+    colnames(spurenpapiere_systematisch) <- cnames
+    
+    spurenpapiere_systematisch <- tail(spurenpapiere_systematisch,-3) %>%
+      mutate(struktur_id = as.integer(struktur_id))
+    
+    spurenpapiere_systematisch <- spurenpapiere_systematisch %>%
+      pivot_longer(-1,names_to = c("Periode","tierart"),names_sep = "_",values_to = "Detektion") %>%
+      mutate(Detektion = !is.na(Detektion)) %>%
+      rename(kontrollperiode = Periode) %>%
+      left_join(perioden, by = c("kontrollperiode" = "periode_int")) %>%
+      mutate(phase = sheet_i)
+  }) %>%
+    mutate(
+      phase = factor(phase,levels = sheets,labels = c("Herbst '19","Frühling '20")),
+      zielart = str_detect(tierart,"Iltis|Hermelin|Mauswiesel")
+    )
+  
+  write_csv(spurenpapiere_systematisch, "input/spurenpapiere_systematisch.csv")
+  
+  
+} else{
+  
+  
+  nachweise_spontan <- read_csv("input_sensitive/wirkungskontrolle_informell_cleand.csv")
+  spurenpapiere_systematisch <- read_csv("input/spurenpapiere_systematisch.csv")
+
+}
+
+## Erhebungswochen ###########################################################
+  
+erhebungswochen <- tribble(
+  ~von, ~bis,
+  "26.08.2019", "05.09.2019",
+  "05.09.2019", "17.09.2019",
+  "17.09.2019", "25.09.2019",
+  "25.09.2019", "07.10.2019",
+  "01.04.2020", "09.04.2020",
+  "09.04.2020", "16.04.2020",
+  "16.04.2020", "23.04.2020",
+  "23.04.2020", "01.05.2020",
+  "01.05.2020", "09.05.2020",
+  "09.05.2020", "18.05.2020"
+) %>%
+  mutate_all(~as.Date(., format = "%d.%m.%Y")) %>%
+  mutate(
+    Phase = ifelse(year(von) == 2019,"Herbst 2019","Frühling 2020"),
+    Phase = fct_rev(Phase)
+  )
+  
+
+```
+
+
+```{r, echo = FALSE}
+# https://yihui.org/tinytex/r/#debugging
+# options(tinytex.verbose = TRUE)
+# You can, and perhaps should, remove this option after you finish debugging (to silence LaTeX, because you no longer need to read the full log).
+
+```
+
+# Zusammenfassung
+
+Im Projekt «Wiesel &amp; Co am Zimmerberg» werden die Tierarten Hermelin, Mauswiesel und Iltis mit gezielten Massnahmen gefördert. Dabei werden im Wesentlichen fünf Arten Typen von Aufwertungsmassnahmen umgesetzt: Winterquartiere, Ast- und Steinhaufen, Gebüschgruppen sowie Grossstrukturen. Von diesen Massnahmen sind bis heute über 450 realisiert worden.
+
+Das Ziel der vorliegenden Wirkungskontrolle ist festzustellen, ob diese Aufwertungsmassnahmen von den Zielarten genutzt werden. Dafür wurden Ast- und Steinhaufen mit Spurentunnel und Winterquartieren mit Fotofallen systematisch beobachtet. Zudem wurden zur Beurteilung zwei weitere Datensätzen zugezogen, die im Rahmen des Naturschutz-Projekts erhoben wurden: Dabei handelt es sich die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
+
+In der **Spurentunnel Untersuchung** sind 39 Asthaufen innerhalb von zwei Jahren über einen Zeitraum von je 6 Wochen systematisch untersucht worden. Die Untersuchungen fanden im Herbst 2019 sowie im Frühling 2020 statt. Anhand der Spurenpapiere konnten über beide Perioden 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis gemacht werden. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Über beide Untersuchungsperioden hinweg konnten in 27 von 39 Asthaufen (69 %) mindestens eine Zielart detektiert werden
+
+In der **Fotofallen-Überwachung** der Winterquartiere konnten in 5 von 11 untersuchten Standorten (45%) mindestens eine Zielart festgestellt werden. Jedes Winterquartier wurde von Kleintieren genutzt: Von Dachsen, Eichhörnchen, Füchsen, Mardern, Fröschen, Vögeln, Mäusen und Hauskatzen.
+
+In der unsystematischen, **spontanen Spurentunnel-Untersuchung** konnte in den insgesamt 32 beobachteten Asthaufen das Hermelin 51 und der Iltis 23-mal nachgewiesen werden. Auch in dieser Erhebung konnte das Mauswiesel nicht nachgewiesen werden. In 25 der 32 Asthaufen (78%) konnte mindestens eine der Zielarten festgestellt werden.
+
+Von den 555 **Sichtungsmeldungen** , die im Projekt gesammelt wurden, sind 428 Meldungen verwendbar. Diese zeigen, dass das Hermelin weitestgehend im ganzen Bezirk beobachtet werden konnte, so auch in stark fragmentierten und dicht besiedelten Kulturflächen. Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften zu verzeichnen. Deutlich weniger Sichtungsmeldungen sind zum Iltis eingegangen. Dies wiederspiegelt einerseits die tiefere Anzahl Individuen im Vergleich zur Hermelinpopulation, ist aber mit Sicherheit auch der Lebensweise dieser Tierart geschuldet: Als dämmerungs- und nachtaktives Tier, welches sich auch gerne im Waldrandbereich aufhaltet, ist der Iltis seltener zu beobachten als das Hermelin.
+
+Ebenfalls sind Beobachtungen von Mauswieseln sehr rar und über den ganzen Bezirk verteilt. Auch hier ist das ein Resultat von zwei verschiedenen Faktoren bestimmt: Das Mauswiesel ist sehr schwierig zu beobachten und zuverlässig von Hermelinen zu unterscheiden. Es kann aber zusätzlich davon ausgegangen werden, dass die Mauswieselpopulation im Bezirk eher klein und fragil ist.
