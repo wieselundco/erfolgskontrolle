@@ -7,20 +7,6 @@ site: "bookdown::bookdown_site"
 documentclass: scrbook
 classoption: oneside
 geometry: "left=2.5cm, right=2.5cm, top=2cm, bottom=2cm" 
-output: 
-  bookdown::gitbook:
-    css: "misc/mystyle.css"
-    config:
-      toc:
-        before: |
-          <img src="images/zhaw_lsfm_schwarz.png" alt="ZHAW Logo" width="300">
-        after: |
-  bookdown::pdf_book:
-    keep_tex: yes
-    includes:
-      in_header: misc/preamble.tex
-      before_body: misc/titlepage.tex
-    
 ---
 
 
@@ -30,7 +16,7 @@ get_remote = FALSE
 
 if(!run_full){
   if(get_remote){
-    warning("if run_full is set to FALSE, get remote set to FALSE automaically")
+    warning("if run_full is set to FALSE, get_remote set to FALSE automatically")
     get_remote <- FALSE
   }
 }
@@ -200,18 +186,23 @@ if(run_full){
   ## Beobachtete Strukturen (Formell) ##########################################
   
   asthaufen_monitoring <- read_csv("input_sensitive/Standorte_Monitoring_Asthaufen_2019-2020.csv") %>%
-    transmute(struktur_id = spurentunnel_nummer, monitoring = TRUE)
+    transmute(struktur_id = spurentunnel_nummer, monitoring = TRUE, monitoring_typ = "spurentunnel")
   
   winterquartier_monitoring <- read_csv("input_sensitive/winterquartiere.csv") %>%
-    transmute(struktur_id, monitoring = TRUE)
+    transmute(struktur_id, monitoring = TRUE, monitoring_typ = "fotofalle")
   
   monitoring <- rbind(asthaufen_monitoring, winterquartier_monitoring) 
   
   strukturen_alle <- strukturen_alle %>%
-    full_join(monitoring, by = "struktur_id") %>%
+    left_join(monitoring, by = "struktur_id") %>%
     mutate(monitoring = !is.na(monitoring)) %>%
     arrange((monitoring))
 
+  strukturen_alle %>%
+    filter(monitoring) %>%
+    select(struktur_id, struktur_typ, monitoring_typ) %>%
+    write_sf("images/spurentunnel_fotofallen_standorte.gpkg")
+  
   
   ## Farben ####################################################################
 

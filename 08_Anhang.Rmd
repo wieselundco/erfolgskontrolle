@@ -50,7 +50,7 @@ if(knitr::is_html_output()){
     ) %>%
     kableExtra::group_rows(index = group_row_indices(spurenpapiere_systematisch2$phase, prefix = "Phase: "), bold = TRUE) %>%
     kableExtra::group_rows(index = group_row_indices(spurenpapiere_systematisch2$struktur_id,prefix = "Str"), bold = FALSE,italic = TRUE, hline_after = FALSE)
-  
+
 } 
 
 ```
@@ -96,26 +96,40 @@ if(!knitr::is_html_output()){
 ```
 
 
-## Anhang D: Hermelin-Nachweise nach Struktur
+## Anhang D: Nachweise pro Struktur (Erhebung 1)
 
 
-(ref:nachweiseprostruktur) Anzahl Hermelinnachweise pro untersuchte Struktur in Erhebung 1.
 
 ```{r nachweiseprostruktur, fig.cap="(ref:nachweiseprostruktur)"}
 spurenpapiere_systematisch3 <- spurenpapiere_systematisch %>%
   filter(zielart) %>%
-  group_by(struktur_id) %>%
+  group_by(struktur_id, tierart) %>%
   summarise(anzahl_nachweise = sum(Detektion))  %>%
-  arrange(desc(anzahl_nachweise)) %>%
-  ungroup() %>%
-  mutate(
-    struktur_id = fct_reorder(as.character(struktur_id),anzahl_nachweise)
+  pivot_wider(names_from = tierart, values_from = anzahl_nachweise) %>%
+  mutate(total = sum(Hermelin,Iltis,Mauswiesel)) %>%
+  arrange(desc(total)) 
+
+caption <- "Anzahl Nachweise der drei Zielarten pro Struktur (Daten aus Erhebung 1)."
+
+if(knitr::is_html_output()){
+  library(DT)
+  datatable(spurenpapiere_systematisch3,
+            caption = caption,
+            extensions = 'Buttons', options = list(
+              dom = 'Bfrtip',
+              buttons = c('csv', 'excel')
+            )
   )
-
-ggplot(spurenpapiere_systematisch3, aes(anzahl_nachweise,struktur_id)) +
-  geom_col() +
-  labs(x = "Anzahl Hermelinnachweise",y = "Struktur ID") +
-  theme_light()
-
+} else{
+  kable(spurenpapiere_systematisch3,caption = caption)
+}
 ```
+
+
+## Anhang E: Geodaten für Erhebung 1 & 2
+
+
+Ein Geopackage mit allen untersuchten Standorten (Erhebung 1 & 2) kann hier heruntergeladen werden: [spurentunnel_fotofallen_standorte.gpkg](https://github.com/wieselundco/erfolgskontrolle/raw/master/images/spurentunnel_fotofallen_standorte.gpkg)
+
+
 
