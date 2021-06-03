@@ -76,8 +76,7 @@ youtube <- function(id, text = ""){
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
 if(run_full){
-  
-  
+  library(WieselundCoData)
   require(sf)
   require(readxl)  
   require(tidyr)
@@ -85,207 +84,18 @@ if(run_full){
   require(ggplot2)
   require(forcats)
   require(ggwaffle)
-  
   require(cowplot)
-
-  
 }
 
 
-if(get_remote){
-  require(RPostgres)
-  
-  conn = DBI::dbConnect(
-    RPostgres::Postgres(),
-    host = "svma-s-01348.zhaw.ch", 
-    dbname = "wieselundco",
-    user = rstudioapi::askForPassword("Database user"),
-    password = rstudioapi::askForPassword("Database password")
-  )
-  
-  if(!DBI::dbIsValid(conn)){
-      stop("Databaseconnection could not be established")
-  } else{
-      
-    ############################################################################    
-    ## Run this part only if database connection can be established ############
-    ############################################################################ 
 
-    
-    
-    
-    ## Beobachtungsmeldungen ################################################### 
-    
-    beobachtungsmeldungen <- read_sf(conn, 
-                                     query = "SELECT datum, name,name_genauigkeit_datum, name_sichtungsart,name_lagegenauigkeit, status,erfassungsdatum, geom  FROM wico.beobachtungsmeldungen_joined", 
-                                     crs = 2056)
-    
-    st_write(beobachtungsmeldungen, "input_sensitive/beobachtungsmeldungen.gpkg",append = FALSE)
-  
-    
-    ## Strukturen ############################################################## 
-
-    strukturen_alle <- DBI::dbGetQuery(conn, "SELECT * FROM wico.strukturen WHERE datum IS NOT NULL and x IS NOT NULL") %>%
-      st_as_sf(coords = c("x","y"), crs = 2056)
-    
-    st_write(strukturen_alle, "input_sensitive/strukturen_alle.gpkg", append = FALSE)
-    
-    }
-}
-
-
-if(run_full){
-  
-  beobachtungsmeldungen <- read_sf("input_sensitive/beobachtungsmeldungen.gpkg")
-    
-  strukturen_alle <- read_sf("input_sensitive/strukturen_alle.gpkg")
-  
-  ## Bezirksgrenze Horgen ###################################################### 
-
-  horgen <- read_sf("input/bezirksgrenze_horgen.gpkg")
-  
-  
-  ## Wirkungskontrolle Informell ##############################################
-  sheetpath <- "input_sensitive/Wirkungskontrolle_informell_2019-11-09.xlsx"
-  
-  sheets <- excel_sheets(sheetpath)
-  
-  sheets <- sheets[!str_detect(sheets, "MASTER|blanko")]
-  
-  nachweise_spontan <- sheets %>%
-    map_dfr(function(x){
-      
-      sheet_i <- read_xlsx(sheetpath, x) %>%
-        dplyr::select(1:16) %>%
-        mutate(
-          Struktur = x,
-          Jahr = as.integer(Jahr)
-        ) %>%
-        fill(Jahr)
-      
-      sheet_fil <- sheet_i %>%
-        filter(Ctrl != 0, Jahr != "Summe", Jahr != "Anz Ctrl") 
-      
-      sheet_fil
-    }) 
-  
-  
-  date_from_week <- function(year, week, weekday = 1){
-    require(ISOweek)
-    w <- paste0(year, "-W", sprintf("%02d", week), "-", weekday)
-    ISOweek2date(w)
-  }
-    
-  nachweise_spontan <- nachweise_spontan %>%
-    filter(!is.na(KW)) %>%
-    mutate(date = date_from_week(Jahr,KW))
-  
-  write_csv(nachweise_spontan, "input_sensitive/wirkungskontrolle_informell_cleand.csv")
-  
-  
-  ## Beobachtete Strukturen (Formell) ##########################################
-  
-  asthaufen_monitoring <- read_csv("input_sensitive/Standorte_Monitoring_Asthaufen_2019-2020.csv") %>%
-    transmute(struktur_id = spurentunnel_nummer, monitoring = TRUE, monitoring_typ = "spurentunnel")
-  
-  winterquartier_monitoring <- read_csv("input_sensitive/winterquartiere.csv") %>%
-    transmute(struktur_id, monitoring = TRUE, monitoring_typ = "fotofalle")
-  
-  monitoring <- rbind(asthaufen_monitoring, winterquartier_monitoring) 
-  
-  strukturen_alle <- strukturen_alle %>%
-    left_join(monitoring, by = "struktur_id") %>%
-    mutate(monitoring = !is.na(monitoring)) %>%
-    arrange((monitoring))
-
-  strukturen_alle %>%
-    filter(monitoring) %>%
-    select(struktur_id, struktur_typ, monitoring_typ) %>%
-    write_sf("images/spurentunnel_fotofallen_standorte.gpkg")
-  
-  
-  ## Farben ####################################################################
-
-  janein_cols <- c("cornflowerblue","coral3") %>%
-    set_names(c("ja","nein"))
-  
-  tierart_farben <- RColorBrewer::brewer.pal(6, "Set2") %>%
-  magrittr::set_names(c("Hermelin","Mauswiesel","Iltis","Baummarder","Steinmarder","andere Arten"))
-  
-  
-  ## Erhebung Formell #########################################################
-  
-  sheets <- c("Phase_1_2019", "Phase_2_2020")
-  
-  spurenpapiere_systematisch <- map_dfr(sheets, function(sheet_i){
-    spurenpapiere_systematisch <-read_xlsx("input//Rohdaten_Erhebung_2019_2020.xlsx",sheet = sheet_i,  skip = 0) %>%
-      as_tibble()
-    
-    periode_int <- as.character(spurenpapiere_systematisch[1,])[!is.na(as.integer(spurenpapiere_systematisch[1,]))]
-    periode_dat <- as.character(spurenpapiere_systematisch[2,])[!is.na(as.integer(spurenpapiere_systematisch[1,]))]
-    perioden <- tibble(periode_int = periode_int, periode_dat = periode_dat) %>%
-      separate(periode_dat, c("von","bis")," - ") %>%
-      mutate_at(2:3,~as.Date(.,format = "%d.%m.%Y"))
-    
-    
-    spurenpapiere_systematisch <- as.data.frame(spurenpapiere_systematisch)
-    spurenpapiere_systematisch[1,] <- zoo::na.locf(as.character(spurenpapiere_systematisch[1,]))
-    
-    spurenpapiere_systematisch <- as_tibble(spurenpapiere_systematisch)
-    
-    spurenpapiere_systematisch <- spurenpapiere_systematisch[,which(str_detect(as.character(as.vector(spurenpapiere_systematisch[3,])),"Struktur ID|Hermelin|Mauswiesel|Iltis|Mäuse|Steinmarder|Siebenschläfer|Hauskatze|Frosch|Igel|Vogel|Eichhörnchen|Fuchs|Dachs|unbekannt"))]
-    # |Ratte|||
-    
-    cnames <- paste(spurenpapiere_systematisch[1,],spurenpapiere_systematisch[3,],sep = "_")
-    cnames[1] <- "struktur_id"
-    colnames(spurenpapiere_systematisch) <- cnames
-    
-    spurenpapiere_systematisch <- tail(spurenpapiere_systematisch,-3) %>%
-      mutate(struktur_id = as.integer(struktur_id))
-    
-    spurenpapiere_systematisch <- spurenpapiere_systematisch %>%
-      pivot_longer(-1,names_to = c("Periode","tierart"),names_sep = "_",values_to = "Detektion") %>%
-      mutate(Detektion = !is.na(Detektion)) %>%
-      rename(kontrollperiode = Periode) %>%
-      left_join(perioden, by = c("kontrollperiode" = "periode_int")) %>%
-      mutate(phase = sheet_i)
-  }) %>%
-    mutate(
-      phase = factor(phase,levels = sheets,labels = c("Herbst '19","Frühling '20")),
-      zielart = str_detect(tierart,"Iltis|Hermelin|Mauswiesel")
-    )
-  
-  write_csv(spurenpapiere_systematisch, "input/spurenpapiere_systematisch.csv")
-  
-  
-} else{
-  
-  
-  nachweise_spontan <- read_csv("input_sensitive/wirkungskontrolle_informell_cleand.csv")
-  spurenpapiere_systematisch <- read_csv("input/spurenpapiere_systematisch.csv")
-
-}
+janein_cols <- c("cornflowerblue","coral3")
+tierart_farben <- RColorBrewer::brewer.pal(6, "Set2")
+tierart_farben <- setNames(tierart_farben, c("Hermelin", "Mauswiesel", "Iltils", "Baummarder", "Steinmarder","andere Arten"))
 
 ## Erhebungswochen ###########################################################
   
-erhebungswochen <- tribble(
-  ~von, ~bis,
-  "26.08.2019", "05.09.2019",
-  "05.09.2019", "17.09.2019",
-  "17.09.2019", "25.09.2019",
-  "25.09.2019", "07.10.2019",
-  "01.04.2020", "09.04.2020",
-  "09.04.2020", "16.04.2020",
-  "16.04.2020", "23.04.2020",
-  "23.04.2020", "01.05.2020",
-  "01.05.2020", "09.05.2020",
-  "09.05.2020", "18.05.2020"
-) %>%
-  mutate_all(~as.Date(., format = "%d.%m.%Y")) %>%
-  mutate(
-    Phase = ifelse(year(von) == 2019,"Herbst 2019","Frühling 2020"),
-    Phase = fct_rev(Phase)
-  )
+
   
 
 ```
