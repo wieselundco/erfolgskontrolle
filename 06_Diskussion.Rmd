@@ -44,7 +44,7 @@ Eine Erklärungsmöglichkeit für die hohe Nachweisquote ist die grosse Dichte a
 
 ```{r kontext, fig.cap="(ref:kontext)", out.width="100%"}
 if(run_full){
-  nachweiserfolg_ref <- read_delim("input/nachweiserfolge_zusammenstellung.csv", ";") %>%
+  nachweiserfolg_ref <- nachweiserfolge_zusammenstellung %>%
     mutate(
       Studie = paste(Bezeichnung,Jahr),
       nachweiserfolg = tunnel_mit_nachweisen / tunnel_total,
