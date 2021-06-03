@@ -125,9 +125,9 @@ if(run_full){
 
 ## Datensatz B: Beobachtungsmeldungen
 
-Seit Anbeginn des Projekts wurde die örtliche Bevölkerung dazu aufgerufen, Beobachtungen von Kleinraubtieren über das eigens dafür eingerichtete Webtool zu melden. Meldungen wurden auch via einen Flyer sowie per Mail oder auch mündlich aufgenommen. Beobachtungsmeldungen wurden durch den Projektleiter (Stefan Keller) verifiziert und in «unsicher», «plausibel» sowie «sicher» eingeteilt.
+Seit Anbeginn des Projekts wurde die örtliche Bevölkerung dazu aufgerufen, Beobachtungen von Kleinraubtieren über das eigens dafür eingerichtete Webtool zu melden. Meldungen wurden auch via einen Flyer sowie per Mail oder auch mündlich aufgenommen. Beobachtungsmeldungen wurden durch den Projektleiter (Stefan Keller) verifiziert und in "unsicher", "plausibel" sowie "sicher" eingeteilt.
 
-Auf diese Weise sind über 500 Meldungen zusammengetragen worden. Alle Meldungen, die über andere Kanäle als das Webtool erfasst wurden, sind vom Projektleiter gesammelt und periodisch in die Datenbank integriert worden. Diese erhielten als «Erfassungsdatum» jeweils das Datum dieser Überführung in die Datenbank, so sind im zeitlichen Verlauf der Meldungen deutliche Spitzen erkennbar (siehe Abbildung \@ref(fig:beobachtungsmeldungenhistogramm)).
+Auf diese Weise sind über 500 Meldungen zusammengetragen worden. Alle Meldungen, die über andere Kanäle als das Webtool erfasst wurden, sind vom Projektleiter gesammelt und periodisch in die Datenbank integriert worden. Diese erhielten als "Erfassungsdatum" jeweils das Datum dieser Überführung in die Datenbank, so sind im zeitlichen Verlauf der Meldungen deutliche Spitzen erkennbar (siehe Abbildung \@ref(fig:beobachtungsmeldungenhistogramm)).
 
 (ref:beobachtungsmeldungenhistogramm) Anzahl gemeldete Beobachtungen pro Jahr, in dem die Meldung in die Datenbank eingetragen wurden. Die hohen Spitzen sind dadurch begründet, dass mehrere, schriftlich vorliegende Meldungen vom Projektleiter in der Datenbank erfasst wurden.
 
