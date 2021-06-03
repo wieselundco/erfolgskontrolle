@@ -4,9 +4,9 @@
 
 Die Attraktivitätskontrolle besteht aus der Beobachtung zweier verschiedener Massnahmentypen in jeweils zwei Zeitperioden. Ergänzend dazu liegen zwei Datensätze vor, die während der Projektdauer unter Einbezug von interessierten Laien erzeugt wurden (sogenannte Bürgerwissenschaften). Diese Erhebungen und Datensätze werden nachstehend beschrieben und sind in Tabelle \@ref(tab:erhebungswochen) zusammengefasst.
 
-Bei **Erhebung 1** handelt es sich um eine systematische Kontrolle ausgewählter Asthaufen während zweier Jahre (2019 / 2020) über einen definierten Zeitraum. Diese Erhebungen wurden nach einheitlicher Vorgehensweise durchgeführt. Im gleichen Zeitraum wurden in **Erhebung 2** sogenannte Winterquartiere (siehe [wieselundco.ch/bonus](http://www.wieselundco.ch/bonus)), ebenfalls systematisch beobachtet. **Erhebung 3** ist eine Aufnahme und Beurteilung qualitativer Merkmale derjenigen Asthaufen, in desen Spurentunneln  am meisten und am wenigsten Zielarten nachgewiesen wurden. 
+Bei **Erhebung 1** handelt es sich um eine systematische Kontrolle ausgewählter Asthaufen während zweier Jahre (2019 / 2020) über einen definierten Zeitraum. Diese Erhebungen wurden nach einheitlicher Vorgehensweise durchgeführt. Im gleichen Zeitraum wurden in **Erhebung 2** sogenannte Winterquartiere (siehe [wieselundco.ch/bonus](http://www.wieselundco.ch/bonus)), ebenfalls systematisch beobachtet. **Erhebung 3** ist eine Aufnahme und Beurteilung qualitativer Merkmale derjenigen Asthaufen, in dessen Spurentunneln  am meisten und am wenigsten Zielarten nachgewiesen wurden. 
 
-Bei **Datensatz A** handelt es sich um die Resultate von spontan durchgeführten Kontrollen einzelner Asthaufen und Grossstrukturen mit Fotofallen und / oder Spurentunneln. Diese Kontrollen dienten unter anderem auch dazu, Freiwilligen, Naturschutzvereinsmitgliedern sowie Schüler\*innen einen tieferen Einblick in das Projekt und dessen Ziele zu geben. Bei **Datensatz B** handelt es sich umSichtungsmeldungen aus der Bevölkerung, die seit Projektbeginn über ein Onlinetool erfasst werden ([wieselundco.ch/sichtungskarte](http://www.wieselundco.ch/beobachtung)).
+Bei **Datensatz A** handelt es sich um die Resultate von spontan durchgeführten Kontrollen einzelner Asthaufen und Grossstrukturen mit Fotofallen und / oder Spurentunneln. Diese Kontrollen dienten unter anderem auch dazu, Freiwilligen, Naturschutzvereins-Mitgliedern sowie Schüler\*innen einen tieferen Einblick in das Projekt und dessen Ziele zu geben. Bei **Datensatz B** handelt es sich um Sichtungsmeldungen aus der Bevölkerung, die seit Projektbeginn über ein Onlinetool erfasst werden ([wieselundco.ch/sichtungskarte](http://www.wieselundco.ch/beobachtung)).
 
 
 ```{r erhebungswochen}
@@ -74,23 +74,27 @@ Zur Auswertung der Bild- und Videoaufnahmen wurden sämtliche Dateien einzeln du
 
 ## Erhebung 3: Qualitative Beurteilung der Asthaufen zur Erörterung attraktivitätsfördernder Faktoren
 
-Die Erhebung erfolgte am 30. und 31. März. Von den 50 kontrollierten Asthaufen wurden jene 12 ohne Nachweise ("unattraktivsten") und jene 13 mit 2 bis 7 Nachweisen ("attraktivsten") qualitativ beurteilt. Dabei wurden 10 Parameter erhoben und jeweils einer der Klassen 0 bis 4 
+Die Erhebung erfolgte am 30. und 31. März 2021. Von den 50 kontrollierten Asthaufen wurden jene 12 ohne Nachweise ("unattraktivsten") und jene 13 mit 2 bis 7 Nachweisen ("attraktivsten") qualitativ beurteilt. Dabei wurden 10 Parameter erhoben und jeweils einer der Klassen 0 bis 4 
 zugeteilt. Die Parameter und ihre Skalenrichtung ist in TABELLE (Zellen D1 bis M1 von WK_Qualitativ_Ah_20210408.xlsx) 
 [WK_Qualitativ_Ah_20210408.xlsx](https://github.com/wieselundco/erfolgskontrolle/files/6588503/WK_Qualitativ_Ah_20210408.xlsx)
-ersichtlich. Fast alle Parameter weisen keine exakt abgrenzbaren Klassifizierungskriterien auf. Die Erhebung kommt bei den Parametern "Störung", "Beuteangebot", "Katzen" und "andere Feinde" einer Schätzung gleich; die Beurteilung erfolgte aufgrund von Indizien wie der Nähe zu Wanderrouten bzw. der Sichtung von Maushaufen bzw. Siedlungsnähe bzw. der Lebensraumqualität für grössere Prädatoren. Dagegen ist das Alter eindeutig bestimmbar und Volumen sowie Astmaterial kann direkt dokumentiert und somit relativ zu den anderen Asthaufen beurteilt werden. (grobes Astmaterial; Klasse 4 vgl. Foto x: 2021-03-31 11.30.21-1_snip.jpg . feines Astmaterial; Klasse 1 vgl. Foto y 2021-03-31 16.23.53_korr.jpg). 
-Zur Auswertung wurden die Klassen 0 bis 2 (am Bsp. Astmaterial: "feines Material") und 3 bis 4 (am Bsp. Astmaterial: "grobes Material") zusammengefasst. In der Folge wurde je Klasse die Anzahl der  Asthaufen mit Nachweisen jener Anzahl ohne Nachweise in einem statistischen Verfahren (NAME?) gegenüber gestellt. 
+ersichtlich. Fast alle Parameter weisen keine exakt abgrenzbaren Klassifizierungskriterien auf. Die Erhebung kommt bei den Parametern "Störung", "Beuteangebot", "Katzen" und "andere Feinde" einer Schätzung gleich; die Beurteilung erfolgte aufgrund von Indizien wie der Nähe zu Wanderrouten bzw. der Sichtung von Maushaufen bzw. Siedlungsnähe bzw. der Lebensraumqualität für grössere Prädatoren. Dagegen ist das Alter eindeutig bestimmbar und Volumen sowie Astmaterial kann direkt dokumentiert und somit relativ zu den anderen Asthaufen beurteilt werden. (grobes Astmaterial; Klasse 4 vgl. \@ref(fig:feinundgrob) links und feines Astmaterial; Klasse 1 vgl. Foto \@ref(fig:feinundgrob) rechts). 
 
-![2021-03-31 16 23 53_korr](https://user-images.githubusercontent.com/49158554/120577635-e1bc1a80-c424-11eb-9afd-4383f6613540.jpg)
-![2021-03-31 11 30 21-1_snip](https://user-images.githubusercontent.com/49158554/120577678-eda7dc80-c424-11eb-82d7-972ed21c2b6a.jpg)
+Zur Auswertung wurden die Klassen 0 bis 2 (am Bsp. Astmaterial: "feines Material") und 3 bis 4 (am Bsp. Astmaterial: "grobes Material") zusammengefasst. In der Folge wurde je Klasse die Anzahl der  Asthaufen mit Nachweisen jener Anzahl ohne Nachweise in einem statistischen Verfahren 
+<!-- NAME? -->
+gegenüber gestellt.
+
+```{r feinundgrob}
+knitr::include_graphics(c("images/feines_astmaterial.jpg","images/grobes_astmaterial.jpg"))
+```
 
 
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
 
-Im Datensatz werden alle 32 Asthaufen berücksichtigt, die unmittelbar nach der Erstellung im Rahmen von Aktionstagen mit Spurentunnel ausgestattet und über einen variablen Zeitraum kontrolliert wurden (siehe Anhang C). In ca. 50% der Erhebungen wurden ergänzend Fotofallen eingesetzt. Die Erhebung dauerte in der Regel deutlich länger als 6 Wochen (höhere Detektionswahrscheinlichkeit), die Kontrollintervalle waren oft grösser als 2 Wochen (vermehrter Datenausfall). Die Erstellung (und Attraktivitätskontrolle) der Asthaufen verteilt sich über die Jahre 2014 bis 2019, wobei es 2016 zu einer Häufung kam. Es kam zu allen Jahreszeiten zu Kontrollaktivitäten, vermehrt im Frühling. Folgende Faktoren erschweren die Verwendung dieser Daten für einen Zielvergleich:
+Im Datensatz werden alle 32 Asthaufen berücksichtigt, die unmittelbar nach der Erstellung im Rahmen von Aktionstagen mit Spurentunnel ausgestattet und über einen variablen Zeitraum kontrolliert wurden (siehe Anhang C \@ref(#anhang-datensatz-a)). In ca. 50% der Erhebungen wurden ergänzend Fotofallen eingesetzt. Die Erhebung dauerte in der Regel deutlich länger als 6 Wochen (höhere Detektionswahrscheinlichkeit), die Kontrollintervalle waren oft grösser als 2 Wochen (vermehrter Datenausfall). Die Beobachtung der Asthaufen verteilt sich über die Jahre 2014 bis 2019, wobei es 2016 zu einer Häufung kam. Es kam zu allen Jahreszeiten zu Kontrollaktivitäten, vermehrt im Frühling. Folgende Faktoren erschweren die Verwendung dieser Daten für einen Zielvergleich:
 
 - die Kontrollen in der Kontrollphase (Dauer und Regelmässigkeit) wurden nicht einheitlich durchgeführt
-- leere Spurenpapiere wurden nicht systematisch dokumentiert. Es ist nicht genau nachvollziehbar, wie intensiv eine Struktur beobachtet wurde. Der Nachweiserfolg kann somit kaum in den Kontext des Nachweisefforts gesetzt werden.
-- die Auswahl der Standorte erfolgte vor allem aus praktischen Überlegungen (Aktionstage, Interesse der Teilnehmenden)
+- leere Spurenpapiere wurden nicht systematisch dokumentiert. Es ist nicht genau nachvollziehbar, wie intensiv eine Struktur beobachtet wurde. Der Nachweiserfolg kann somit nicht in den Kontext des Nachweisefforts gesetzt werden.
+- die Auswahl der Standorte erfolgte vor allem aus praktischen Überlegungen (z.B. Interesse der Teilnehmenden an Aktionstagen)
 
 Da der Datensatz mit beachtlichem Aufwand erhoben wurde, wird er in den vorliegenden Bericht integriert. Abbildung \@ref(fig:wirkungskontrollespontaneffort) zeigt, für welche Kalenderwochen in welchen Jahren für eine Struktur ein Spurenpapier vorhanden ist. Dabei stellt jedes Quadrat eine Kalenderwoche einer Struktur dar und ist gelb eingefärbt, wenn ein Spurenpapier für diesen Zeitraum vorhanden ist.
 
