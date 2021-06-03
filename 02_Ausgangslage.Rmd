@@ -4,7 +4,7 @@ Das Projekt "Wiesel & Co am Zimmerberg" ist eine gemeinsame Aktion der Naturschu
 
 Zur Förderung dieser Zielarten werden in erster Linie ihre Lebensräume aufgewertet. Dazu werden natürliche Strukturen wie Asthaufen und Hecken geschaffen, um mehr Deckungsmöglichkeiten, grösseren Beuteerfolg und bessere Bedingungen für die Aufzucht von Jungen zu schaffen.
 
-Konkret werden im Projekt Massnahmen gefördert, welche in der Broschüre _Fördermassnahmen für Wiesel im Landwirtschaftsgebiet_^[Verfügbar unter http://wieselnetz.ch/de/uber-win/downloads/] beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und teilweise finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (Abbildung \@ref(fig:massnahmen)):
+Konkret werden im Projekt Massnahmen gefördert, welche unter http://wieselundco.ch/projekt/massnahmen beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und teilweise finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (Abbildung \@ref(fig:massnahmen)):
 
 1. Ast- / Steinhaufen
 2. Winterquartiere
@@ -12,9 +12,9 @@ Konkret werden im Projekt Massnahmen gefördert, welche in der Broschüre _Förd
 4. Grossstrukturen
 5. Sanierung von Feldscheunen
 
-Von den etwa 450 Massnahmen, die im Rahmen des Naturschutzprojekts umgesetzt wurden, handelt es sich bei über 60 % um Asthaufen. Etwa 20 % der Massnahmen sind Gebüschgruppen und weitere 10 % Steinhaufen. Winterquartiere und Grossstrukturen bilden die restlichen 10 % zu jeweils gleichen Teilen.
+Von den etwa 450 Massnahmen, die im Rahmen des Naturschutzprojekts umgesetzt wurden, handelt es sich bei über 60 % um Asthaufen. Etwa 20 % der Massnahmen sind Gebüschgruppen und weitere 10 % Steinhaufen. Winterquartiere und Grossstrukturen bilden die restlichen 10 %.
 
-Das Ziel der vorliegenden Wirkungskontrolle ist festzustellen, ob die Aufwertungsmassnahmen für die Zielarten attraktiv sind und von ihnen genutzt werden. Dafür werden Ast- und Steinhaufen mit Spurentunnel und Winterquartieren mit Fotofallen systematisch beobachtet. Zudem werden zur Beurteilung zwei weitere Datensätzen zugezogen, die bereits vorliegen und nicht erhoben werden müssen. Dabei handelt es sich die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
+Die vorliegende Wirkungskontrolle soll feststellen, ob die Aufwertungsmassnahmen für die Zielarten attraktiv sind und von ihnen genutzt werden. Dafür werden Ast- und Steinhaufen mit Spurentunnel und Winterquartiere mit Fotofallen systematisch beobachtet. Zudem werden zur Beurteilung zwei weitere Datensätze des Projekts beigezogen, die bereits vorliegen. Dabei handelt es sich um die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
 
 
 (ref:massnahmen) Massnahmen, die im Projekt gefördert werden (Quelle: [wieselundco.ch/bonus](http://www.wieselundco.ch/bonus))
