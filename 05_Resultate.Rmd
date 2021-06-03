@@ -124,7 +124,8 @@ youtube("4gVpcvPIrNA", "Die ganze Sequenz des Hermelins in Str.196")
 
 ## Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen
 
-Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \@ref(fig:winterquartiereresultate)). Im Folgejahr, 2020, gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Frühling 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45%) mindestens eine Zielart festgestellt werden konnte. Jedes Winterquartier wurde von zahlreichen Tierarten genutzt: Von Dachsen, Eichhörnchen, Füchsen, Mardern, Fröschen, Vögeln und Mäusen.
+Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \@ref(fig:winterquartiereresultate)). Im Folgejahr, 2020, gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Frühling 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45%) mindestens eine Zielart festgestellt werden konnte. Dies entspricht 4 Nachweisen des Hermelins und 3 vdes Iltis. Alle 3 Winterquartiere in Feldscheunen (sanierte Streuhütten) wiesen Nachweise auf (2 des Hermelins, 3 des Iltis).
+Jedes Winterquartier wurde von zahlreichen Tierarten genutzt: Von Dachsen, Eichhörnchen, Füchsen, Mardern, Fröschen, Vögeln und Mäusen.
 
 Die Daten der Standorte Str116 und Str198 konnten 2019 und die von Str12747 im Jahr 2020 nicht ausgewertet werden. Die Kameras an den genannten Standorten wiesen eine Fehlfunktion auf und erfassten so viele Bilder, dass eine Auswertung der Daten unverhältnismässig viel Zeit in Anspruch genommen hätte.
 
@@ -217,6 +218,18 @@ youtube("ISg0ZA5Fvgo", "Die ganze Sequenz des Hermelins in Str.13956")
 
 ```
 
+## Erhebung 3: Qualitative Beurteilung der Asthaufen zur Erörterung attraktivitätsfördernder Faktoren
+
+Einzig beim Parameter "Astmaterial" konnte zwischen der Anzahl Nachweisen (Attraktivität) und der Klassifizierung (grob bzw. fein) ein signifikanter Zusammenhang berechnet werden. 
+
+	mit Nachweis	ohne Nachweis	Total
+feines Material (Klasse 1-2)	1	8	9
+grobes Material (Klasse 3-4)	12	4	16
+Total	13	12	25
+
+	grobes Astermaterial (Klasse 3-4) erhöht die Wahrscheinlichkeit für einen Hermelin-Nachweis (p = 0.0085)
+
+
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
 
 In den insgesamt 32 beobachteten Asthaufen konnte das Hermelin 51 und der Iltis 23-mal nachgewiesen werden (siehe Abbildung \@ref(fig:wirkungskontrollespontaneinzelnachweisewaffle)): Wie auch schon in der systematischen Wirkungskontrolle, konnte auch in dieser Erhebung das Mauswiesel nicht nachgewiesen werden. Dafür wurde der Iltis einiges häufiger detektiert, in der systematischen Wirkungskontrolle konnten nur zwei Iltisnachweise erbracht werden.
@@ -299,7 +312,7 @@ Die grösste Unsicherheit in Bezug auf ihre Plausibilität besteht bei den Mausw
 knitr::include_graphics("images/beobachtungsmeldungen_filter.png")
 ```
 
-Das Hermelin konnte weitestgehend im ganzen Bezirk beobachtet werden, so auch in stark fragmentierten und dicht besiedelten Kulturflächen der Gemeinde Kilchberg und der Halbinsel Au (siehe Abbildung \@ref(fig:layoutbeobachtungsmeldungen)). Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften wie Horgenberg, Hirzel, Schönenberg zu verzeichnen. Weitestgehend ohne Meldungen sind die Siedlungsgebiete selbst sowie der Sihlwald und das Gemeindegebiet Hütten. Während das Fehlen in Siedlungsgebieten und grösseren Waldflächen ökologisch bedingt ist, ist das Ausbleiben von Meldungen in der Gemeinde Hütten mit grösster Wahrscheinlichkeit ein Artefakt davon, dass in Hütten kein aktiver Naturschutzverein besteht.
+Das Hermelin konnte weitestgehend im ganzen Bezirk beobachtet werden, so auch in stark fragmentierten und dicht besiedelten Kulturflächen der Gemeinde Kilchberg und der Halbinsel Au (siehe Abbildung \@ref(fig:layoutbeobachtungsmeldungen)). Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften wie Horgenberg, Hirzel, Schönenberg zu verzeichnen. Weitestgehend ohne Meldungen sind die Siedlungsgebiete selbst sowie der Sihlwald und das Gemeindegebiet Hütten. Während das Fehlen in Siedlungsgebieten und grösseren Waldflächen ökologisch bedingt ist, ist das Ausbleiben von Meldungen in der Gemeinde Hütten mit grösster Wahrscheinlichkeit ein Artefakt davon, dass in Hütten weniger intensiv beobachtet und gemeldet wird.
 
 Deutlich weniger Sichtungsmeldungen sind zum Iltis eingegangen. Dies wiederspiegelt einerseits die tiefere Anzahl Individuen im Vergleich zur Hermelinpopulation, ist aber auch mit Sicherheit der Lebensweise dieser Tierart geschuldet: Als dämmerungs- und nachtaktives Tier, welches sich auch gerne im Waldrandbereich aufhaltet, ist der Iltis seltener zu beobachten als das Hermelin.
 
