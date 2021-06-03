@@ -220,16 +220,24 @@ youtube("ISg0ZA5Fvgo", "Die ganze Sequenz des Hermelins in Str.13956")
 
 ## Erhebung 3: Qualitative Beurteilung der Asthaufen zur Erörterung attraktivitätsfördernder Faktoren
 
-Einzig beim Parameter "Astmaterial" konnte zwischen der Anzahl Nachweisen (Attraktivität) und der Klassifizierung (grob bzw. fein) ein signifikanter Zusammenhang berechnet werden. 
 
-|                              	| mit Nachweis 	| ohne Nachweis 	| Total 	|
-|------------------------------	|--------------	|---------------	|-------	|
-| feines Material (Klasse 1-2) 	| 1            	| 8             	| 9     	|
-| grobes Material (Klasse 3-4) 	| 12           	| 4             	| 16    	|
-| Total                        	| 13           	| 12            	| 25    	|
-
-*grobes Astermaterial (Klasse 3-4) erhöht die Wahrscheinlichkeit für einen Hermelin-Nachweis (p = 0.0085)*
-
+```{r}
+asthaufen_qualitaet_list %>%
+  imap(function(x, code){
+    x %>%
+      filter(!is.na(beurteilung)) %>%
+      group_by(beurteilung,.drop = FALSE) %>%
+      summarise(n = sum(as.integer(total_nach_weise_wk_2019_2020))) %>%
+      ggplot(aes(beurteilung, n)) + 
+      geom_col() +
+      scale_x_discrete(drop = FALSE) %>%
+      labs(title = code, x = "", y = "") +
+      lims(y = c(0,26)) +
+      theme_light()
+  }) %>%
+  cowplot::plot_grid(plotlist = .)
+  
+```
 
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
 
