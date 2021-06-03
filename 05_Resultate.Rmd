@@ -124,8 +124,8 @@ youtube("4gVpcvPIrNA", "Die ganze Sequenz des Hermelins in Str.196")
 
 ## Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen
 
-Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \@ref(fig:winterquartiereresultate)). Im Folgejahr, 2020, gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Frühling 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45%) mindestens eine Zielart festgestellt werden konnte. Dies entspricht 4 Nachweisen des Hermelins und 3 vdes Iltis. Alle 3 Winterquartiere in Feldscheunen (sanierte Streuhütten) wiesen Nachweise auf (2 des Hermelins, 3 des Iltis).
-Jedes Winterquartier wurde von zahlreichen Tierarten genutzt: Von Dachsen, Eichhörnchen, Füchsen, Mardern, Fröschen, Vögeln und Mäusen.
+Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \@ref(fig:winterquartiereresultate)). Im Folgejahr (2020) gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Frühling 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45%) mindestens eine Zielart festgestellt werden konnte (4 Hermelin- und 3 Iltis-Nachweise). Alle 3 Winterquartiere in Feldscheunen (sanierte Streuhütten) wiesen Nachweise auf (2 des Hermelins, 3 des Iltis).
+Jedes Winterquartier wurde von zahlreichen Tierarten genutzt: Dachse, Eichhörnchen, Füchse, Marder, Frösche, Vögel und Mäusen wurden von den Kameras abgelichtet.
 
 Die Daten der Standorte Str116 und Str198 konnten 2019 und die von Str12747 im Jahr 2020 nicht ausgewertet werden. Die Kameras an den genannten Standorten wiesen eine Fehlfunktion auf und erfassten so viele Bilder, dass eine Auswertung der Daten unverhältnismässig viel Zeit in Anspruch genommen hätte.
 
@@ -222,12 +222,13 @@ youtube("ISg0ZA5Fvgo", "Die ganze Sequenz des Hermelins in Str.13956")
 
 Einzig beim Parameter "Astmaterial" konnte zwischen der Anzahl Nachweisen (Attraktivität) und der Klassifizierung (grob bzw. fein) ein signifikanter Zusammenhang berechnet werden. 
 
-	mit Nachweis	ohne Nachweis	Total
-feines Material (Klasse 1-2)	1	8	9
-grobes Material (Klasse 3-4)	12	4	16
-Total	13	12	25
+|                              	| mit Nachweis 	| ohne Nachweis 	| Total 	|
+|------------------------------	|--------------	|---------------	|-------	|
+| feines Material (Klasse 1-2) 	| 1            	| 8             	| 9     	|
+| grobes Material (Klasse 3-4) 	| 12           	| 4             	| 16    	|
+| Total                        	| 13           	| 12            	| 25    	|
 
-	grobes Astermaterial (Klasse 3-4) erhöht die Wahrscheinlichkeit für einen Hermelin-Nachweis (p = 0.0085)
+*grobes Astermaterial (Klasse 3-4) erhöht die Wahrscheinlichkeit für einen Hermelin-Nachweis (p = 0.0085)*
 
 
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
