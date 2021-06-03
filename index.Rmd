@@ -12,14 +12,6 @@ geometry: "left=2.5cm, right=2.5cm, top=2cm, bottom=2cm"
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
 run_full = FALSE
-get_remote = FALSE
-
-if(!run_full){
-  if(get_remote){
-    warning("if run_full is set to FALSE, get_remote set to FALSE automatically")
-    get_remote <- FALSE
-  }
-}
 
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
@@ -33,6 +25,15 @@ require(forcats)
 require(lubridate)
 require(glue)
 
+if(run_full){
+  library(WieselundCoData)
+  require(sf)
+  require(readxl)  
+  require(purrr)
+  require(ggwaffle)
+  require(cowplot)
+}
+
 group_row_indices <- function(col, prefix = "", suffix = "", sep = ""){
   setNames(rle(col)[[1]],paste(prefix,rle(col)[[2]],suffix,sep = sep))
 }
@@ -40,22 +41,6 @@ group_row_indices <- function(col, prefix = "", suffix = "", sep = ""){
 youtube <- function(id, text = ""){
   require(knitr)
   require(glue)
-  # Careful, you must set the css accordingly (.container and .video)
-  # https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed
-  # .container {
-  #     position: relative;
-  #     width: 100%;
-  #     height: 0;
-  #     padding-bottom: 56.25%;
-  #  }
-  # .video {
-  #     position: absolute;
-  #     top: 0;
-  #     left: 0;
-  #     width: 100%;
-  #     height: 100%;
-  # }
-  
   if(knitr::is_html_output()){
     glue::glue('<div class="container"> <iframe src="//www.youtube.com/embed/{id}" frameborder="0" allowfullscreen class="video"></iframe> </div><caption class = "caption">{text}</caption>')
   } else{
@@ -71,32 +56,10 @@ youtube <- function(id, text = ""){
         "\\end{figure}")
   }
 }
-```
-
-
-```{r, echo = FALSE, warning=FALSE, message=FALSE}
-if(run_full){
-  library(WieselundCoData)
-  require(sf)
-  require(readxl)  
-  require(tidyr)
-  require(purrr)
-  require(ggplot2)
-  require(forcats)
-  require(ggwaffle)
-  require(cowplot)
-}
-
-
 
 janein_cols <- c("cornflowerblue","coral3")
 tierart_farben <- RColorBrewer::brewer.pal(6, "Set2")
 tierart_farben <- setNames(tierart_farben, c("Hermelin", "Mauswiesel", "Iltils", "Baummarder", "Steinmarder","andere Arten"))
-
-## Erhebungswochen ###########################################################
-  
-
-  
 
 ```
 
