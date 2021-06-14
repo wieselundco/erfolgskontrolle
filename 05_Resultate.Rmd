@@ -221,22 +221,60 @@ youtube("ISg0ZA5Fvgo", "Die ganze Sequenz des Hermelins in Str.13956")
 ## Erhebung 3: Qualitative Beurteilung der Asthaufen zur Erörterung attraktivitätsfördernder Faktoren
 
 
+
+
 ```{r}
 asthaufen_qualitaet_list %>%
   imap(function(x, code){
     x %>%
       filter(!is.na(beurteilung)) %>%
+      mutate(beurteilung = fct_relabel(beurteilung, ~str_replace(., "sehr ","s."))) %>%
       group_by(beurteilung,.drop = FALSE) %>%
       summarise(n = sum(as.integer(total_nach_weise_wk_2019_2020))) %>%
       ggplot(aes(beurteilung, n)) + 
       geom_col() +
       scale_x_discrete(drop = FALSE) %>%
-      labs(title = code, x = "", y = "") +
+      labs(title = str_to_title(str_replace_all(code, "_", " ")), x = "", y = "") +
       lims(y = c(0,26)) +
       theme_light()
   }) %>%
   cowplot::plot_grid(plotlist = .)
+
+
+res <- imap(asthaufen_qualitaet_list, function(x, type){
+  x <- x %>%    
+    dplyr::transmute(beurteilung = (beurteilung))
   
+  names(x) <- type
+  x
+}) %>%
+  do.call("cbind", .) %>%
+  cbind(
+  asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
+  .
+)
+
+res_long <- res %>%
+  pivot_longer(-total_nach_weise_wk_2019_2020)
+
+res %>%
+  mutate(besucht = (total_nach_weise_wk_2019_2020>0)) %>%
+  dplyr::select(-total_nach_weise_wk_2019_2020) %>%
+  # mutate(across(is.factor, ~as.integer(.))) %>%
+  glm(besucht~astmaterial,family = "binomial", data = .) %>%
+  summary()
+
+
+res$astmaterial
+res %>%
+  mutate(besucht = total_nach_weise_wk_2019_2020>0) %>%
+  count(besucht, astmaterial) %>%
+  ggplot(aes(astmaterial, n, fill = besucht)) + geom_col(position = "dodge") +
+  facet_wrap(~besucht)
+  
+  
+
+
 ```
 
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
