@@ -75,9 +75,18 @@ Zur Auswertung der Bild- und Videoaufnahmen wurden sämtliche Dateien einzeln du
 ## Erhebung 3: Qualitative Beurteilung der Asthaufen zur Erörterung attraktivitätsfördernder Faktoren
 
 Die Erhebung erfolgte am 30. und 31. März 2021. Von den 50 kontrollierten Asthaufen wurden jene 12 ohne Nachweise ("unattraktivsten") und jene 13 mit 2 bis 7 Nachweisen ("attraktivsten") qualitativ beurteilt. Dabei wurden 10 Parameter erhoben und jeweils einer der Klassen 0 bis 4 
-zugeteilt. Die Parameter und ihre Skalenrichtung ist in TABELLE (Zellen D1 bis M1 von WK_Qualitativ_Ah_20210408.xlsx) 
-[WK_Qualitativ_Ah_20210408.xlsx](https://github.com/wieselundco/erfolgskontrolle/files/6588503/WK_Qualitativ_Ah_20210408.xlsx)
-ersichtlich. Fast alle Parameter weisen keine exakt abgrenzbaren Klassifizierungskriterien auf. Die Erhebung kommt bei den Parametern "Störung", "Beuteangebot", "Katzen" und "andere Feinde" einer Schätzung gleich; die Beurteilung erfolgte aufgrund von Indizien wie der Nähe zu Wanderrouten bzw. der Sichtung von Maushaufen bzw. Siedlungsnähe bzw. der Lebensraumqualität für grössere Prädatoren. Dagegen ist das Alter eindeutig bestimmbar und Volumen sowie Astmaterial kann direkt dokumentiert und somit relativ zu den anderen Asthaufen beurteilt werden. (grobes Astmaterial; Klasse 4 vgl. \@ref(fig:grob) links und feines Astmaterial; Klasse 1 vgl. Foto \@ref(fig:fein) rechts). 
+zugeteilt. Dabei stellen tiefe (Klassen-) Werte eher *positive* Attributsausprägungen dar und hohe Werte eher *negative*. 
+
+```{r}
+code_explanation %>%
+  arrange(Code) %>%
+  kableExtra::kable() %>%
+  kableExtra::kable_styling()
+
+```
+
+
+Die Parameter und ihre Skalenrichtung ist im [Anhang](#anhang-asthaufen-qualitaet) ersichtlich. Dabei ist zu beachten, dass fast alle Parameter keine exakt abgrenzbaren Klassengrenzen aufweisen. Die Erhebung kommt bei den Parametern "Störung", "Beuteangebot", "Katzen" und "andere Feinde" einer Schätzung gleich; die Beurteilung erfolgte aufgrund von Indizien wie der Nähe zu Wanderrouten bzw. der Sichtung von Maushaufen bzw. Siedlungsnähe bzw. der Lebensraumqualität für grössere Prädatoren. Dagegen ist das Alter eindeutig bestimmbar und Volumen sowie Astmaterial kann direkt dokumentiert und somit relativ zu den anderen Asthaufen beurteilt werden. (grobes Astmaterial; Klasse 4 vgl. \@ref(fig:grob) links und feines Astmaterial; Klasse 1 vgl. Foto \@ref(fig:fein) rechts). 
 
 Zur Auswertung wurden die Klassen 0 bis 2 (am Bsp. Astmaterial: "feines Material") und 3 bis 4 (am Bsp. Astmaterial: "grobes Material") zusammengefasst. In der Folge wurde je Klasse die Anzahl der  Asthaufen mit Nachweisen jener Anzahl ohne Nachweise in einem statistischen Verfahren 
 <!-- NAME? -->
