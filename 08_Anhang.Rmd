@@ -131,5 +131,15 @@ if(knitr::is_html_output()){
 
 Ein Geopackage mit allen untersuchten Standorten (Erhebung 1 & 2) kann hier heruntergeladen werden: [spurentunnel_fotofallen_standorte.gpkg](https://github.com/wieselundco/erfolgskontrolle/raw/master/images/spurentunnel_fotofallen_standorte.gpkg)
 
+## Anhang F: Asthaufenqualität {#anhang-asthaufen-qualitaet}
+
+```{r}
+asthaufen_qualitaet %>%
+  kableExtra::kable()%>%
+  kableExtra::kable_styling()
+```
+
+
+
 
 
