@@ -11,7 +11,7 @@ geometry: "left=2.5cm, right=2.5cm, top=2cm, bottom=2cm"
 
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
-run_full = TRUE
+run_full = FALSE
 
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
@@ -24,9 +24,10 @@ require(ggplot2)
 require(forcats)  
 require(lubridate)
 require(glue)
+library(WieselundCoData)
 
 if(run_full){
-  library(WieselundCoData)
+  
   require(sf)
   require(readxl)  
   require(purrr)
@@ -35,7 +36,19 @@ if(run_full){
 }
 
 group_row_indices <- function(col, prefix = "", suffix = "", sep = ""){
+  col <- as.character(col)
   setNames(rle(col)[[1]],paste(prefix,rle(col)[[2]],suffix,sep = sep))
+}
+
+
+clean_code <- function(code){
+  code %>%
+      str_replace("storung", "störung") %>%
+      str_replace("beute_angebot", "beuteangebot") %>%
+      str_replace("kleinstr","kleinstrukturen") %>%
+      str_replace("korridore_habitate", "korridore / habitate") %>%
+      str_replace_all("_", " ") %>%
+      str_to_title()
 }
 
 youtube <- function(id, text = ""){

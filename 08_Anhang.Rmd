@@ -5,7 +5,6 @@
 
 
 ```{r}
-nachweiserfolge_zusammenstellung <- read_delim("input/nachweiserfolge_zusammenstellung.csv", ";")
 
 
 
@@ -140,6 +139,11 @@ asthaufen_qualitaet %>%
 ```
 
 
+
+
+```{r}
+knitr::include_graphics("images/asthaufen_qualitaet_histogramm_newclasses.png")
+```
 
 
 

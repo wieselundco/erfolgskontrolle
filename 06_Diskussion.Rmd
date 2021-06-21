@@ -9,7 +9,7 @@ In der vorliegenden Untersuchung wurde auf eine Beköderung verzichtet. In diese
 
 ```{r winziele, fig.cap="Zieldefinition in Anlehnung an Müri und Weinberger (2014) sowie ihre Beurteilung und Bemerkungen."}
 
-win_ziele <- read_csv("input/WIN_ziele.csv") %>%
+win_ziele <- WIN_ziele %>%
   mutate(Beurteilung = case_when(
     Beurteilung == -1~"rot",
     Beurteilung == 0~"gelb",
