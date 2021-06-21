@@ -213,9 +213,9 @@ youtube("ISg0ZA5Fvgo", "Die ganze Sequenz des Hermelins in Str.13956")
 
 ```
 
-## Erhebung 3: Qualitative Beurteilung der Asthaufen zur Erörterung attraktivitätsfördernder Faktoren
+## Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernden Faktoren
 
-In der Erhebung zur Qualität der Asthaufen ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalsausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung *Astmaterial: sehr fein* oder *benachbarten Kleinstrukturen: sehr wenig*). Dieser Umstand erschwert das Erkennen von Effekten, und aus diesem Grund werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (`mittel`) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden Klassen möglichst ähnlich gross zu halten. In Abbildung \@ref(fig:asthaufenqualcount) sind die ursprünglichen sowie die neu gebildeten Klassen ersichtlich.
+In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalsausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung *Astmaterial: sehr fein* oder *benachbarten Kleinstrukturen: sehr wenig*). Dieser Umstand erschwert das Erkennen von Effekten, deshalb werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (`mittel`) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden neuen Klassen möglichst ausgewogen (gleich gross) zu halten. In Abbildung \@ref(fig:asthaufenqualcount) sind die ursprünglichen sowie die neu gebildeten Klassen (farblich gekenntzeichnet) ersichtlich.
 
 
 ```{r asthaufenqualcount}
@@ -312,7 +312,7 @@ knitr::include_graphics("images/asthaufen_qualitaet_histogramm.png")
 
 ```
 
-Da es sich um Zähldaten handelt, berechnen wir ein Generalized Linear Model der Famillie `poission` wo wir die Anzahl Hermelinbesuche durch die erhobenen Parameter zu erklären versuchen. Dabei kommt heraus, dass sich das Hermelin vorkommen durch das verwendete Astmaterial (hoch signifikant, `p = 0.01`, `estimate = 1.46995`) und die Anzahl beanchbarten Kleinstrukturen (schwach signifikant `p = 0.1`, `estimate = -0.59077`) erklären lässt. Der vollständige Modelloutput ist hier ersichtlich:
+Um den Einfluss der erhobenen Parameter auf die Hermelinbesuche zu prüfen, berechnen wir ein `poisson` basiertes Generalized Linear Model. Dieses Modell zeigt, dass sich das Hermelin vorkommen durch die Anzahl beanachbarten Kleinstrukturen (schwach signifikant `p = 0.1`, negative Korrelation), vor allem aber durch das verwendete Astmaterial (hoch signifikant, `p = 0.01`, positive Korrelation) erklären lässt. Der vollständige Modelloutput ist hier ersichtlich:
 
 ```{r}
 asthaufen_qualitaet_df2 %>%

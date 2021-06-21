@@ -4,7 +4,7 @@
 
 Die Attraktivitätskontrolle besteht aus der Beobachtung zweier verschiedener Massnahmentypen in jeweils zwei Zeitperioden. Ergänzend dazu liegen zwei Datensätze vor, die während der Projektdauer unter Einbezug von interessierten Laien erzeugt wurden (sogenannte Bürgerwissenschaften). Diese Erhebungen und Datensätze werden nachstehend beschrieben und sind in Tabelle \@ref(tab:erhebungswochen) zusammengefasst.
 
-Bei **Erhebung 1** handelt es sich um eine systematische Kontrolle ausgewählter Asthaufen während zweier Jahre (2019 / 2020) über einen definierten Zeitraum. Diese Erhebungen wurden nach einheitlicher Vorgehensweise durchgeführt. Im gleichen Zeitraum wurden in **Erhebung 2** sogenannte Winterquartiere (siehe [wieselundco.ch/bonus](http://www.wieselundco.ch/bonus)), ebenfalls systematisch beobachtet. **Erhebung 3** ist eine Aufnahme und Beurteilung qualitativer Merkmale derjenigen Asthaufen, in dessen Spurentunneln  am meisten und am wenigsten Zielarten nachgewiesen wurden. 
+Bei **Erhebung 1** handelt es sich um eine systematische Kontrolle ausgewählter Asthaufen während zweier Jahre (2019 / 2020) über einen definierten Zeitraum. Diese Erhebungen wurden nach einheitlicher Vorgehensweise durchgeführt. Im gleichen Zeitraum wurden in **Erhebung 2** sogenannte Winterquartiere (siehe [wieselundco.ch/bonus](http://www.wieselundco.ch/bonus)), ebenfalls systematisch beobachtet. **Erhebung 3** ist eine Aufnahme und Beurteilung von 9 verschiedenen Merkmale von sehr gut sowie sehr schlecht besuchten Asthaufen.
 
 Bei **Datensatz A** handelt es sich um die Resultate von spontan durchgeführten Kontrollen einzelner Asthaufen und Grossstrukturen mit Fotofallen und / oder Spurentunneln. Diese Kontrollen dienten unter anderem auch dazu, Freiwilligen, Naturschutzvereins-Mitgliedern sowie Schüler\*innen einen tieferen Einblick in das Projekt und dessen Ziele zu geben. Bei **Datensatz B** handelt es sich um Sichtungsmeldungen aus der Bevölkerung, die seit Projektbeginn über ein Onlinetool erfasst werden ([wieselundco.ch/sichtungskarte](http://www.wieselundco.ch/beobachtung)).
 
@@ -72,9 +72,9 @@ Zur Untersuchung der Winterquartiere wurden Fotofallen mit Infrarotblitz von Bus
 
 Zur Auswertung der Bild- und Videoaufnahmen wurden sämtliche Dateien einzeln durchgeschaut und alle gefundenen Tiergruppen (ausser Mäusen und Katzen) aufaddiert. Die nachfolgende Analyse der Zahlen beschränkt sich jedoch auf die Zielarten. 
 
-## Erhebung 3: Qualitative Beurteilung der Asthaufen zur Erörterung attraktivitätsfördernder Faktoren
+## Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernden Faktoren
 
-Es ist anzunehmen, dass die Nutzung von Asthaufen durch Kleinraubtiere nicht rein zufällig ist, sondern von gewissen Faktoren abhängt. Um diese Annahme zu überprüfen wurden 13 besonders gut frequentierte Asthaufen und 12 nicht frequentierte Asthaufen ausgewählt und im Feld aufgesucht. Jeder der 25 verschiedenen Asthaufen wurde auf 9 verschiedene Faktoren untersucht und pro Faktor in eine von 5 Klassen eingeteilt (siehe nachstehende Tabelle). 
+Es ist anzunehmen, dass die Nutzung von Kleinstrukturen durch Kleinraubtiere nicht rein zufällig ist, sondern von gewissen Faktoren abhängig ist. Um diese Annahme zu überprüfen wurden 13 besonders gut frequentierte Asthaufen und 12 nicht frequentierte Asthaufen ausgewählt und im Feld aufgesucht. Jeder der 25 verschiedenen Asthaufen wurde auf 9 verschiedene Faktoren untersucht und pro Faktor in eine von 5 Klassen eingeteilt (siehe nachstehende Tabelle). 
 
 ```{r}
 code_explanation %>%

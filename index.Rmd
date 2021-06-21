@@ -25,12 +25,12 @@ require(forcats)
 require(lubridate)
 require(glue)
 library(WieselundCoData)
+require(purrr)
 
 if(run_full){
   
   require(sf)
   require(readxl)  
-  require(purrr)
   require(ggwaffle)
   require(cowplot)
 }
