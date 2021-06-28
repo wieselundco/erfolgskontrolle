@@ -95,7 +95,7 @@ Es ist zu beachten, dass fast alle Parameter keine exakt abgrenzbaren Klassengre
 Andere Faktoren können hingegen klarer beurteilt werden, wie zum Beispiel das Volumen oder das Astmaterial (grob \@ref(fig:astmaterial) links bzw. fein \@ref(fig:astmaterial) rechts).
  <!-- DIE FOTOS SIND ZIEMLICH UNDEUTLICH/UNSCHARF, SONST WÄRE DIR DIE KLASSENZUTEILUNG KLAR GEWESEN...  -->
 
-```{r astmaterial, out.width = "49%"}
+```{r astmaterial, out.width = "49%", fig.cap="Zwei Asthaufen mit unterschiedlichem Material: Grob (links) bzw. fein (rechts)"}
 knitr::include_graphics(c("images/feines_astmaterial.jpg","images/grobes_astmaterial.jpg"))
 ```
 

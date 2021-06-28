@@ -2,7 +2,7 @@
 title: "Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg"
 subtitle: "Schlussbericht"
 date: "Wädenswil, 9. März 2021"
-author: "Nils Ratnaweera, Inga Laas, Silvio Aegerter, Patrick Laube"
+author: "Nils Ratnaweera, Stefan Keller, Patrick Laube"
 site: "bookdown::bookdown_site"
 documentclass: scrbook
 classoption: oneside
@@ -83,6 +83,19 @@ options(tinytex.verbose = TRUE)
 # You can, and perhaps should, remove this option after you finish debugging (to silence LaTeX, because you no longer need to read the full log).
 
 ```
+
+# Danksagung
+
+Dieser Bericht ist durch die Mitwirkung vieler engagierter Personen entstanden, bei denen wir uns an dieser Stelle bedanken möchten:
+
+- Simon Capt für seine fachlichen Einschätzungen sowie der Bestimmung und Gegenkontrolle von zahlreichen Spurenpapieren
+- Inga Laas und Silvio Aegerter für ihr grosses Engagement bei der Erhebung der Daten aus Spurentunneln und Fotofallen 
+- Adrian Dietrich (SWILD), Andrin Dürst (Naturpark Thal) sowie Matthias Nyfeler (ZHAW) für ihre Inputs für die statistische Auswertung der Daten
+- Zahlreiche freiwilligen Helfer bei der Betreuung von Spurentunneln sowie die Meldung von Beobachtungen
+
+
+
+
 
 # Zusammenfassung {-}
 
