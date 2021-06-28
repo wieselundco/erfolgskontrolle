@@ -72,9 +72,10 @@ Zur Untersuchung der Winterquartiere wurden Fotofallen mit Infrarotblitz von Bus
 
 Zur Auswertung der Bild- und Videoaufnahmen wurden sämtliche Dateien einzeln durchgeschaut und alle gefundenen Tiergruppen (ausser Mäusen und Katzen) aufaddiert. Die nachfolgende Analyse der Zahlen beschränkt sich jedoch auf die Zielarten. 
 
-## Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernden Faktoren
+## Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernder Faktoren
 
-Es ist anzunehmen, dass die Nutzung von Kleinstrukturen durch Kleinraubtiere nicht rein zufällig ist, sondern von gewissen Faktoren abhängig ist. Um diese Annahme zu überprüfen wurden 13 besonders gut frequentierte Asthaufen und 12 nicht frequentierte Asthaufen ausgewählt und im Feld aufgesucht. Jeder der 25 verschiedenen Asthaufen wurde auf 9 verschiedene Faktoren untersucht und pro Faktor in eine von 5 Klassen eingeteilt (siehe nachstehende Tabelle). 
+Es ist anzunehmen, dass die Nutzung von Kleinstrukturen durch Kleinraubtiere von gewissen Faktoren besonders stark beeinflusst wird.
+Um diese Annahme zu überprüfen wurden gemäss Erhebung 1,  die 13 bestfrequentierten Asthaufen und 12 nicht frequentierte Asthaufen ausgewählt und im Feld aufgesucht. Jeder der 25 verschiedenen Asthaufen wurde auf 9 mutmasslich attraktivitätsbestimmende Faktoren untersucht und pro Faktor in eine von 5 Klassen eingeteilt (siehe nachstehende Tabelle). 
 
 ```{r}
 code_explanation %>%
@@ -88,10 +89,11 @@ code_explanation %>%
 
 ```
 
-
-Es ist zu beachten, dass fast alle Parameter keine exakt abgrenzbaren Klassengrenzen aufweisen. Die Erhebung kommt bei den Parametern "Störung", "Beuteangebot", "Katzen" und "andere Feinde" einer Schätzung gleich; die Beurteilung erfolgte aufgrund von Indizien wie der Nähe zu Wanderrouten bzw. der Sichtung von Maushaufen bzw. Siedlungsnähe bzw. der Lebensraumqualität für grössere Prädatoren. Dagegen ist das Alter eindeutig bestimmbar und Volumen sowie Astmaterial kann direkt dokumentiert und somit relativ zu den anderen Asthaufen beurteilt werden. (grobes Astmaterial; Klasse 4 vgl. \@ref(fig:astmaterial) links und feines Astmaterial; Klasse 1 vgl. Foto \@ref(fig:astmaterial) rechts). 
-
-
+Es ist zu beachten, dass fast alle Parameter keine exakt abgrenzbaren Klassengrenzen aufweisen. Die Erhebung kommt bei bei gewissen Parametern einer Schätzung gleich und die Beurteilung erfolgte aufgrund von Indizien: Die Nähe zu Wanderrouten ("Störung") oder Siedlungen ("Katzen"), die Sichtung von Maushaufen ("Beuteangebot") oder die Lebensraumqualität für grössere Prädatoren ("andere Fressfeinde").
+<!-- Dagegen ist das Alter eindeutig bestimmbar und Volumen sowie Astmaterial kann direkt dokumentiert und somit relativ zu den anderen Asthaufen beurteilt werden. 
+ -->
+Andere Faktoren können hingegen klarer beurteilt werden, wie zum Beispiel das Volumen oder das Astmaterial (grob \@ref(fig:astmaterial) links bzw. fein \@ref(fig:astmaterial) rechts).
+ <!-- DIE FOTOS SIND ZIEMLICH UNDEUTLICH/UNSCHARF, SONST WÄRE DIR DIE KLASSENZUTEILUNG KLAR GEWESEN...  -->
 
 ```{r astmaterial, out.width = "49%"}
 knitr::include_graphics(c("images/feines_astmaterial.jpg","images/grobes_astmaterial.jpg"))
@@ -137,7 +139,7 @@ if(run_full){
 
 
 
-## Datensatz B: Beobachtungsmeldungen
+## Datensatz B: Beobachtungsmeldungen {#methode-datensatz-b}
 
 Seit Anbeginn des Projekts wurde die örtliche Bevölkerung dazu aufgerufen, Beobachtungen von Kleinraubtieren über das eigens dafür eingerichtete Webtool zu melden. Meldungen wurden auch via einen Flyer sowie per Mail oder auch mündlich aufgenommen. Beobachtungsmeldungen wurden durch den Projektleiter (Stefan Keller) verifiziert und in "unsicher", "plausibel" sowie "sicher" eingeteilt.
 
