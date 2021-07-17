@@ -35,7 +35,7 @@ if(run_full){
 Da es sich bei gewissen Nachweisen vermutlich um Mehrfachbeobachtung des gleichen Individuums handelt, ist der Anteil an Strukturen mit mindestens einem Nachweis aussagekräftiger. Im Herbst 2019 konnte in 19 von 39 Asthaufen (49 %) mindestens eine Zielart nachgewiesen werden. In 18 von 39 Asthaufen (46 %) wurde das Hermelin detektiert, in 2 von 39 Asthaufen (5 %) der Iltis. Im Frühling 2020 wurde in 14 von 39 Asthaufen (36 %) eine Zielart detektiert, wobei es sich immer um Hermeline handelte (siehe Abbildung \@ref(fig:strukturenmitzielart)). Über beide Untersuchungsperioden hinweg konnte in 27 von 39 Asthaufen (69 %) mindestens eine Zielart detektiert werden.
 
 
-(ref:strukturenmitzielart) Anzahl sowie Anteil der untersuchten Strukturen, in denen mindestens eine Zielart nachgewiesen werden konnte.
+(ref:strukturenmitzielart) Anzahl sowie Anteil der untersuchten Asthaufen, in denen mindestens eine Zielart nachgewiesen werden konnte.
 
 ```{r strukturenmitzielart, fig.cap="(ref:strukturenmitzielart)", out.width="100%"}
 
