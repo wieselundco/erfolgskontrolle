@@ -213,7 +213,7 @@ youtube("ISg0ZA5Fvgo", "Die ganze Sequenz des Hermelins in Str.13956")
 
 ```
 
-## Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernder Faktoren
+## Erhebung 3: Ermittlung attraktivitätsfördernder Faktoren von Asthaufen
 
 In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung *Astmaterial: sehr fein* oder *benachbarten Kleinstrukturen: sehr wenig*). Dieser Umstand erschwert das Erkennen von Effekten, deshalb werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (`mittel`) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden neuen Klassen möglichst ausgewogen (gleich gross) zu halten. In Abbildung \@ref(fig:asthaufenqualcount) sind die ursprünglichen sowie die neu gebildeten Klassen (farblich gekennzeichnet) ersichtlich.
 
