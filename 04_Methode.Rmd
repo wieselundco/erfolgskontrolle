@@ -103,17 +103,7 @@ In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichp
 
 ```{r asthaufenqualcount, fig.cap="Anzahl Asthaufen pro Merkmalsausprägung"}
 
-class_borders <- list(
-    astmaterial = 2.5,
-    volumen = 2.5,
-    storung = 2.5,
-    beute_angebot = 2.5,
-    katzen = 3.5,
-    andere_feinde = 3.5,
-    benachbarte_kleinstr = 2.5,
-    benachbarte_korridore_habitate = 2.5,
-    pflege_aufstockung = 2.5
-  )
+
 
 asthaufen_qualitaet_df <- imap(asthaufen_qualitaet_list, function(x, type){
     x <- x %>%    
@@ -124,21 +114,6 @@ asthaufen_qualitaet_df <- imap(asthaufen_qualitaet_list, function(x, type){
   }) %>%
     do.call("bind_cols", .) %>%
     bind_cols(
-      asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
-      .
-    )
-
-asthaufen_qualitaet_df2 <- asthaufen_qualitaet_df %>%
-    select(-1) %>%
-    imap(function(x, y){
-      class_border <- as.numeric(class_borders[y])
-      class1 <- levels(x)[2]
-      class2 <- levels(x)[4]
-      newclasses <- ifelse(as.integer(x) > class_border,class1, class2)
-      factor(newclasses, levels = c(class1, class2), ordered = TRUE)
-    }) %>%
-    do.call("bind_cols", .) %>%
-     bind_cols(
       asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
       .
     )
