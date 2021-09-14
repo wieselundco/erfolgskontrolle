@@ -15,24 +15,28 @@ run_full = FALSE
 
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
-require(kableExtra)
-require(dplyr)
-require(readr)
-require(tidyr)
-require(stringr)
-require(ggplot2)
-require(forcats)  
-require(lubridate)
-require(glue)
+library(kableExtra)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(forcats)  
+library(lubridate)
+library(glue)
+
+# remotes::install_github("wieselundco/erfolgskontrolleData")
+
 library(WieselundCoData)
-require(purrr)
+library(purrr)
 
 if(run_full){
   
-  require(sf)
-  require(readxl)  
-  require(ggwaffle)
-  require(cowplot)
+  library(sf)
+  library(readxl)  
+  # remotes::install_github("liamgilbey/ggwaffle")
+  library(ggwaffle)
+  library(cowplot)
 }
 
 group_row_indices <- function(col, prefix = "", suffix = "", sep = ""){
@@ -52,8 +56,8 @@ clean_code <- function(code){
 }
 
 youtube <- function(id, text = ""){
-  require(knitr)
-  require(glue)
+  library(knitr)
+  library(glue)
   if(knitr::is_html_output()){
     glue::glue('<div class="container"> <iframe src="//www.youtube.com/embed/{id}" frameborder="0" allowfullscreen class="video"></iframe> </div><caption class = "caption">{text}</caption>')
   } else{
@@ -72,7 +76,8 @@ youtube <- function(id, text = ""){
 
 janein_cols <- c("cornflowerblue","coral3")
 tierart_farben <- RColorBrewer::brewer.pal(6, "Set2")
-tierart_farben <- setNames(tierart_farben, c("Hermelin", "Mauswiesel", "Iltils", "Baummarder", "Steinmarder","andere Arten"))
+tierart_farben <- setNames(tierart_farben, c("Hermelin", "Mauswiesel", "Iltis", "Baummarder", "Steinmarder","andere Arten"))
+tierart_farben <- tierart_farben[1:3]
 
 ```
 
