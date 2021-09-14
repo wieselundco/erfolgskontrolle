@@ -129,9 +129,8 @@ Jedes Winterquartier wurde von zahlreichen Tierarten genutzt: Dachse, Eichhörnc
 
 Die Daten der Standorte Str116 und Str198 konnten 2019 und die von Str12747 im Jahr 2020 nicht ausgewertet werden. Die Kameras an den genannten Standorten wiesen eine Fehlfunktion auf und erfassten so viele Bilder, dass eine Auswertung der Daten unverhältnismässig viel Zeit in Anspruch genommen hätte.
 
-(ref:winterquartiereresultate) Zusammenfassung der Resultate aus der Überwachung der Winterquartiere mit sämtlichen Tierarten
 
-```{r winterquartiereresultate, message=FALSE, fig.cap="(ref:winterquartiereresultate)", out.width="100%"}
+```{r winterquartiereresultate, message=FALSE, fig.cap="Zusammenfassung der Resultate aus der Überwachung der Winterquartiere mit sämtlichen Tierarten", out.width="100%"}
 if(run_full){
   
   winterquartiere_resultate_long <- winterquartiere_resultate  %>%
@@ -163,9 +162,9 @@ if(run_full){
     )
   
   
-  ggsave("images/winterquartiere_resultate.jpg")
+  ggsave("images/winterquartiere_resultate.png")
 } else{
-  knitr::include_graphics("images/winterquartiere_resultate.jpg")
+  knitr::include_graphics("images/winterquartiere_resultate.png")
 }
 
 
@@ -220,77 +219,155 @@ Um den Einfluss der erhobenen Parameter auf die Hermelinbesuche zu prüfen, bere
 Der vollständige Modelloutput ist hier ersichtlich:
 
 ```{r}
-asthaufen_qualitaet_df2 %>%
-  mutate(total_nach_weise_wk_2019_2020 = as.integer(total_nach_weise_wk_2019_2020)) %>%
-  glm(total_nach_weise_wk_2019_2020~., data = ., family = "poisson") %>%
+# asthaufen_qualitaet_df2 %>%
+#   mutate(total_nach_weise_wk_2019_2020 = as.integer(total_nach_weise_wk_2019_2020)) %>%
+#   glm(total_nach_weise_wk_2019_2020~., data = ., family = "poisson") %>%
+#   summary()
+
+
+
+asthaufen_qualitaet_df3 <- asthaufen_qualitaet_df2 %>%
+  mutate(total_nach_weise_wk_2019_2020 = as.numeric(total_nach_weise_wk_2019_2020)) %>%
+  mutate(nachweise_bool = as.integer(total_nach_weise_wk_2019_2020>0)) %>%
+  rename(nachweise_int = total_nach_weise_wk_2019_2020)
+
+#correlation plots
+library(corrplot)
+cormat <- asthaufen_qualitaet_df %>% 
+  select(-total_nach_weise_wk_2019_2020) %>%
+  mutate(across(.fns = as.numeric)) %>%  
+  cor(method="spearman")
+
+cormat[lower.tri(cormat,diag = FALSE)] <- 9999999
+cormat_df <- cormat %>%
+  as.data.frame() %>%
+  tibble::rownames_to_column("var1") %>%
+  pivot_longer(-var1,"var2",values_to = "cor") %>%
+  filter(cor <= 1) %>%
+  mutate(across(starts_with("var"), ~factor(., levels = rownames(cormat),ordered = TRUE))) %>%
+  mutate(across(starts_with("var"), ~fct_relabel(., clean_code)))
+
+
+cormat_df %>%
+  ggplot(aes(var1, var2, size = cor, color = cor)) +
+  scale_y_discrete(limits = rev(levels(cormat_df$var1))) +
+  scale_x_discrete(limits = rev(levels(cormat_df$var2))) +
+  # geom_text(data = ~filter(., var1 == var2),aes(label = var1), color = "black", hjust = 1,nudge_x = -0.5) +
+  geom_point() +
+  coord_equal() +
+  theme_minimal() +
+  scale_size_continuous(guide = NULL) +
+  scale_color_gradient2("Korrelation",low = "blue",high = "red", mid = "white",limits = c(-1,1)) +
+  theme(axis.title = element_blank(), axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "bottom")
+  
+#storung, katzen, andere Feinde sind stark korreliert
+#volumen, pflege_auf_stockung stark korreliert
+#astmaterial, volumen, beute_angebot schwach korreliert
+  
+#logistische Regression mit nachweis oder nicht
+#logistische Regression hat kein Problem mit zero-inflation oder overdispersion
+asthaufen_qualitaet_df3 %>% 
+  glm(nachweise_bool~
+        astmaterial+volumen+storung+beute_angebot+andere_feinde,
+      data=.,
+      family="binomial") %>% summary()
+
+asthaufen_qualitaet_df3 %>% #simplified da correlated
+  glm(nachweise_bool~
+        astmaterial+storung+beute_angebot,
+      data=.,
+      family="binomial") %>%
   summary()
 
+#poisson regression
+asthaufen_qualitaet_df3 %>% 
+  glm(nachweise_int~astmaterial+volumen+storung+beute_angebot+katzen+andere_feinde,data=.,
+      family="poisson") %>% summary()
+
+#simplified da correlated
+asthaufen_qualitaet_df3 %>% 
+  glm(nachweise_int~
+        astmaterial+storung+beute_angebot,data=.,
+      family="poisson") %>% summary()
+
+#overdispersion
+asthaufen_qualitaet_df3 %>% 
+  select(nachweise_int) %>% 
+  summarise(sd=sd(nachweise_int),
+            var=var(nachweise_int),
+            mean=mean(nachweise_int))
+#Die Varianz sollte ungefähr gleich gross sein wie der Mittelwert
+
+asthaufen_qualitaet_df3 %>%
+  ggplot(aes(x=nachweise_int)) + 
+    geom_histogram() 
+#theoretische Verteilung
+plot(dpois(1:7,lambda=1.72),type="h")
+#sieht ein bisschen nach zero inflation aus
+
+#goodness of fit test poisson distribution
+chisq.test(
+  table(factor(asthaufen_qualitaet_df3$nachweise_int,levels=1:7)),
+  p=dpois(1:7,1.72),
+  rescale.p = TRUE)
+#empirische Verteilung passt nicht gut zur theoretischen Verteilung
+
+#zero-inflation see https://stats.idre.ucla.edu/r/dae/zip/
+library(pscl)
+summary(m1 <- zeroinfl(nachweise_int~
+                         astmaterial+storung+beute_angebot,data=asthaufen_qualitaet_df3))
+
+#ols regression
+asthaufen_qualitaet_df3 %>% lm(nachweise_int~
+                   astmaterial+volumen+storung+beute_angebot,data=.) -> model1
+asthaufen_qualitaet_df3 %>% lm(sqrt(nachweise_int)~
+             astmaterial+volumen+storung+beute_angebot,data=.) -> model2
+asthaufen_qualitaet_df3 %>% lm(nachweise_bool~
+             astmaterial+volumen+storung+beute_angebot,data=.) -> model3
+summary(model1)
+summary(model2)
+summary(model3)
+par(mfrow=c(1,3))
+plot(model1,which=1)
+plot(model2,which=1)
+plot(model3,which=1)
+plot(model1,which=2)
+plot(model2,which=2)
+plot(model3,which=2)
+par(mfrow=c(1,1))
+shapiro.test(rstandard(model1))
+shapiro.test(rstandard(model2))
+shapiro.test(rstandard(model3))
+
+#statistische Tests, z.B. mit Fishers exaktem Test, ob 
+kt = with(asthaufen_qualitaet_df3, table( nachweise_bool , astmaterial ))
+kt
+fisher.test(kt)
+#oder mit den ganzen Daten ohne Zusammenfassung der Klassen
+kt = with(asthaufen_qualitaet_df3, table( nachweise_int , astmaterial ))
+kt
+fisher.test(kt)
+#sind so halt zu wenig Daten
+#oder mit den ganzen Zahldaten mite Zusammenfassung der Klassen der unabhängigen Variabeln
+kt = with(asthaufen_qualitaet_df3, table( nachweise_int , astmaterial ))
+kt
+fisher.test(kt)
+#sind so halt auch zu wenig Daten
+
+#tests der weiteren Variabeln, kann schoener programmiert werden 
+#bonferroni-Korrektur, da wir 9-Tests machen
+for (variable in tail(names(asthaufen_qualitaet_df3),-1)) {
+  print(variable)
+  kt = table( asthaufen_qualitaet_df3$nachweise_bool , asthaufen_qualitaet_df3[[variable]] )
+  print(kt)
+  print(fisher.test(kt))
+  print("adjusted p-value")
+  print(p.adjust(fisher.test(kt)$p.value,n=9))
+}
+
 ```
 
 
-```{r}
-# if(run_full){
-#   asthaufen_qualitaet_list %>%
-#   imap(function(x, code){
-#     
-#     code <- clean_code(code)
-#     
-#     x %>%
-#       filter(!is.na(beurteilung)) %>%
-#       mutate(beurteilung = fct_relabel(beurteilung, ~str_replace(., "sehr ","s."))) %>%
-#       group_by(beurteilung,.drop = FALSE) %>%
-#       summarise(n = sum(as.integer(total_nach_weise_wk_2019_2020))) %>%
-#       ggplot(aes(beurteilung, n)) + 
-#       geom_col() +
-#       scale_x_discrete(drop = FALSE) %>%
-#       labs(title = code, x = "", y = "") +
-#       lims(y = c(0,26)) +
-#       theme_light()
-#   }) %>%
-#   cowplot::plot_grid(plotlist = .)
-# 
-#   ggsave("images/asthaufen_qualitaet_histogramm.png", width = 25, height = 12, units = "cm")
-# } else{
-#   knitr::include_graphics("images/asthaufen_qualitaet_histogramm.png")
-# }
-# 
-# 
-# 
-# res <- imap(asthaufen_qualitaet_list, function(x, type){
-#   x <- x %>%    
-#     dplyr::transmute(beurteilung = (beurteilung))
-#   
-#   names(x) <- type
-#   x
-# }) %>%
-#   do.call("cbind", .) %>%
-#   cbind(
-#   asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
-#   .
-# )
-# 
-# res_long <- res %>%
-#   pivot_longer(-total_nach_weise_wk_2019_2020)
-# 
-# res %>%
-#   mutate(besucht = (total_nach_weise_wk_2019_2020>0)) %>%
-#   dplyr::select(-total_nach_weise_wk_2019_2020) %>%
-#   # mutate(across(is.factor, ~as.integer(.))) %>%
-#   glm(besucht~astmaterial,family = "binomial", data = .) %>%
-#   summary()
-# 
-# 
-# res$astmaterial
-# res %>%
-#   mutate(besucht = total_nach_weise_wk_2019_2020>0) %>%
-#   count(besucht, astmaterial) %>%
-#   ggplot(aes(astmaterial, n, fill = besucht)) + geom_col(position = "dodge") +
-#   facet_wrap(~besucht)
-#   
-#   
-
-
-```
 
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
 
