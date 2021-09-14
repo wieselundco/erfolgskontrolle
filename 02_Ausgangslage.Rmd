@@ -4,7 +4,7 @@ Das Projekt "Wiesel & Co am Zimmerberg" ist eine gemeinsame Aktion der Naturschu
 
 Zur Förderung dieser Zielarten werden in erster Linie ihre Lebensräume aufgewertet. Dazu werden natürliche Strukturen wie Asthaufen und Hecken geschaffen, um mehr Deckungsmöglichkeiten, grösseren Beuteerfolg und bessere Bedingungen für die Aufzucht von Jungen zu schaffen.
 
-Konkret werden im Projekt Massnahmen gefördert, welche unter [wieselundco.ch/projekt/massnahmen](http://wieselundco.ch/projekt/massnahmen) beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und teilweise finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (siehe auch Abbildung \@ref(fig:massnahmen)):
+Konkret werden im Projekt Massnahmen gefördert, welche unter [wieselundco.ch/welche-massnahmen](https://wieselundco.ch/welche-massnahmen) beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und teilweise finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (siehe auch Abbildung \@ref(fig:massnahmen)):
 
 1. Ast- / Steinhaufen
 2. Winterquartiere
