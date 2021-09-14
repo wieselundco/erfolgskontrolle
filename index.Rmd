@@ -1,7 +1,7 @@
 ---
 title: "Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg"
 subtitle: "Schlussbericht"
-date: "Wädenswil, 9. März 2021"
+date: "Wädenswil, 14. September"
 author: "Nils Ratnaweera, Stefan Keller, Patrick Laube"
 site: "bookdown::bookdown_site"
 documentclass: scrbook
@@ -93,13 +93,26 @@ class_borders <- list(
     pflege_aufstockung = 2.5
   )
 
+asthaufen_qualitaet_df <- imap(asthaufen_qualitaet_list, function(x, type){
+    x <- x %>%    
+      dplyr::transmute(beurteilung = beurteilung)
+    
+    names(x) <- type
+    x
+  }) %>%
+    do.call("bind_cols", .) %>%
+    bind_cols(
+      asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
+      .
+    )
+
 asthaufen_qualitaet_df2 <- asthaufen_qualitaet_df %>%
     select(-1) %>%
     imap(function(x, y){
       class_border <- as.numeric(class_borders[y])
       class1 <- levels(x)[2]
       class2 <- levels(x)[4]
-      newclasses <- ifelse(as.integer(x) > class_border,class1, class2)
+      newclasses <- ifelse(as.integer(x) > class_border,class2, class1)
       factor(newclasses, levels = c(class1, class2), ordered = TRUE)
     }) %>%
     do.call("bind_cols", .) %>%
@@ -107,6 +120,11 @@ asthaufen_qualitaet_df2 <- asthaufen_qualitaet_df %>%
       asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
       .
     )
+
+asthaufen_qualitaet_df3 <- asthaufen_qualitaet_df2 %>%
+  mutate(total_nach_weise_wk_2019_2020 = as.numeric(total_nach_weise_wk_2019_2020)) %>%
+  mutate(nachweise_bool = as.integer(total_nach_weise_wk_2019_2020>0)) %>%
+  rename(nachweise_int = total_nach_weise_wk_2019_2020)
 ```
 
 
@@ -136,9 +154,11 @@ Im Projekt "Wiesel &amp; Co am Zimmerberg" werden die Tierarten Hermelin, Mauswi
 
 Das Ziel der vorliegenden Wirkungskontrolle ist festzustellen, ob diese Aufwertungsmassnahmen von den Zielarten genutzt werden. Dafür wurden Ast- und Steinhaufen mit Spurentunnel und Winterquartieren mit Fotofallen systematisch beobachtet. Zudem wurden zur Beurteilung zwei weitere Datensätzen zugezogen, die im Rahmen des Naturschutz-Projekts erhoben wurden: Dabei handelt es sich die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
 
-In der **Spurentunnel Untersuchung** sind 39 Asthaufen innerhalb von zwei Jahren über einen Zeitraum von je 6 Wochen systematisch untersucht worden. Die Untersuchungen fanden im Herbst 2019 sowie im Frühling 2020 statt. Anhand der Spurenpapiere konnten über beide Perioden 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis gemacht werden. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Über beide Untersuchungsperioden hinweg konnten in 27 von 39 Asthaufen (69 %) mindestens eine Zielart detektiert werden
+In der **Spurentunnel Untersuchung** sind 39 Asthaufen innerhalb von zwei Jahren über einen Zeitraum von je 6 Wochen systematisch untersucht worden. Die Untersuchungen fanden im Herbst 2019 sowie im Frühling 2020 statt. Anhand der Spurenpapiere konnten über beide Perioden 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis gemacht werden. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Über beide Untersuchungsperioden hinweg konnten in 27 von 39 Asthaufen (69 %) mindestens eine Zielart detektiert werden. 
 
 In der **Fotofallen-Überwachung** der Winterquartiere konnten in 5 von 11 untersuchten Standorten (45%) mindestens eine Zielart festgestellt werden. Jedes Winterquartier wurde von Kleintieren genutzt: Von Dachsen, Eichhörnchen, Füchsen, Mardern, Fröschen, Vögeln, Mäusen und Hauskatzen.
+
+In der Untersuchung zur **Ermittlung attraktivitätsfördernder Faktoren von Asthaufen** wurden gut besuchte Asthaufen mit solchen verglichen, bei denen wir keinen Hermelin Nachweis erbringen konnte. Dabei haben wir 9 verschiedene Parameter zu den Asthaufen erhoben und ihren Einfluss auf das Hermelinvorkommen statistisch analysiert. Dabei kam heraus, dass das Astmaterial als einziger untersuchter Parameter einen Einfluss auf das Hermelin-Vorkommen zu haben scheint. Dabei ist bei Asthaufen mit groben Astmaterial die Wahrscheinlichkeit eines Hermelin Nachweises grösser als bei Asthaufen mit feinem Astmaterial. 
 
 In der unsystematischen, **spontanen Spurentunnel-Untersuchung** konnte in den insgesamt 32 beobachteten Asthaufen das Hermelin 51 und der Iltis 23-mal nachgewiesen werden. Auch in dieser Erhebung konnte das Mauswiesel nicht nachgewiesen werden. In 25 der 32 Asthaufen (78%) konnte mindestens eine der Zielarten festgestellt werden.
 
