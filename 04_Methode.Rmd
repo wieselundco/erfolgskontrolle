@@ -99,6 +99,102 @@ knitr::include_graphics(c("images/feines_astmaterial.jpg","images/grobes_astmate
 ```
 
 
+In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung *Astmaterial: sehr fein* oder *benachbarten Kleinstrukturen: sehr wenig*). Dieser Umstand erschwert das Erkennen von Effekten, deshalb werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (`mittel`) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden neuen Klassen möglichst ausgewogen (gleich gross) zu halten. In Abbildung \@ref(fig:asthaufenqualcount) sind die ursprünglichen sowie die neu gebildeten Klassen (farblich gekennzeichnet) ersichtlich.
+
+```{r asthaufenqualcount, fig.cap="Anzahl Asthaufen pro Merkmalsausprägung"}
+
+class_borders <- list(
+    astmaterial = 2.5,
+    volumen = 2.5,
+    storung = 2.5,
+    beute_angebot = 2.5,
+    katzen = 3.5,
+    andere_feinde = 3.5,
+    benachbarte_kleinstr = 2.5,
+    benachbarte_korridore_habitate = 2.5,
+    pflege_aufstockung = 2.5
+  )
+
+asthaufen_qualitaet_df <- imap(asthaufen_qualitaet_list, function(x, type){
+    x <- x %>%    
+      dplyr::transmute(beurteilung = (beurteilung))
+    
+    names(x) <- type
+    x
+  }) %>%
+    do.call("bind_cols", .) %>%
+    bind_cols(
+      asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
+      .
+    )
+
+asthaufen_qualitaet_df2 <- asthaufen_qualitaet_df %>%
+    select(-1) %>%
+    imap(function(x, y){
+      class_border <- as.numeric(class_borders[y])
+      class1 <- levels(x)[2]
+      class2 <- levels(x)[4]
+      newclasses <- ifelse(as.integer(x) > class_border,class1, class2)
+      factor(newclasses, levels = c(class1, class2), ordered = TRUE)
+    }) %>%
+    do.call("bind_cols", .) %>%
+     bind_cols(
+      asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
+      .
+    )
+
+if(run_full){
+  
+  p1 <- asthaufen_qualitaet_df %>%
+    select(-1) %>%
+    imap(function(x, y){
+      class_border <- as.numeric(class_borders[y])
+      fct_count(x) %>%
+        filter(!is.na(f)) %>%
+        mutate(class = as.integer(f)>class_border) %>%
+        ggplot(aes(f, n, fill = class)) +
+        geom_col() +
+        labs(subtitle = clean_code(y)) +
+        scale_y_continuous("",limits = c(0,25)) +
+        scale_x_discrete("") +
+        geom_vline(xintercept = class_border) +
+        theme_light() +
+        theme(legend.position = "none", panel.grid.minor = element_blank(), panel.grid.major.x = element_blank())
+    })%>%
+    cowplot::plot_grid(plotlist = .) +
+    patchwork::plot_annotation(title = "Anzahl Asthaufen pro Merkmalsausprägung", subtitle = "Ursprüngliche Klassen (neue Klassen farblich gekennzeichnet)") +
+    annotate("text", 0.01,0.5, label = "Anzahl Asthaufen", angle = 90)
+  
+  ggsave("images/asthaufen_qualitaet_histogramm.png", p1, width = 25, height = 30, units = "cm")
+
+  
+  
+  p2 <- asthaufen_qualitaet_df2 %>%
+    select(-1) %>%
+    imap(function(x, y){
+      fct_count(x) %>%
+        filter(!is.na(f)) %>%
+        ggplot(aes(f, n, fill = f)) +
+        geom_col() +
+        labs(subtitle = clean_code(y)) +
+        scale_y_continuous("",limits = c(0,25)) +
+        scale_x_discrete("") +
+        theme_light() +
+        theme(legend.position = "none", panel.grid.minor = element_blank(), panel.grid.major.x = element_blank())
+    })%>%
+    cowplot::plot_grid(plotlist = .) +
+    patchwork::plot_annotation("Anzahl Asthaufen pro Merkmalsausprägung", subtitle = "Neue Klassen") +
+    annotate("text", 0.01,0.5, label = "Anzahl Asthaufen", angle = 90)
+    
+    ggsave("images/asthaufen_qualitaet_histogramm_newclasses.png",p2,  width = 25, height = 30, units = "cm")
+    
+} 
+
+knitr::include_graphics("images/asthaufen_qualitaet_histogramm.png")
+
+
+```
+
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
 
 Im Datensatz werden alle 32 Asthaufen berücksichtigt, die unmittelbar nach der Erstellung im Rahmen von Aktionstagen mit Spurentunnel ausgestattet und über einen variablen Zeitraum kontrolliert wurden (siehe Anhang C \@ref(#anhang-datensatz-a)). In ca. 50% der Erhebungen wurden ergänzend Fotofallen eingesetzt. Die Erhebung dauerte in der Regel deutlich länger als 6 Wochen (höhere Detektionswahrscheinlichkeit), die Kontrollintervalle waren oft grösser als 2 Wochen (vermehrter Datenausfall). Die Beobachtung der Asthaufen verteilt sich über die Jahre 2014 bis 2019, wobei es 2016 zu einer Häufung kam. Es kam zu allen Jahreszeiten zu Kontrollaktivitäten, vermehrt im Frühling. Folgende Faktoren erschweren die Verwendung dieser Daten für einen Zielvergleich:
