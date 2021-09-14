@@ -302,11 +302,12 @@ In den insgesamt 32 beobachteten Asthaufen konnte das Hermelin 51 und der Iltis 
 
 if(run_full){
   
+  library(ggwaffle)
   nachweise_spontan %>%
     pivot_longer(Mäuse:Ratte,"Art", values_to = "Detektion") %>%
     filter(Art %in% c("Hermelin","Iltis","Mauswiesel"),
-           Detektion == 1) %>%
-    waffle_iron(aes_d(group = Art),rows = 4) %>% 
+           Detektion == 1) %>% 
+    ggwaffle::waffle_iron(aes_d(group = Art),rows = 4) %>% 
     mutate(group = fct_expand(group,"Mauswiesel")) %>% 
     ggplot(aes(x,y, fill = group)) +
     geom_tile(colour = "white",lwd = 1.2) +
