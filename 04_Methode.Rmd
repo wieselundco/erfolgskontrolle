@@ -105,18 +105,7 @@ In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichp
 
 
 
-asthaufen_qualitaet_df <- imap(asthaufen_qualitaet_list, function(x, type){
-    x <- x %>%    
-      dplyr::transmute(beurteilung = (beurteilung))
-    
-    names(x) <- type
-    x
-  }) %>%
-    do.call("bind_cols", .) %>%
-    bind_cols(
-      asthaufen_qualitaet_list[[1]][, "total_nach_weise_wk_2019_2020"],
-      .
-    )
+
 
 if(run_full){
   

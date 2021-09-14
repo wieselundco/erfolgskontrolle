@@ -10,11 +10,14 @@ In der vorliegenden Untersuchung wurde auf eine Beköderung verzichtet. In diese
 ```{r winziele, fig.cap="Zieldefinition in Anlehnung an Müri und Weinberger (2014) sowie ihre Beurteilung und Bemerkungen."}
 
 win_ziele <- WIN_ziele %>%
-  mutate(Beurteilung = case_when(
-    Beurteilung == -1~"rot",
-    Beurteilung == 0~"gelb",
-    Beurteilung == 1~"gruen",
-  ))
+  mutate(
+    Zieldefinition = str_replace_all(Zieldefinition, "Patches1", "Patches"),
+    Beurteilung = case_when(
+      Beurteilung == -1~"rot",
+      Beurteilung == 0~"gelb",
+      Beurteilung == 1~"gruen"
+      )
+    )
 
 
 ampel_ratio = 311/876
@@ -40,7 +43,7 @@ Der Austausch mit Projektleitern und Ökologen anderer Wieselprojekte in der Sch
 Der Anteil der Spurentunnel mit Hermelinnachweisen im Vergleich zur totalen Anzahl eingesetzter Spurentunnel ist ausserordentlich hoch und liegt bei 49 % (2019) bzw. 36 % (2020). 
 <!-- [FOLGENDES WEGLASSEN DA NICHT VERGLEICHBAR MIT DEN EK'S IN ABB 5.1?? -->
 <!-- und bei knapp 70 % über beide Jahre kummuliert. ]  -->
-Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz B, siehe \@ref(#methode-datensatz-b)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden), die Vergleichbarkeit einschränken.
+Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz B, siehe \@ref(methode-datensatz-b)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden), die Vergleichbarkeit einschränken.
 
 Eine Erklärungsmöglichkeit für die hohen Nachweisquoten ist die grosse Dichte an Schermäusen, welche eine vorzügliche Nahrungsgrundlage für Hermeline (und Mauswiesel) bildet. Die hinzukommenden Kleinstrukturen in der streckenweise strukturarmen Zimmerberglandschaft üben eine starke Anziehungskraft aus. Wären viele andere Kleinstrukturen vorhanden, könnte der Nachweiserfolg kleiner sein, auch wenn zugleich die Hermelinpopulation grösser wäre.
 
@@ -111,7 +114,7 @@ Gegenüber 59 Hermelinnachweisen während der Wirkungskontrolle wurde der Iltis 
 
 ```{r, echo = FALSE}
 tribble(
-  ~typ, ~Hermelin, ~Iltis, ~Mauswiesel,
+  ~Typ, ~Hermelin, ~Iltis, ~Mauswiesel,
   "Asthaufen", 55L, 2L, 0L,
   "Winterquartiere", 4L, 3L, 0L
 ) %>%
