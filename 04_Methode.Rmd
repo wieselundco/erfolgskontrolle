@@ -93,9 +93,8 @@ Es ist zu beachten, dass fast alle Parameter keine exakt abgrenzbaren Klassengre
 <!-- Dagegen ist das Alter eindeutig bestimmbar und Volumen sowie Astmaterial kann direkt dokumentiert und somit relativ zu den anderen Asthaufen beurteilt werden. 
  -->
 Andere Faktoren können hingegen klarer beurteilt werden, wie zum Beispiel das Volumen oder das Astmaterial (grob \@ref(fig:astmaterial) links bzw. fein \@ref(fig:astmaterial) rechts).
- <!-- DIE FOTOS SIND ZIEMLICH UNDEUTLICH/UNSCHARF, SONST WÄRE DIR DIE KLASSENZUTEILUNG KLAR GEWESEN...  -->
 
-```{r astmaterial, out.width = "49%", fig.cap="Zwei Asthaufen mit unterschiedlichem Material: Grob (links) bzw. fein (rechts)"}
+```{r astmaterial, out.width = "45%", fig.show="hold", fig.cap="Zwei Asthaufen mit unterschiedlichem Material: Grob (links) bzw. fein (rechts)"}
 knitr::include_graphics(c("images/feines_astmaterial.jpg","images/grobes_astmaterial.jpg"))
 ```
 
