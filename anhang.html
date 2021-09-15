@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg</title>
-  <meta name="description" content="8 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <title>7 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel &amp; Co am Zimmerberg</title>
+  <meta name="description" content="7 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel &amp; Co am Zimmerberg" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg" />
+  <meta property="og:title" content="7 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel &amp; Co am Zimmerberg" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg" />
+  <meta name="twitter:title" content="7 Anhang | Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel &amp; Co am Zimmerberg" />
   
   
   
@@ -32,8 +32,9 @@
   
 <link rel="prev" href="literaturverzeichnis.html"/>
 
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,12 +50,13 @@
 
 
 
-
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.17/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -68,6 +70,71 @@
 <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="misc/mystyle.css" type="text/css" />
@@ -86,48 +153,56 @@
 <img src="images/zhaw_lsfm_schwarz.png" alt="ZHAW Logo" width="300">  
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Danksagung</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Danksagung</a></li>
 <li class="chapter" data-level="" data-path="zusammenfassung.html"><a href="zusammenfassung.html"><i class="fa fa-check"></i>Zusammenfassung</a></li>
-<li class="chapter" data-level="2" data-path="ausgangslage.html"><a href="ausgangslage.html"><i class="fa fa-check"></i><b>2</b> Ausgangslage</a></li>
-<li class="chapter" data-level="3" data-path="konzept-der-vorliegenden-wirkungskontrolle.html"><a href="konzept-der-vorliegenden-wirkungskontrolle.html"><i class="fa fa-check"></i><b>3</b> Konzept der vorliegenden Wirkungskontrolle</a></li>
-<li class="chapter" data-level="4" data-path="methode.html"><a href="methode.html"><i class="fa fa-check"></i><b>4</b> Methode</a>
+<li class="chapter" data-level="1" data-path="ausgangslage.html"><a href="ausgangslage.html"><i class="fa fa-check"></i><b>1</b> Ausgangslage</a></li>
+<li class="chapter" data-level="2" data-path="konzept-der-vorliegenden-wirkungskontrolle.html"><a href="konzept-der-vorliegenden-wirkungskontrolle.html"><i class="fa fa-check"></i><b>2</b> Konzept der vorliegenden Wirkungskontrolle</a></li>
+<li class="chapter" data-level="3" data-path="methode.html"><a href="methode.html"><i class="fa fa-check"></i><b>3</b> Methode</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="methode.html"><a href="methode.html#übersicht"><i class="fa fa-check"></i><b>4.1</b> Übersicht</a></li>
-<li class="chapter" data-level="4.2" data-path="methode.html"><a href="methode.html#erhebung-1-attraktivitätskontrolle-von-asthaufen-mittels-spurentunneln"><i class="fa fa-check"></i><b>4.2</b> Erhebung 1: Attraktivitätskontrolle von Asthaufen mittels Spurentunneln</a></li>
-<li class="chapter" data-level="4.3" data-path="methode.html"><a href="methode.html#erhebung-2-attraktivitätskontrolle-von-winterquartieren-mittels-fotofallen"><i class="fa fa-check"></i><b>4.3</b> Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen</a></li>
-<li class="chapter" data-level="4.4" data-path="methode.html"><a href="methode.html#erhebung-3-erhebung-von-asthaufen-eigenschaften-zur-ermittlung-attraktivitätsfördernder-faktoren"><i class="fa fa-check"></i><b>4.4</b> Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernder Faktoren</a></li>
-<li class="chapter" data-level="4.5" data-path="methode.html"><a href="methode.html#datensatz-a-unsystematische-attraktivitätskontrolle-von-asthaufen"><i class="fa fa-check"></i><b>4.5</b> Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen</a></li>
-<li class="chapter" data-level="4.6" data-path="methode.html"><a href="methode.html#methode-datensatz-b"><i class="fa fa-check"></i><b>4.6</b> Datensatz B: Beobachtungsmeldungen</a></li>
+<li class="chapter" data-level="3.1" data-path="methode.html"><a href="methode.html#übersicht"><i class="fa fa-check"></i><b>3.1</b> Übersicht</a></li>
+<li class="chapter" data-level="3.2" data-path="methode.html"><a href="methode.html#erhebung-1-attraktivitätskontrolle-von-asthaufen-mittels-spurentunneln"><i class="fa fa-check"></i><b>3.2</b> Erhebung 1: Attraktivitätskontrolle von Asthaufen mittels Spurentunneln</a></li>
+<li class="chapter" data-level="3.3" data-path="methode.html"><a href="methode.html#erhebung-2-attraktivitätskontrolle-von-winterquartieren-mittels-fotofallen"><i class="fa fa-check"></i><b>3.3</b> Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen</a></li>
+<li class="chapter" data-level="3.4" data-path="methode.html"><a href="methode.html#erhebung-3-ermittlung-attraktivitätsfördernder-faktoren-von-asthaufen"><i class="fa fa-check"></i><b>3.4</b> Erhebung 3: Ermittlung attraktivitätsfördernder Faktoren von Asthaufen</a></li>
+<li class="chapter" data-level="3.5" data-path="methode.html"><a href="methode.html#datensatz-a-unsystematische-attraktivitätskontrolle-von-asthaufen"><i class="fa fa-check"></i><b>3.5</b> Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen</a></li>
+<li class="chapter" data-level="3.6" data-path="methode.html"><a href="methode.html#methode-datensatz-b"><i class="fa fa-check"></i><b>3.6</b> Datensatz B: Beobachtungsmeldungen</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="resultate.html"><a href="resultate.html"><i class="fa fa-check"></i><b>5</b> Resultate</a>
+<li class="chapter" data-level="4" data-path="resultate.html"><a href="resultate.html"><i class="fa fa-check"></i><b>4</b> Resultate</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="resultate.html"><a href="resultate.html#erhebung-1-attraktivitätskontrolle-von-asthaufen-mittels-spurentunneln-1"><i class="fa fa-check"></i><b>5.1</b> Erhebung 1: Attraktivitätskontrolle von Asthaufen mittels Spurentunneln</a></li>
-<li class="chapter" data-level="5.2" data-path="resultate.html"><a href="resultate.html#erhebung-2-attraktivitätskontrolle-von-winterquartieren-mittels-fotofallen-1"><i class="fa fa-check"></i><b>5.2</b> Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen</a></li>
-<li class="chapter" data-level="5.3" data-path="resultate.html"><a href="resultate.html#erhebung-3-erhebung-von-asthaufen-eigenschaften-zur-ermittlung-attraktivitätsfördernder-faktoren-1"><i class="fa fa-check"></i><b>5.3</b> Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernder Faktoren</a></li>
-<li class="chapter" data-level="5.4" data-path="resultate.html"><a href="resultate.html#datensatz-a-unsystematische-attraktivitätskontrolle-von-asthaufen-1"><i class="fa fa-check"></i><b>5.4</b> Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen</a></li>
-<li class="chapter" data-level="5.5" data-path="resultate.html"><a href="resultate.html#datensatz-b-beobachtungsmeldungen"><i class="fa fa-check"></i><b>5.5</b> Datensatz B: Beobachtungsmeldungen</a></li>
+<li class="chapter" data-level="4.1" data-path="resultate.html"><a href="resultate.html#erhebung-1-attraktivitätskontrolle-von-asthaufen-mittels-spurentunneln-1"><i class="fa fa-check"></i><b>4.1</b> Erhebung 1: Attraktivitätskontrolle von Asthaufen mittels Spurentunneln</a></li>
+<li class="chapter" data-level="4.2" data-path="resultate.html"><a href="resultate.html#erhebung-2-attraktivitätskontrolle-von-winterquartieren-mittels-fotofallen-1"><i class="fa fa-check"></i><b>4.2</b> Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen</a></li>
+<li class="chapter" data-level="4.3" data-path="resultate.html"><a href="resultate.html#erhebung-3-ermittlung-attraktivitätsfördernder-faktoren-von-asthaufen-1"><i class="fa fa-check"></i><b>4.3</b> Erhebung 3: Ermittlung attraktivitätsfördernder Faktoren von Asthaufen</a></li>
+<li class="chapter" data-level="4.4" data-path="resultate.html"><a href="resultate.html#datensatz-a-unsystematische-attraktivitätskontrolle-von-asthaufen-1"><i class="fa fa-check"></i><b>4.4</b> Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen</a></li>
+<li class="chapter" data-level="4.5" data-path="resultate.html"><a href="resultate.html#datensatz-b-beobachtungsmeldungen"><i class="fa fa-check"></i><b>4.5</b> Datensatz B: Beobachtungsmeldungen</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html"><i class="fa fa-check"></i><b>6</b> Diskussion und Fazit</a>
+<li class="chapter" data-level="5" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html"><i class="fa fa-check"></i><b>5</b> Diskussion und Fazit</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#vergleich-mit-den-zielsetzungen-von-win-wieselnetz"><i class="fa fa-check"></i><b>6.1</b> Vergleich mit den Zielsetzungen von WIN Wieselnetz</a></li>
-<li class="chapter" data-level="6.2" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#nachweisquote-im-vergleich-mit-anderen-studien"><i class="fa fa-check"></i><b>6.2</b> Nachweisquote im Vergleich mit anderen Studien</a></li>
-<li class="chapter" data-level="6.3" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#interpretation-der-nachweiszahlen"><i class="fa fa-check"></i><b>6.3</b> Interpretation der Nachweiszahlen</a>
+<li class="chapter" data-level="5.1" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#vergleich-mit-den-zielsetzungen-von-win-wieselnetz"><i class="fa fa-check"></i><b>5.1</b> Vergleich mit den Zielsetzungen von WIN Wieselnetz</a></li>
+<li class="chapter" data-level="5.2" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#nachweisquote-im-vergleich-mit-anderen-studien"><i class="fa fa-check"></i><b>5.2</b> Nachweisquote im Vergleich mit anderen Studien</a></li>
+<li class="chapter" data-level="5.3" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#interpretation-der-nachweiszahlen"><i class="fa fa-check"></i><b>5.3</b> Interpretation der Nachweiszahlen</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#hermlin-vs.-mauswiesel"><i class="fa fa-check"></i><b>6.3.1</b> Hermlin vs. Mauswiesel</a></li>
-<li class="chapter" data-level="6.3.2" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#iltis"><i class="fa fa-check"></i><b>6.3.2</b> Iltis</a></li>
+<li class="chapter" data-level="5.3.1" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#hermlin-vs.-mauswiesel"><i class="fa fa-check"></i><b>5.3.1</b> Hermlin vs. Mauswiesel</a></li>
+<li class="chapter" data-level="5.3.2" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#iltis"><i class="fa fa-check"></i><b>5.3.2</b> Iltis</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#erkenntnisse-für-die-anlagen-von-asthaufen"><i class="fa fa-check"></i><b>6.4</b> Erkenntnisse für die Anlagen von Asthaufen</a></li>
-<li class="chapter" data-level="6.5" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#fazit-und-ausblick"><i class="fa fa-check"></i><b>6.5</b> Fazit und Ausblick</a></li>
+<li class="chapter" data-level="5.4" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#erkenntnisse-für-die-anlagen-von-asthaufen"><i class="fa fa-check"></i><b>5.4</b> Erkenntnisse für die Anlagen von Asthaufen</a></li>
+<li class="chapter" data-level="5.5" data-path="diskussion-und-fazit.html"><a href="diskussion-und-fazit.html#fazit-und-ausblick"><i class="fa fa-check"></i><b>5.5</b> Fazit und Ausblick</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="literaturverzeichnis.html"><a href="literaturverzeichnis.html"><i class="fa fa-check"></i><b>7</b> Literaturverzeichnis</a></li>
-<li class="chapter" data-level="8" data-path="anhang.html"><a href="anhang.html"><i class="fa fa-check"></i><b>8</b> Anhang</a>
+<li class="chapter" data-level="6" data-path="literaturverzeichnis.html"><a href="literaturverzeichnis.html"><i class="fa fa-check"></i><b>6</b> Literaturverzeichnis</a></li>
+<li class="chapter" data-level="7" data-path="anhang.html"><a href="anhang.html"><i class="fa fa-check"></i><b>7</b> Anhang</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="anhang.html"><a href="anhang.html#anhang-zusammenstellung"><i class="fa fa-check"></i><b>8.1</b> Anhang A: Nachweiserfolge anderer Studien</a></li>
-<li class="chapter" data-level="8.2" data-path="anhang.html"><a href="anhang.html#anhang-b-erhebung-1-rohdaten"><i class="fa fa-check"></i><b>8.2</b> Anhang B: Erhebung 1 (Rohdaten)</a></li>
-<li class="chapter" data-level="8.3" data-path="anhang.html"><a href="anhang.html#anhang-datensatz-a"><i class="fa fa-check"></i><b>8.3</b> Anhang C: Datensatz A (Rohdaten)</a></li>
-<li class="chapter" data-level="8.4" data-path="anhang.html"><a href="anhang.html#anhang-d-nachweise-pro-struktur-erhebung-1"><i class="fa fa-check"></i><b>8.4</b> Anhang D: Nachweise pro Struktur (Erhebung 1)</a></li>
-<li class="chapter" data-level="8.5" data-path="anhang.html"><a href="anhang.html#anhang-e-geodaten-für-erhebung-1-2"><i class="fa fa-check"></i><b>8.5</b> Anhang E: Geodaten für Erhebung 1 &amp; 2</a></li>
-<li class="chapter" data-level="8.6" data-path="anhang.html"><a href="anhang.html#anhang-asthaufen-qualitaet"><i class="fa fa-check"></i><b>8.6</b> Anhang F: Asthaufenqualität</a></li>
+<li class="chapter" data-level="7.1" data-path="anhang.html"><a href="anhang.html#anhang-zusammenstellung"><i class="fa fa-check"></i><b>7.1</b> Anhang A: Nachweiserfolge anderer Studien</a></li>
+<li class="chapter" data-level="7.2" data-path="anhang.html"><a href="anhang.html#anhang-b-erhebung-1-rohdaten"><i class="fa fa-check"></i><b>7.2</b> Anhang B: Erhebung 1 (Rohdaten)</a></li>
+<li class="chapter" data-level="7.3" data-path="anhang.html"><a href="anhang.html#anhang-datensatz-a"><i class="fa fa-check"></i><b>7.3</b> Anhang C: Datensatz A (Rohdaten)</a></li>
+<li class="chapter" data-level="7.4" data-path="anhang.html"><a href="anhang.html#anhang-d-nachweise-pro-struktur-erhebung-1"><i class="fa fa-check"></i><b>7.4</b> Anhang D: Nachweise pro Struktur (Erhebung 1)</a></li>
+<li class="chapter" data-level="7.5" data-path="anhang.html"><a href="anhang.html#anhang-e-geodaten-für-erhebung-1-2"><i class="fa fa-check"></i><b>7.5</b> Anhang E: Geodaten für Erhebung 1 &amp; 2</a></li>
+<li class="chapter" data-level="7.6" data-path="anhang.html"><a href="anhang.html#anhang-asthaufen-qualitaet"><i class="fa fa-check"></i><b>7.6</b> Anhang F: Asthaufenqualität</a></li>
+<li class="chapter" data-level="7.7" data-path="anhang.html"><a href="anhang.html#anhang-attraktivitaet-modell"><i class="fa fa-check"></i><b>7.7</b> Anhang G: Statistische Modellierung attraktivitätsfördernder Faktoren</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="anhang.html"><a href="anhang.html#korrelationsmatrix-der-faktoren"><i class="fa fa-check"></i><b>7.7.1</b> Korrelationsmatrix der Faktoren</a></li>
+<li class="chapter" data-level="7.7.2" data-path="anhang.html"><a href="anhang.html#logistischre-regression"><i class="fa fa-check"></i><b>7.7.2</b> Logistischre Regression</a></li>
+<li class="chapter" data-level="7.7.3" data-path="anhang.html"><a href="anhang.html#zero-inflation-sihe-httpsstats.idre.ucla.edurdaezip"><i class="fa fa-check"></i><b>7.7.3</b> Zero-inflation (sihe <span>https://stats.idre.ucla.edu/r/dae/zip/</span>)</a></li>
+<li class="chapter" data-level="7.7.4" data-path="anhang.html"><a href="anhang.html#ols-regression"><i class="fa fa-check"></i><b>7.7.4</b> OLS regression</a></li>
+<li class="chapter" data-level="7.7.5" data-path="anhang.html"><a href="anhang.html#fishers-exakter-test"><i class="fa fa-check"></i><b>7.7.5</b> Fishers Exakter Test</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -138,7 +213,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co. am Zimmerberg</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel &amp; Co am Zimmerberg</a>
           </h1>
         </div>
 
@@ -146,13 +221,13 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="anhang" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Anhang</h1>
-<div id="anhang-zusammenstellung" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Anhang A: Nachweiserfolge anderer Studien</h2>
+<div id="anhang" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Anhang</h1>
+<div id="anhang-zusammenstellung" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Anhang A: Nachweiserfolge anderer Studien</h2>
 <table>
 <caption>
-<span id="tab:unnamed-chunk-12">Tabelle 8.1: </span>Zusammenstellung der Resultate verschiedener Spurentunnel-Untersuchungen. npos entspricht der Anzahl Spurentunnel mit Positivnachweisen, ntot der Anzahl Spurentunnel der entsprechenden Untersuchung.
+<span id="tab:unnamed-chunk-11">Tabelle 7.1: </span>Zusammenstellung der Resultate verschiedener Spurentunnel-Untersuchungen. npos entspricht der Anzahl Spurentunnel mit Positivnachweisen, ntot der Anzahl Spurentunnel der entsprechenden Untersuchung.
 </caption>
 <thead>
 <tr>
@@ -595,12 +670,12 @@ Ringger, 2020
 </tbody>
 </table>
 </div>
-<div id="anhang-b-erhebung-1-rohdaten" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Anhang B: Erhebung 1 (Rohdaten)</h2>
+<div id="anhang-b-erhebung-1-rohdaten" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Anhang B: Erhebung 1 (Rohdaten)</h2>
 <!-- Systematische Wirkungskontrolle -->
 <table>
 <caption>
-<span id="tab:unnamed-chunk-13">Tabelle 8.2: </span>Tabellarische Darstellung aller Nachweise aus Erhebung 1
+<span id="tab:unnamed-chunk-12">Tabelle 7.2: </span>Tabellarische Darstellung aller Nachweise aus Erhebung 1
 </caption>
 <thead>
 <tr>
@@ -1962,11 +2037,11 @@ Hermelin
 </tbody>
 </table>
 </div>
-<div id="anhang-datensatz-a" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Anhang C: Datensatz A (Rohdaten)</h2>
+<div id="anhang-datensatz-a" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Anhang C: Datensatz A (Rohdaten)</h2>
 <table>
 <caption>
-<span id="tab:unnamed-chunk-15">Tabelle 8.3: </span>Tabellarische Darstellung aller Nachweise aus Datensatz A
+<span id="tab:unnamed-chunk-14">Tabelle 7.3: </span>Tabellarische Darstellung aller Nachweise aus Datensatz A
 </caption>
 <thead>
 <tr>
@@ -4280,17 +4355,17 @@ Hermelin
 </tbody>
 </table>
 </div>
-<div id="anhang-d-nachweise-pro-struktur-erhebung-1" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Anhang D: Nachweise pro Struktur (Erhebung 1)</h2>
-<div id="htmlwidget-ade6cb586487c61bc115" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ade6cb586487c61bc115">{"x":{"filter":"none","extensions":["Buttons"],"caption":"<caption>Anzahl Nachweise der drei Zielarten pro Struktur (Daten aus Erhebung 1).<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39"],[15944,312,133,325,15564,223,17548,23,24,304,329,15546,17148,126,168,183,210,220,231,265,273,310,320,323,12745,17544,17546,18,54,122,147,232,235,242,313,15549,15554,17150,18346],[7,6,4,3,4,3,3,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[7,6,4,4,4,3,3,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>struktur_id<\/th>\n      <th>Hermelin<\/th>\n      <th>Iltis<\/th>\n      <th>Mauswiesel<\/th>\n      <th>total<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["csv","excel"],"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="anhang-d-nachweise-pro-struktur-erhebung-1" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Anhang D: Nachweise pro Struktur (Erhebung 1)</h2>
+<div id="htmlwidget-e04f525c4e3d3a94e5c3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e04f525c4e3d3a94e5c3">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"caption":"<caption>Anzahl Nachweise der drei Zielarten pro Struktur (Daten aus Erhebung 1).<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39"],[15944,312,133,325,15564,223,17548,23,24,304,329,15546,17148,126,168,183,210,220,231,265,273,310,320,323,12745,17544,17546,18,54,122,147,232,235,242,313,15549,15554,17150,18346],[7,6,4,3,4,3,3,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[7,6,4,4,4,3,3,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>struktur_id<\/th>\n      <th>Hermelin<\/th>\n      <th>Iltis<\/th>\n      <th>Mauswiesel<\/th>\n      <th>total<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["csv","excel"],"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="anhang-e-geodaten-für-erhebung-1-2" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Anhang E: Geodaten für Erhebung 1 &amp; 2</h2>
+<div id="anhang-e-geodaten-für-erhebung-1-2" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Anhang E: Geodaten für Erhebung 1 &amp; 2</h2>
 <p>Ein Geopackage mit allen untersuchten Standorten (Erhebung 1 &amp; 2) kann hier heruntergeladen werden: <a href="https://github.com/wieselundco/erfolgskontrolle/raw/master/images/spurentunnel_fotofallen_standorte.gpkg">spurentunnel_fotofallen_standorte.gpkg</a></p>
 </div>
-<div id="anhang-asthaufen-qualitaet" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> Anhang F: Asthaufenqualität</h2>
+<div id="anhang-asthaufen-qualitaet" class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> Anhang F: Asthaufenqualität</h2>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -5598,7 +5673,222 @@ Mosli Nordeck
 </tbody>
 </table>
 <p><img src="images/asthaufen_qualitaet_histogramm_newclasses.png" width="1476" /></p>
+</div>
+<div id="anhang-attraktivitaet-modell" class="section level2" number="7.7">
+<h2><span class="header-section-number">7.7</span> Anhang G: Statistische Modellierung attraktivitätsfördernder Faktoren</h2>
+<div id="korrelationsmatrix-der-faktoren" class="section level3" number="7.7.1">
+<h3><span class="header-section-number">7.7.1</span> Korrelationsmatrix der Faktoren</h3>
+<ul>
+<li><em>Störung</em>, <em>Katzen</em> und <em>andere Feinde</em> sind stark korreliert</li>
+<li><em>Volumen</em>, <em>Pflege / Aufstockung</em> sind stark korreliert</li>
+<li><em>Astmaterial</em>, <em>Volumen</em> und <em>Beuteangebot</em> sind schwach korreliert</li>
+</ul>
+<p><img src="Wiesel_und_Co_Schlussbericht_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+<div id="logistischre-regression" class="section level3" number="7.7.2">
+<h3><span class="header-section-number">7.7.2</span> Logistischre Regression</h3>
+<div id="poisson" class="section level4" number="7.7.2.1">
+<h4><span class="header-section-number">7.7.2.1</span> Poisson</h4>
+<p>Einfaches Modell, um die Korrelationen zu berücksichtigen</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="anhang.html#cb2-1" aria-hidden="true" tabindex="-1"></a>asthaufen_qualitaet_df3 <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="anhang.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glm</span>(nachweise_int<span class="sc">~</span></span>
+<span id="cb2-3"><a href="anhang.html#cb2-3" aria-hidden="true" tabindex="-1"></a>        astmaterial<span class="sc">+</span>storung<span class="sc">+</span>beute_angebot,<span class="at">data=</span>.,</span>
+<span id="cb2-4"><a href="anhang.html#cb2-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">family=</span><span class="st">&quot;poisson&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = nachweise_int ~ astmaterial + storung + beute_angebot, 
+##     family = &quot;poisson&quot;, data = .)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.9045  -0.7324  -0.4952   0.4167   1.9101  
+## 
+## Coefficients:
+##                 Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)      -0.3297     0.3670  -0.898 0.368990    
+## astmaterial.L    -1.7551     0.5143  -3.413 0.000644 ***
+## storung.L        -0.5535     0.2246  -2.464 0.013727 *  
+## beute_angebot.L   0.1933     0.2180   0.887 0.375299    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for poisson family taken to be 1)
+## 
+##     Null deviance: 65.194  on 24  degrees of freedom
+## Residual deviance: 33.959  on 21  degrees of freedom
+## AIC: 80.887
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<p>Overdispersion (die Varianz sollte ungefähr gleich gross sein wie der Mittelwert)</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="anhang.html#cb4-1" aria-hidden="true" tabindex="-1"></a>asthaufen_qualitaet_df3 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="anhang.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(nachweise_int) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="anhang.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb4-4"><a href="anhang.html#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd =</span> <span class="fu">sd</span>(nachweise_int),</span>
+<span id="cb4-5"><a href="anhang.html#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">var =</span> <span class="fu">var</span>(nachweise_int),</span>
+<span id="cb4-6"><a href="anhang.html#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean =</span> <span class="fu">mean</span>(nachweise_int)</span>
+<span id="cb4-7"><a href="anhang.html#cb4-7" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##      sd   var  mean
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  2.05  4.21  1.72</code></pre>
+<p>Der Vergleich zwischen der tatsächlichen und der theoretischen Verteilung zeigt, dass die Daten tendentziell <em>overdispersed</em> sind:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="anhang.html#cb6-1" aria-hidden="true" tabindex="-1"></a>asthaufen_qualitaet_df3 <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="anhang.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(nachweise_int) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="anhang.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="anhang.html#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb6-5"><a href="anhang.html#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">complete</span>(<span class="at">nachweise_int =</span> <span class="fu">full_seq</span>(nachweise_int,<span class="dv">1</span>), <span class="at">fill =</span> <span class="fu">list</span>(<span class="at">n =</span> <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-6"><a href="anhang.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">poisson =</span> <span class="fu">dpois</span>(nachweise_int, <span class="at">lambda =</span> <span class="fl">1.72</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="anhang.html#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>nachweise_int) <span class="sc">%&gt;%</span></span>
+<span id="cb6-8"><a href="anhang.html#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(nachweise_int, value, <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="anhang.html#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="anhang.html#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>name, <span class="at">scales =</span> <span class="st">&quot;free_y&quot;</span>)</span></code></pre></div>
+<p><img src="Wiesel_und_Co_Schlussbericht_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><em>Goodness of fit test</em> mit <em>poisson distribution</em> zeigt, dass die empirische Verteilung nicht gut zur theoretischen Verteilung passt.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="anhang.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(</span>
+<span id="cb7-2"><a href="anhang.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">table</span>(<span class="fu">factor</span>(asthaufen_qualitaet_df3<span class="sc">$</span>nachweise_int,<span class="at">levels=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>)),</span>
+<span id="cb7-3"><a href="anhang.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">p=</span><span class="fu">dpois</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>,<span class="fl">1.72</span>),</span>
+<span id="cb7-4"><a href="anhang.html#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">rescale.p =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  table(factor(asthaufen_qualitaet_df3$nachweise_int, levels = 1:7))
+## X-squared = 55.631, df = 6, p-value = 3.456e-10</code></pre>
+</div>
+</div>
+<div id="zero-inflation-sihe-httpsstats.idre.ucla.edurdaezip" class="section level3" number="7.7.3">
+<h3><span class="header-section-number">7.7.3</span> Zero-inflation (sihe <a href="https://stats.idre.ucla.edu/r/dae/zip/" class="uri">https://stats.idre.ucla.edu/r/dae/zip/</a>)</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="anhang.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pscl)</span>
+<span id="cb9-2"><a href="anhang.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">zeroinfl</span>(nachweise_int<span class="sc">~</span>astmaterial<span class="sc">+</span>storung<span class="sc">+</span>beute_angebot,</span>
+<span id="cb9-3"><a href="anhang.html#cb9-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">data=</span>asthaufen_qualitaet_df3,<span class="at">link =</span> <span class="st">&quot;logit&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="anhang.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## zeroinfl(formula = nachweise_int ~ astmaterial + storung + beute_angebot, 
+##     data = asthaufen_qualitaet_df3, link = &quot;logit&quot;)
+## 
+## Pearson residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.8342 -0.4947 -0.1516  0.4880  1.7209 
+## 
+## Count model coefficients (poisson with log link):
+##                 Estimate Std. Error z value Pr(&gt;|z|)
+## (Intercept)       0.5785     0.5028   1.150    0.250
+## astmaterial.L    -0.7993     0.6894  -1.159    0.246
+## storung.L        -0.4304     0.2758  -1.560    0.119
+## beute_angebot.L   0.1863     0.2700   0.690    0.490
+## 
+## Zero-inflation model coefficients (binomial with logit link):
+##                 Estimate Std. Error z value Pr(&gt;|z|)  
+## (Intercept)       0.1141     0.7706   0.148   0.8822  
+## astmaterial.L     2.3519     1.2422   1.893   0.0583 .
+## storung.L         0.8761     1.0633   0.824   0.4100  
+## beute_angebot.L  -0.5849     0.9475  -0.617   0.5370  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+## 
+## Number of iterations in BFGS optimization: 12 
+## Log-likelihood: -32.57 on 8 Df</code></pre>
+</div>
+<div id="ols-regression" class="section level3" number="7.7.4">
+<h3><span class="header-section-number">7.7.4</span> OLS regression</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="anhang.html#cb11-1" aria-hidden="true" tabindex="-1"></a>asthaufen_qualitaet_df3 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(nachweise_int<span class="sc">~</span></span>
+<span id="cb11-2"><a href="anhang.html#cb11-2" aria-hidden="true" tabindex="-1"></a>                   astmaterial<span class="sc">+</span>volumen<span class="sc">+</span>storung<span class="sc">+</span>beute_angebot,<span class="at">data=</span>.) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="anhang.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = nachweise_int ~ astmaterial + volumen + storung + 
+##     beute_angebot, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.2905 -0.7005 -0.0602  0.5298  4.0177 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept)       1.3804     0.4125   3.346  0.00321 **
+## astmaterial.L    -1.8044     0.6188  -2.916  0.00854 **
+## volumen.L         0.1909     0.6256   0.305  0.76337   
+## storung.L        -0.8700     0.4984  -1.746  0.09624 . 
+## beute_angebot.L   0.2179     0.5182   0.421  0.67857   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.711 on 20 degrees of freedom
+## Multiple R-squared:  0.4208, Adjusted R-squared:  0.305 
+## F-statistic: 3.633 on 4 and 20 DF,  p-value: 0.02212</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="anhang.html#cb13-1" aria-hidden="true" tabindex="-1"></a>asthaufen_qualitaet_df3 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">sqrt</span>(nachweise_int)<span class="sc">~</span></span>
+<span id="cb13-2"><a href="anhang.html#cb13-2" aria-hidden="true" tabindex="-1"></a>             astmaterial<span class="sc">+</span>volumen<span class="sc">+</span>storung<span class="sc">+</span>beute_angebot,<span class="at">data=</span>.) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="anhang.html#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = sqrt(nachweise_int) ~ astmaterial + volumen + storung + 
+##     beute_angebot, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.6145 -0.3113  0.1470  0.4810  1.2542 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)       0.7337     0.1828   4.013 0.000682 ***
+## astmaterial.L    -0.9363     0.2743  -3.414 0.002751 ** 
+## volumen.L         0.1725     0.2773   0.622 0.540937    
+## storung.L        -0.3241     0.2209  -1.467 0.157871    
+## beute_angebot.L   0.1576     0.2297   0.686 0.500402    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.7582 on 20 degrees of freedom
+## Multiple R-squared:  0.4716, Adjusted R-squared:  0.3659 
+## F-statistic: 4.463 on 4 and 20 DF,  p-value: 0.009695</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="anhang.html#cb15-1" aria-hidden="true" tabindex="-1"></a>asthaufen_qualitaet_df3 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(nachweise_bool<span class="sc">~</span></span>
+<span id="cb15-2"><a href="anhang.html#cb15-2" aria-hidden="true" tabindex="-1"></a>             astmaterial<span class="sc">+</span>volumen<span class="sc">+</span>storung<span class="sc">+</span>beute_angebot,<span class="at">data=</span>.) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="anhang.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = nachweise_bool ~ astmaterial + volumen + storung + 
+##     beute_angebot, data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.83664 -0.14962  0.00916  0.30763  0.70611 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)       0.4137     0.1003   4.126 0.000524 ***
+## astmaterial.L    -0.5047     0.1504  -3.355 0.003153 ** 
+## volumen.L         0.1209     0.1521   0.795 0.435948    
+## storung.L        -0.1123     0.1212  -0.927 0.365188    
+## beute_angebot.L   0.1020     0.1260   0.810 0.427576    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.4159 on 20 degrees of freedom
+## Multiple R-squared:  0.4457, Adjusted R-squared:  0.3349 
+## F-statistic: 4.021 on 4 and 20 DF,  p-value: 0.01494</code></pre>
+</div>
+<div id="fishers-exakter-test" class="section level3" number="7.7.5">
+<h3><span class="header-section-number">7.7.5</span> Fishers Exakter Test</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="anhang.html#cb17-1" aria-hidden="true" tabindex="-1"></a>kt <span class="ot">=</span> <span class="fu">with</span>(asthaufen_qualitaet_df3, <span class="fu">table</span>(nachweise_bool, astmaterial ))</span>
+<span id="cb17-2"><a href="anhang.html#cb17-2" aria-hidden="true" tabindex="-1"></a>kt</span></code></pre></div>
+<pre><code>##               astmaterial
+## nachweise_bool grob fein
+##              0    4    8
+##              1   12    1</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="anhang.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fisher.test</span>(kt,<span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  kt
+## p-value = 0.003258
+## alternative hypothesis: true odds ratio is less than 1
+## 95 percent confidence interval:
+##  0.0000000 0.4108968
+## sample estimates:
+## odds ratio 
+## 0.04891419</code></pre>
 
+</div>
 </div>
 </div>
             </section>
@@ -5611,7 +5901,6 @@ Mosli Nordeck
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -5630,6 +5919,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -5650,6 +5940,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Wiesel_und_Co_Schlussbericht.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
