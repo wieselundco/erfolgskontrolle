@@ -135,7 +135,7 @@ options(tinytex.verbose = TRUE)
 
 ```
 
-# Danksagung
+# Danksagung {-}
 
 Dieser Bericht ist durch die Mitwirkung vieler engagierter Personen entstanden, bei denen wir uns an dieser Stelle bedanken möchten:
 
