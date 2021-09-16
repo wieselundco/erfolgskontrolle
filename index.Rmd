@@ -135,19 +135,6 @@ options(tinytex.verbose = TRUE)
 
 ```
 
-# Danksagung {-}
-
-Dieser Bericht ist durch die Mitwirkung vieler engagierter Personen entstanden, bei denen wir uns an dieser Stelle bedanken möchten:
-
-- Simon Capt für seine fachlichen Einschätzungen sowie der Bestimmung und Gegenkontrolle von zahlreichen Spurenpapieren
-- Inga Laas und Silvio Aegerter für ihr grosses Engagement bei der Erhebung der Daten aus Spurentunneln und Fotofallen 
-- Adrian Dietrich (SWILD), Andrin Dürst (Naturpark Thal) sowie Matthias Nyfeler (ZHAW) für ihre Inputs für die statistische Auswertung der Daten
-- Zahlreiche freiwilligen Helfer bei der Betreuung von Spurentunneln sowie die Meldung von Beobachtungen
-
-
-
-
-
 # Zusammenfassung {-}
 
 Im Projekt "Wiesel &amp; Co am Zimmerberg" werden die Tierarten Hermelin, Mauswiesel und Iltis mit gezielten Massnahmen gefördert. Dabei werden im Wesentlichen fünf Arten Typen von Aufwertungsmassnahmen umgesetzt: Winterquartiere, Ast- und Steinhaufen, Gebüschgruppen sowie Grossstrukturen. Von diesen Massnahmen sind bis heute über 450 realisiert worden.
@@ -167,3 +154,11 @@ In der unsystematischen, **spontanen Spurentunnel-Untersuchung** konnte in den i
 Von den 555 **Sichtungsmeldungen** , die im Projekt gesammelt wurden, sind 428 Meldungen verwendbar. Diese zeigen, dass das Hermelin weitestgehend im ganzen Bezirk beobachtet werden konnte, so auch in stark fragmentierten und dicht besiedelten Kulturflächen. Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften zu verzeichnen. Deutlich weniger Sichtungsmeldungen sind zum Iltis eingegangen. Dies wiederspiegelt einerseits die tiefere Anzahl Individuen im Vergleich zur Hermelinpopulation, ist aber mit Sicherheit auch der Lebensweise dieser Tierart geschuldet: Als dämmerungs- und nachtaktives Tier, welches sich auch gerne im Waldrandbereich aufhaltet, ist der Iltis seltener zu beobachten als das Hermelin.
 
 Ebenfalls sind Beobachtungen von Mauswieseln sehr rar und über den ganzen Bezirk verteilt. Auch hier ist das ein Resultat von zwei verschiedenen Faktoren bestimmt: Das Mauswiesel ist sehr schwierig zu beobachten und zuverlässig von Hermelinen zu unterscheiden. Es kann aber zusätzlich davon ausgegangen werden, dass die Mauswieselpopulation im Bezirk eher klein und fragil ist.
+
+
+
+# Danksagung {-}
+
+Dieser Bericht ist durch die Mitwirkung vieler engagierter Personen entstanden, bei denen wir uns an dieser Stelle bedanken möchten: **Simon Capt** für seine fachlichen Einschätzungen sowie der Bestimmung und Gegenkontrolle von zahlreichen Spurenpapieren. **Inga Laas** und **Silvio Aegerter** für ihr grosses Engagement bei der Erhebung der Daten aus Spurentunneln und Fotofallen. **Adrian Dietrich** (SWILD), **Andrin Dürst** (Naturpark Thal) sowie **Matthias Nyfeler** (ZHAW) für ihre Inputs für die statistische Auswertung der Daten. All den zahlreiche freiwilligen Helfer bei der Betreuung von Spurentunneln sowie die Meldung von Beobachtungen.
+
+
