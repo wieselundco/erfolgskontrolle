@@ -42,7 +42,7 @@ Der Austausch mit Projektleitern und Ökologen anderer Wieselprojekte in der Sch
 Der Anteil der Spurentunnel mit Hermelinnachweisen im Vergleich zur totalen Anzahl eingesetzter Spurentunnel ist ausserordentlich hoch und liegt bei 49 % (2019) bzw. 36 % (2020). 
 <!-- [FOLGENDES WEGLASSEN DA NICHT VERGLEICHBAR MIT DEN EK'S IN ABB 5.1?? -->
 <!-- und bei knapp 70 % über beide Jahre kummuliert. ]  -->
-Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz A, siehe \@ref(datensatz-a-unsystematische-attraktivitätskontrolle-von-asthaufen-1)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden) die Vergleichbarkeit einschränken.
+Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz A, siehe \@ref(methode-datensatz-a)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden) die Vergleichbarkeit einschränken.
 
 Eine Erklärungsmöglichkeit für die hohen Nachweisquoten ist die grosse Dichte an Schermäusen, welche eine vorzügliche Nahrungsgrundlage für Hermeline (und Mauswiesel) bilden. Die hinzukommenden Kleinstrukturen in der streckenweise strukturarmen Zimmerberglandschaft üben eine starke Anziehungskraft aus. Wären viele andere Kleinstrukturen vorhanden, könnte der Nachweiserfolg kleiner sein, auch wenn zugleich die Hermelinpopulation grösser wäre.
 
