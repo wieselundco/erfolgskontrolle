@@ -163,7 +163,7 @@ cormat <- asthaufen_qualitaet_df %>%
   mutate(across(.fns = as.numeric)) %>%  
   cor(method="spearman")
 
-cormat[lower.tri(cormat,diag = FALSE)] <- 9999999
+# cormat[lower.tri(cormat,diag = FALSE)] <- 9999999
 cormat_df <- cormat %>%
   as.data.frame() %>%
   tibble::rownames_to_column("var1") %>%
@@ -174,7 +174,7 @@ cormat_df <- cormat %>%
 
 
 cormat_df %>%
-  ggplot(aes(var1, var2, size = cor, color = cor)) +
+  ggplot(aes(var1, var2, size = abs(cor), color = cor)) +
   scale_y_discrete(limits = rev(levels(cormat_df$var1))) +
   scale_x_discrete(limits = rev(levels(cormat_df$var2))) +
   # geom_text(data = ~filter(., var1 == var2),aes(label = var1), color = "black", hjust = 1,nudge_x = -0.5) +
