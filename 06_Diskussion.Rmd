@@ -141,6 +141,11 @@ Interessant ist die Erkenntnis, dass grobes Material bei Holzstrukturen die Attr
 Idealerweise wird ein Asthaufen von Beginn weg aus grobem, massivem Material wie Wurzelstöcken, Stamm- und Stangenholz aufgebaut - bestenfalls aus beständigen Holzarten. Denn die realisierten Asthaufen sollen auch möglichst lange bestehen. Zu bedenken ist, dass selbst voluminöse Asthaufen innert weniger Jahren stark zerfallen, sofern sie aus Weichholz aufgebaut werden. Diesem Zerfall kann mit einer periodischen Aufstockung begegnet werden. 
 Um die Nachaltigkeit zu fördern, wurde das Knowhow mit persönlicher Beratung und anlässlich Dutzender Aktionstage interessierten Landwirtinnen und weiteren interessierten Personen vermittelt. Zudem gaben die zweijährlich wiederkehrenden Vergütungen Anreiz für Pflegemassnahmen.
 
+```{r, fig.cap="Die Analyse der Daten aus Erhebung 3 zeigt, dass ein Nachweis von den Zielarten bei jenen Asthaufen wahrscheinlicher ist, die aus grobem Astmaterial aufgebaut sind."}
+knitr::include_graphics("images/hermelin_asthaufen_2.jpg")
+```
+
+
 ## Fazit und Ausblick
 
 Es muss davon ausgegangen werden, dass die sich immer mehr ausbreitende "Normallandschaft" im Schweizer Mittelland nicht nur bei Artengruppen wie Vögeln, sondern auch  bei Kleinraubtieren die Generalisten gegenüber den Spezialisten begünstigt. So könnte das im Mittelland ohnehin seltenere Mauswiesel zukünftig grossräumig in seiner Existenz gefährdet sein. Es scheint, dass eine kleinräumigere Landschaft mit einer extensiver betriebenen Landwirtschaft den Bestand des Mauswiesel gegenüber jenem des Hermelins vergrössern könnte. Davon würde  dank verbesserten Deckungsmöglichkeiten und Nahrungsgrundlagen wahrscheinlich auch der Iltis profitieren.
