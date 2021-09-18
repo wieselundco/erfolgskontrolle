@@ -1,6 +1,7 @@
 bookdown::gitbook:
   css: "misc/mystyle.css"
   config:
+    download: false
     toc:
       before: |
         <img src="images/zhaw_lsfm_schwarz.png" alt="ZHAW Logo" width="300">  
