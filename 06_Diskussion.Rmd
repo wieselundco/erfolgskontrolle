@@ -11,7 +11,6 @@ In der vorliegenden Untersuchung wurde auf eine Beköderung verzichtet. In diese
 
 win_ziele <- WIN_ziele %>%
   mutate(
-    Zieldefinition = str_replace_all(Zieldefinition, "Patches1", "Patches"),
     Beurteilung = case_when(
       Beurteilung == -1~"rot",
       Beurteilung == 0~"gelb",
