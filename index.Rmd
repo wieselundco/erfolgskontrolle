@@ -47,12 +47,13 @@ group_row_indices <- function(col, prefix = "", suffix = "", sep = ""){
 
 clean_code <- function(code){
   code %>%
-      str_replace("storung", "störung") %>%
-      str_replace("beute_angebot", "beuteangebot") %>%
-      str_replace("kleinstr","kleinstrukturen") %>%
-      str_replace("korridore_habitate", "korridore / habitate") %>%
-      str_replace_all("_", " ") %>%
-      str_to_title()
+    str_replace("storung", "störung") %>%
+    str_replace("beute_angebot", "beuteangebot") %>%
+    str_replace("kleinstr","kleinstrukturen") %>%
+    str_replace("korridore_habitate", "korridore / habitate") %>%
+    str_replace("pflege_aufstockung", "pflege / aufstockung") %>%
+    str_replace_all("_", " ") %>%
+    str_to_title()
 }
 
 youtube <- function(id, text = ""){
