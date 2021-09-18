@@ -4,14 +4,13 @@
 %
 \documentclass[
   oneside]{scrbook}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
-  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -37,13 +36,53 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co.~am Zimmerberg},
+  pdftitle={Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel \& Co am Zimmerberg},
   pdfauthor={Nils Ratnaweera, Stefan Keller, Patrick Laube},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
-\usepackage{longtable,booktabs}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -116,7 +155,7 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel und Co.~am Zimmerberg}
+\title{Wirkungskontrolle der Aufwertungsmassnahmen für Wiesel \& Co am Zimmerberg}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
@@ -125,7 +164,7 @@
 \makeatother
 \subtitle{Schlussbericht}
 \author{Nils Ratnaweera, Stefan Keller, Patrick Laube}
-\date{Wädenswil, 9. März 2021}
+\date{Wädenswil, 14. September}
 
 \begin{document}
 \maketitle
@@ -205,49 +244,42 @@ Titelbild:    & Hermelin vor einem Winterquartier (Laas, 2020)
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{danksagung}{%
-\chapter{Danksagung}\label{danksagung}}
-
-Dieser Bericht ist durch die Mitwirkung vieler engagierter Personen entstanden, bei denen wir uns an dieser Stelle bedanken möchten:
-
-\begin{itemize}
-\tightlist
-\item
-  Simon Capt für seine fachlichen Einschätzungen sowie der Bestimmung und Gegenkontrolle von zahlreichen Spurenpapieren
-\item
-  Inga Laas und Silvio Aegerter für ihr grosses Engagement bei der Erhebung der Daten aus Spurentunneln und Fotofallen
-\item
-  Adrian Dietrich (SWILD), Andrin Dürst (Naturpark Thal) sowie Matthias Nyfeler (ZHAW) für ihre Inputs für die statistische Auswertung der Daten
-\item
-  Zahlreiche freiwilligen Helfer bei der Betreuung von Spurentunneln sowie die Meldung von Beobachtungen
-\end{itemize}
-
 \hypertarget{zusammenfassung}{%
 \chapter*{Zusammenfassung}\label{zusammenfassung}}
 \addcontentsline{toc}{chapter}{Zusammenfassung}
 
-Im Projekt ``Wiesel \& Co am Zimmerberg'' werden die Tierarten Hermelin, Mauswiesel und Iltis mit gezielten Massnahmen gefördert. Dabei werden im Wesentlichen fünf Arten Typen von Aufwertungsmassnahmen umgesetzt: Winterquartiere, Ast- und Steinhaufen, Gebüschgruppen sowie Grossstrukturen. Von diesen Massnahmen sind bis heute über 450 realisiert worden.
+Im Projekt ``Wiesel \& Co am Zimmerberg'' werden die Tierarten Hermelin, Mauswiesel und Iltis mit gezielten Massnahmen gefördert. Dabei werden im Wesentlichen fünf Typen von Aufwertungsmassnahmen umgesetzt: Winterquartiere, Ast- und Steinhaufen, Gebüschgruppen sowie Grossstrukturen. Von diesen Massnahmen wurden mehr als 450 realisiert.
 
-Das Ziel der vorliegenden Wirkungskontrolle ist festzustellen, ob diese Aufwertungsmassnahmen von den Zielarten genutzt werden. Dafür wurden Ast- und Steinhaufen mit Spurentunnel und Winterquartieren mit Fotofallen systematisch beobachtet. Zudem wurden zur Beurteilung zwei weitere Datensätzen zugezogen, die im Rahmen des Naturschutz-Projekts erhoben wurden: Dabei handelt es sich die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
+Das Ziel der vorliegenden Wirkungskontrolle ist festzustellen, ob diese Aufwertungsmassnahmen von den Zielarten genutzt werden. Dafür wurden Ast- und Steinhaufen mit Spurentunneln und Winterquartiere mit Fotofallen systematisch beobachtet. Zudem wurden zur Beurteilung zwei weitere Datensätze zugezogen, die im Rahmen des Projekts erhoben wurden: Dabei handelt es sich um die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
 
-In der \textbf{Spurentunnel Untersuchung} sind 39 Asthaufen innerhalb von zwei Jahren über einen Zeitraum von je 6 Wochen systematisch untersucht worden. Die Untersuchungen fanden im Herbst 2019 sowie im Frühling 2020 statt. Anhand der Spurenpapiere konnten über beide Perioden 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis gemacht werden. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Über beide Untersuchungsperioden hinweg konnten in 27 von 39 Asthaufen (69 \%) mindestens eine Zielart detektiert werden
+In der \textbf{Spurentunnel Untersuchung} sind 39 Asthaufen innerhalb von zwei Jahren über einen Zeitraum von je 6 Wochen systematisch untersucht worden. Die Untersuchungen fanden im Herbst 2019 sowie im Frühling 2020 statt. Anhand der Spurenpapiere erfolgten über beide Perioden 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Über beide Untersuchungsperioden hinweg wurde in 27 von 39 Asthaufen (69 \%) mindestens eine Zielart detektiert. Von den Zielen, die WIN Wieselnetz den regionalen Wieselprojekten formuliert, konnte Wiesel \& Co am Zimmerberg nur eines vollständig erreichen (\emph{In mind. 75 \% der untersuchten Patches des Populationsraums sollen Nachweise von Hermelinen erbracht werden}). Drei der Ziele sind Teilweise erfüllt und ein Ziel konnte nicht erreicht werden (\emph{In mind. 25 \% der untersuchten Patches des Populationsraums sollen Nachweise von Mauswieseln erbracht werden.}). Die Nachweisraten zählen im Vergleich zu anderen Wieselprojekten in der Schweiz zu den höchsten.
 
-In der \textbf{Fotofallen-Überwachung} der Winterquartiere konnten in 5 von 11 untersuchten Standorten (45\%) mindestens eine Zielart festgestellt werden. Jedes Winterquartier wurde von Kleintieren genutzt: Von Dachsen, Eichhörnchen, Füchsen, Mardern, Fröschen, Vögeln, Mäusen und Hauskatzen.
+In der \textbf{Fotofallen-Überwachung} der Winterquartiere konnte in 5 von 11 untersuchten Standorten (45\%) mindestens eine Zielart festgestellt werden. 4 Einzelnachweise des Hermelins und 3 des Iltis. Jedes Winterquartier wurde von Kleintieren genutzt: Von Dachsen, Eichhörnchen, Füchsen, Mardern, Fröschen, Vögeln, Mäusen und Hauskatzen.
 
-In der unsystematischen, \textbf{spontanen Spurentunnel-Untersuchung} konnte in den insgesamt 32 beobachteten Asthaufen das Hermelin 51 und der Iltis 23-mal nachgewiesen werden. Auch in dieser Erhebung konnte das Mauswiesel nicht nachgewiesen werden. In 25 der 32 Asthaufen (78\%) konnte mindestens eine der Zielarten festgestellt werden.
+Zwei Gründe könnten für die überragende \textbf{Dominanz des Hermelins gegenüber des Mauswiesels} ausschlaggebend sein: (1) Dominanz des Hermelin aufgrund der idealen Nahrungsgrundlage, (2) Benachteiligung des Mauswiesels durch mangelnde Kleinräumigkeit bzw. Vernetzung des Lebensraumes. Diese Gründe sind allerdings mit einiger Unsicherheit belegt, und auch nach Durchführung des Projekts ist über die Populationsdynamik im Bezirk Horgen nicht viel bekannt.
 
-Von den 555 \textbf{Sichtungsmeldungen} , die im Projekt gesammelt wurden, sind 428 Meldungen verwendbar. Diese zeigen, dass das Hermelin weitestgehend im ganzen Bezirk beobachtet werden konnte, so auch in stark fragmentierten und dicht besiedelten Kulturflächen. Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften zu verzeichnen. Deutlich weniger Sichtungsmeldungen sind zum Iltis eingegangen. Dies wiederspiegelt einerseits die tiefere Anzahl Individuen im Vergleich zur Hermelinpopulation, ist aber mit Sicherheit auch der Lebensweise dieser Tierart geschuldet: Als dämmerungs- und nachtaktives Tier, welches sich auch gerne im Waldrandbereich aufhaltet, ist der Iltis seltener zu beobachten als das Hermelin.
+In der Untersuchung zur \textbf{Ermittlung attraktivitätsfördernder Faktoren von Asthaufen} wurden stark frequentierte Asthaufen mit solchen verglichen, die keinen Nachweis von Zielarten erbringen konnten. Dabei haben wir 9 verschiedene Parameter zu den Asthaufen erhoben und ihre Attraktivität statistisch analysiert. Dabei kam heraus, dass das Astmaterial als einziger untersuchter Parameter die Attraktiviät für die Zielarten (überwiegend Hermeline) zu beeinflussen scheint. Bei Asthaufen mit grobem Astmaterial ist die Wahrscheinlichkeit eines Nachweises mit hoher Signifikanz grösser als bei Asthaufen mit feinem Astmaterial.
 
-Ebenfalls sind Beobachtungen von Mauswieseln sehr rar und über den ganzen Bezirk verteilt. Auch hier ist das ein Resultat von zwei verschiedenen Faktoren bestimmt: Das Mauswiesel ist sehr schwierig zu beobachten und zuverlässig von Hermelinen zu unterscheiden. Es kann aber zusätzlich davon ausgegangen werden, dass die Mauswieselpopulation im Bezirk eher klein und fragil ist.
+In der unsystematischen, \textbf{spontanen Spurentunnel-Untersuchung} konnte in den insgesamt 32 beobachteten Asthaufen das Hermelin 51 und der Iltis 23-mal nachgewiesen werden. Auch in dieser Erhebung gab es keine Mauswiesel Nachweise. In 25 der 32 Asthaufen (78\%) wurde mindestens eine der Zielarten festgestellt.
+
+Von den 555 \textbf{Sichtungsmeldungen} , die im Projekt gesammelt wurden, sind 428 Meldungen verwendbar. Die Beobachtungen von Hermelinen sind über den ganzen Bezirk verteilt, so auch in stark fragmentierten und dicht besiedelten Kulturflächen. Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften zu verzeichnen. Deutlich weniger Sichtungsmeldungen sind zum Iltis eingegangen. Dies wiederspiegelt einerseits die Annahme, dass seine Population kleiner ist als jene des Hermelins. Andererseits sind die tieferen Zahlen sicherlich auch der Lebensweise dieser Tierart geschuldet: Als dämmerungs- und nachtaktives Tier, welches sich gerne in Deckung aufhält, ist der Iltis seltener zu beobachten als das Hermelin.
+
+Ebenfalls sind Beobachtungen von Mauswieseln sehr rar und über den ganzen Bezirk verteilt. Auch hier dürfte das Resultat von verschiedenen Faktoren bestimmt sein: Das Mauswiesel verhält sich weniger auffällig und ist unzuverlässig von Hermelinen zu unterscheiden. Alle Resultate weisen darauf hin, dass die Mauswieselpopulation im Bezirk klein und fragil ist.
+
+\hypertarget{danksagung}{%
+\chapter*{Danksagung}\label{danksagung}}
+\addcontentsline{toc}{chapter}{Danksagung}
+
+Dieser Bericht ist durch die Mitwirkung vieler engagierter Personen entstanden, bei denen wir uns an dieser Stelle bedanken möchten: \textbf{Simon Capt} für seine fachlichen Einschätzungen sowie der Bestimmung und Gegenkontrolle von zahlreichen Spurenpapieren. \textbf{Inga Laas} und \textbf{Silvio Aegerter} für ihr grosses Engagement bei der Erhebung der Daten aus Spurentunneln und Fotofallen. \textbf{Adrian Dietrich} (SWILD), \textbf{Andrin Dürst} (Naturpark Thal) sowie \textbf{Matthias Nyfeler} (ZHAW) für ihre Inputs zur statistischen Auswertung der Daten. All den zahlreichen freiwilligen Helfern bei der Betreuung von Spurentunneln sowie die Meldung von Beobachtungen.
 
 \hypertarget{ausgangslage}{%
 \chapter{Ausgangslage}\label{ausgangslage}}
 
-Das Projekt ``Wiesel \& Co am Zimmerberg'' ist eine gemeinsame Aktion der Naturschutzvereine des Bezirks Horgen. Im Zentrum dieses Naturschutzprojekts steht die Förderung der Tierarten Hermelin, Mauswiesel und Iltis.
+``Wiesel \& Co am Zimmerberg'' ist ein mehrjähriges Prokekt der Naturschutzvereine des Bezirks Horgen (2014 bis 2021). Im Zentrum dieses Naturschutzprojekts steht die Förderung der Tierarten Hermelin, Mauswiesel und Iltis.
 
 Zur Förderung dieser Zielarten werden in erster Linie ihre Lebensräume aufgewertet. Dazu werden natürliche Strukturen wie Asthaufen und Hecken geschaffen, um mehr Deckungsmöglichkeiten, grösseren Beuteerfolg und bessere Bedingungen für die Aufzucht von Jungen zu schaffen.
 
-Konkret werden im Projekt Massnahmen gefördert, welche unter \href{http://wieselundco.ch/projekt/massnahmen}{wieselundco.ch/projekt/massnahmen} beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und teilweise finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (siehe auch Abbildung \ref{fig:massnahmen}):
+Konkret werden im Projekt Massnahmen gefördert, welche unter \href{https://wieselundco.ch/welche-massnahmen}{wieselundco.ch/welche-massnahmen} beschrieben sind. Im Projekt wird die Realisierung dieser Massnahmen beratend, tatkräftig und teilweise finanziell unterstützt. Die finanzielle Unterstützung erfolgt bei der Umsetzung folgender Massnahmen (siehe auch Abbildung \ref{fig:massnahmen}):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -264,7 +296,7 @@ Konkret werden im Projekt Massnahmen gefördert, welche unter \href{http://wiese
   Sanierung von Feldscheunen
 \end{enumerate}
 
-Von den etwa 450 Massnahmen, die im Rahmen des Naturschutzprojekts umgesetzt wurden, handelt es sich bei über 60 \% um Asthaufen. Etwa 20 \% der Massnahmen sind Gebüschgruppen und weitere 10 \% Steinhaufen. Winterquartiere und Grossstrukturen bilden die restlichen 10 \%.
+Von den etwa 450 Massnahmen, die im Rahmen des Naturschutzprojekts umgesetzt wurden, handelt es sich bei über 60 \% um Asthaufen. Etwa 20 \% der Massnahmen sind Gebüschgruppen und weitere 10 \% Steinhaufen. Winterquartiere und Grossstrukturen bilden die restlichen 10 \%. Dazu kommen 8 sanierte Feldscheunen (Streu- und Torfhütten).
 
 Die vorliegende Wirkungskontrolle soll feststellen, ob die Aufwertungsmassnahmen für die Zielarten attraktiv sind und von ihnen genutzt werden. Dafür werden Ast- und Steinhaufen mit Spurentunnel und Winterquartiere mit Fotofallen systematisch beobachtet. Zudem werden zur Beurteilung zwei weitere Datensätze des Projekts beigezogen, die bereits vorliegen. Dabei handelt es sich um die Resultate von spontanen Wirkungskontrollen sowie um Beobachtungsmeldungen aus der Bevölkerung.
 
@@ -281,13 +313,13 @@ Die vorliegende Wirkungskontrolle entspricht einer Synthese zwischen der Attrakt
 
 Gemäss dem Konzept von Müri und Weinberger (2013) besteht die Erfolgskontrolle aus der Umsetzungskontrolle, der Attraktivitätskontrolle sowie der Populationskontrolle. Diese Bestandteile können auch als drei unterschiedliche Ansätze verstanden werden, um den Erfolg eines Aufwertungsprojektes zu messen, und unterscheiden sich stark in ihrem Aufwand und ihrer Aussagekraft.
 
-Die \textbf{Umsetzungskontrolle} stellt die einfachste Art dar, den Erfolg des Projektes zu messen. Dabei gilt es die Anzahl der realisierten Massnahmen bzw. deren Anteil an den geplanten Massnahmen zu bestimmen. Dieser Kennwert (z.B. ``80\% aller geplanten Massnahmen konnten umgesetzt werden'') sagt jedoch wenig darüber aus, ob die umgesetzten Massnahmen auch zum gewünschten Erfolg (Stärkung der lokalen Wieselpopulation) beitragen. Werden Massnahmen ungünstig angelegt, sind sie für die Zielarten nicht nutzbar. Die Umsetzungskontrolle erfolgt in den Berichterstattungen, welche einsehbar sind unter: \href{http://www.wieselundco.ch/projekt/resultate}{wieselundco.ch/projekt/resultate}.
+Die \textbf{Umsetzungskontrolle} stellt die einfachste Art dar, den Erfolg des Projektes zu messen. Dabei gilt es die Anzahl der realisierten Massnahmen bzw. deren Anteil an den geplanten Massnahmen zu bestimmen. Dieser Kennwert (z.B. ``80\% aller geplanten Massnahmen konnten umgesetzt werden'') sagt jedoch wenig darüber aus, ob die umgesetzten Massnahmen auch zum gewünschten Erfolg (Stärkung der lokalen Wieselpopulation) beitragen. Werden Massnahmen ungünstig angelegt, sind sie für die Zielarten nicht nutzbar. Die Umsetzungskontrolle erfolgt in den Berichterstattungen, welche einsehbar sind unter: \href{https://wieselundco.ch/resultate}{wieselundco.ch/resultate}.
 
-Am aufwändigsten ist die \textbf{Populationskontrolle} : Hier wird untersucht, ob sich die Population durch die umgesetzten Massnahmen günstig entwickelt hat. Eine solche Untersuchung hat die grösste Aussagekraft, da sie direkt die Kernfrage beantwortet. Jedoch unterliegen Hermelin- und Mauswieselpopulationen starken Schwankungen, die von externen Faktoren wie Witterung und Nahrungsverfügbarkeit abhängig sind. Um eine fundierte Aussage über die projektbedingte Populationsentwicklung machen zu können, wären Langzeitstudien vor und nach der Umsetzung nötig, was finanziell und logistisch einen unverhältnismässig hohen Aufwand bedeuten würde.
+Am aufwändigsten ist die \textbf{Populationskontrolle}: Hier wird untersucht, ob sich die Population durch die umgesetzten Massnahmen günstig entwickelt hat. Eine solche Untersuchung hat die grösste Aussagekraft, da sie direkt die Kernfrage beantwortet. Jedoch unterliegen Hermelin- und Mauswieselpopulationen starken Schwankungen, die von externen Faktoren wie Witterung und Nahrungsverfügbarkeit abhängig sind. Um eine fundierte Aussage über die projektbedingte Populationsentwicklung machen zu können, wären Langzeitstudien vor und nach der Umsetzung nötig, was finanziell und logistisch einen unverhältnismässig hohen Aufwand bedeuten würde.
 
-Bei der \textbf{Attraktivitätskontrolle} handelt es sich um einen Kompromiss zwischen Machbarkeit und Aussagekraft. Diese fokussiert auf die Frage, ob und wie häufig die erstellten Strukturen von den Zielarten genutzt wurden. Sie hat eine erheblich grössere Aussagekraft als diejenige der Umsetzungskontrolle, weil die Nutzung der Strukturen mitberücksichtigt wird. Die vorliegende Untersuchung verfolgt diesen Ansatz (``Attraktivitätskontrolle''). Dazu wurden zwei Erhebungen durchgeführt: Zum einen wurden \textbf{Asthaufen mit Spurentunnel} , zum anderen \textbf{Winterquartiere mit Fotofallen} beobachtet.
+Bei der \textbf{Attraktivitätskontrolle} handelt es sich um einen Kompromiss zwischen Machbarkeit und Aussagekraft. Diese fokussiert auf die Frage, ob und wie häufig die erstellten Strukturen von den Zielarten genutzt wurden. Sie hat eine erheblich grössere Aussagekraft als diejenige der Umsetzungskontrolle, weil die Nutzung der Strukturen mitberücksichtigt wird. Die vorliegende Untersuchung verfolgt diesen Ansatz (``Attraktivitätskontrolle''). Dazu wurden zwei Erhebungen durchgeführt: Zum einen wurden \textbf{Asthaufen mit Spurentunneln}, zum anderen \textbf{Winterquartiere mit Fotofallen} beobachtet.
 
-Die Resultate der Spurentunnel und Fotofallen geben nicht nur Aufschluss darüber, wie viele sondern auch welche Strukturen wie oft (und von welchen Arten) besucht wurden. Eine Erhebung verschiedener Parameter von sehr gut und sehr schlecht frequentierten Asthaufen soll Aufschlüsse über die Faktoren geben, was Strukturen für Wiesel \& Co attraktiv machen.
+Die Resultate der Spurentunnel und Fotofallen geben nicht nur Aufschluss darüber, wie viele, sondern auch welche Strukturen wie oft (und von welchen Arten) besucht wurden. Eine Erhebung verschiedener Parameter von sehr gut und sehr schlecht frequentierten Asthaufen soll zudem Aufschlüsse über die Faktoren geben, was Strukturen für Wiesel \& Co attraktiv machen.
 
 Zusätzlich werden zwei weitere Datensätze von Seite Wiesel \& Co am Zimmerberg beigezogen: Zum einen handelt es sich um Daten von spontan und unsystematisch durchgeführten Spurentunnel Erhebungen und zum anderen um Sichtungsmeldungen aus der Bevölkerung. Weitere Details dazu im nächsten Kapitel ``Methode''.
 
@@ -347,12 +379,12 @@ Um die Artbestimmung der erfassten Spuren sicherzustellen, erfolgte die Auswertu
 
 Die Überwachung der Winterquartiere wurde während sechs Wochen zwischen dem 26.08.2019 und 06.10.2019 sowie zwischen dem 30.3.2020 und 10.04.2020 durchgeführt. Untersucht wurden 11 Winterquartiere (alle in der Region Südost, siehe Abbildung \ref{fig:layoutstrukturen}).
 
-Zur Untersuchung der Winterquartiere wurden Fotofallen mit Infrarotblitz von Bushnell verwendet. Als Setup wurde pro Auslösung ein Foto, sowie ein Film von 5 bis 10 Sekunden aufgenommen. Die Kameras wurden an einem eigens dafür eingeschlagenen Pfosten montiert, ergänzt mit einem Informationsblatt für Passanten.
+Zur Untersuchung der Winterquartiere wurden Fotofallen mit Infrarotblitz von Bushnell verwendet. Als Setup wurde pro Auslösung ein Foto, sowie ein Film von 5 bis 10 Sekunden aufgenommen. Die Kameras wurden an einem eigens dafür eingeschlagenen Pfosten montiert, ergänzt mit einem Informationsblatt für Passanten. Der Aufnahmewinkel wurde bestmöglich gewählt, um die Bewegungen direkt beim Winterquartier zu registrieren. Als Besuche gelten Erkundungen, die nicht zwingend ein Eindringen ins Winterquartier beinhalten müssen.
 
 Zur Auswertung der Bild- und Videoaufnahmen wurden sämtliche Dateien einzeln durchgeschaut und alle gefundenen Tiergruppen (ausser Mäusen und Katzen) aufaddiert. Die nachfolgende Analyse der Zahlen beschränkt sich jedoch auf die Zielarten.
 
-\hypertarget{erhebung-3-erhebung-von-asthaufen-eigenschaften-zur-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren}{%
-\section{Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernder Faktoren}\label{erhebung-3-erhebung-von-asthaufen-eigenschaften-zur-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren}}
+\hypertarget{erhebung-3-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren-von-asthaufen}{%
+\section{Erhebung 3: Ermittlung attraktivitätsfördernder Faktoren von Asthaufen}\label{erhebung-3-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren-von-asthaufen}}
 
 Es ist anzunehmen, dass die Nutzung von Kleinstrukturen durch Kleinraubtiere von gewissen Faktoren besonders stark beeinflusst wird.
 Um diese Annahme zu überprüfen wurden gemäss Erhebung 1, die 13 bestfrequentierten Asthaufen und 12 nicht frequentierte Asthaufen ausgewählt und im Feld aufgesucht. Jeder der 25 verschiedenen Asthaufen wurde auf 9 mutmasslich attraktivitätsbestimmende Faktoren untersucht und pro Faktor in eine von 5 Klassen eingeteilt (siehe nachstehende Tabelle).
@@ -381,42 +413,45 @@ Benachbarte Kleinstrukturen & s. wenig & wenig & mittel & viel & s. viel\\
 \hline
 Benachbarte Korridore / Habitate & s. ungünstig & ungünstig & mittel & günstig & s. günstig\\
 \hline
-Pflege Aufstockung & s. schlecht & schlecht & mittel & gut & s. gut\\
+Pflege / Aufstockung & s. schlecht & schlecht & mittel & gut & s. gut\\
 \hline
 \end{tabular}
 \end{table}
 
 Es ist zu beachten, dass fast alle Parameter keine exakt abgrenzbaren Klassengrenzen aufweisen. Die Erhebung kommt bei bei gewissen Parametern einer Schätzung gleich und die Beurteilung erfolgte aufgrund von Indizien: Die Nähe zu Wanderrouten (``Störung'') oder Siedlungen (``Katzen''), die Sichtung von Maushaufen (``Beuteangebot'') oder die Lebensraumqualität für grössere Prädatoren (``andere Fressfeinde'').
-Andere Faktoren können hingegen klarer beurteilt werden, wie zum Beispiel das Volumen oder das Astmaterial (grob \ref{fig:astmaterial} links bzw. fein \ref{fig:astmaterial} rechts).
+Andere Faktoren können hingegen klarer beurteilt werden, wie zum Beispiel das Volumen oder das Astmaterial (grob \ref{fig:astmaterial} rechts bzw. fein \ref{fig:astmaterial} links).
 
 \begin{figure}
-\includegraphics[width=0.49\linewidth]{images/feines_astmaterial} \caption{Zwei Asthaufen mit unterschiedlichem Material: Grob (links) bzw. fein (rechts)}\label{fig:astmaterial-1}
+\includegraphics[width=0.45\linewidth]{images/feines_astmaterial} \includegraphics[width=0.45\linewidth]{images/grobes_astmaterial} \caption{Zwei Asthaufen mit unterschiedlichem Material: Grob (rechts) bzw. fein (links)}\label{fig:astmaterial}
 \end{figure}
+
+In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung \emph{Astmaterial: sehr fein} oder \emph{benachbarten Kleinstrukturen: sehr wenig}). Dieser Umstand erschwert das Erkennen von Effekten, deshalb werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (\emph{mittel}) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden neuen Klassen möglichst ausgewogen (gleich gross) zu halten. In Abbildung \ref{fig:asthaufenqualcount} sind die ursprünglichen sowie die neu gebildeten Klassen (farblich gekennzeichnet) ersichtlich.
+
 \begin{figure}
-\includegraphics[width=0.49\linewidth]{images/grobes_astmaterial} \caption{Zwei Asthaufen mit unterschiedlichem Material: Grob (links) bzw. fein (rechts)}\label{fig:astmaterial-2}
+\includegraphics[width=41in]{images/asthaufen_qualitaet_histogramm} \caption{Reklassifizierung der Anzahl Asthaufen pro Merkmalsausprägung}\label{fig:asthaufenqualcount}
 \end{figure}
 
 \hypertarget{datensatz-a-unsystematische-attraktivituxe4tskontrolle-von-asthaufen}{%
 \section{Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen}\label{datensatz-a-unsystematische-attraktivituxe4tskontrolle-von-asthaufen}}
 
-Im Datensatz werden alle 32 Asthaufen berücksichtigt, die unmittelbar nach der Erstellung im Rahmen von Aktionstagen mit Spurentunnel ausgestattet und über einen variablen Zeitraum kontrolliert wurden (siehe Anhang C @ref(\#anhang-datensatz-a)). In ca. 50\% der Erhebungen wurden ergänzend Fotofallen eingesetzt. Die Erhebung dauerte in der Regel deutlich länger als 6 Wochen (höhere Detektionswahrscheinlichkeit), die Kontrollintervalle waren oft grösser als 2 Wochen (vermehrter Datenausfall). Die Beobachtung der Asthaufen verteilt sich über die Jahre 2014 bis 2019, wobei es 2016 zu einer Häufung kam. Es kam zu allen Jahreszeiten zu Kontrollaktivitäten, vermehrt im Frühling. Folgende Faktoren erschweren die Verwendung dieser Daten für einen Zielvergleich:
+Im Datensatz werden alle 32 Asthaufen berücksichtigt, die unmittelbar nach der Erstellung im Rahmen von Aktionstagen mit Spurentunnel ausgestattet und über einen variablen Zeitraum kontrolliert wurden (siehe Anhang C \ref{anhang-datensatz-a}). In ca. 50\% der Erhebungen wurden ergänzend Fotofallen eingesetzt. Die Erhebung dauerte in der Regel deutlich länger als 6 Wochen (höhere Detektionswahrscheinlichkeit), die Kontrollintervalle waren oft grösser als 2 Wochen (vermehrter Datenausfall). Die Beobachtung der Asthaufen verteilt sich über die Jahre 2014 bis 2019, wobei es 2016 zu einer Häufung kam. Es kam zu allen Jahreszeiten zu Kontrollaktivitäten, vermehrt im Frühling. Folgende Faktoren erschweren die Verwendung dieser Daten für einen Zielvergleich:
 
 \begin{itemize}
 \tightlist
 \item
   die Kontrollen in der Kontrollphase (Dauer und Regelmässigkeit) wurden nicht einheitlich durchgeführt
 \item
-  leere Spurenpapiere wurden nicht systematisch dokumentiert. Es ist nicht genau nachvollziehbar, wie intensiv eine Struktur beobachtet wurde. Der Nachweiserfolg kann somit nicht in den Kontext des Nachweisefforts gesetzt werden.
+  leere bzw. nicht auswertbare Spurenpapiere wurden nicht systematisch dokumentiert. Es ist nicht genau nachvollziehbar, wie intensiv eine Struktur beobachtet wurde. Der Nachweiserfolg kann somit nicht in den Kontext des Nachweisefforts gesetzt werden.
 \item
   die Auswahl der Standorte erfolgte vor allem aus praktischen Überlegungen (z.B. Interesse der Teilnehmenden an Aktionstagen)
 \end{itemize}
 
-Da der Datensatz mit beachtlichem Aufwand erhoben wurde, wird er in den vorliegenden Bericht integriert. Abbildung \ref{fig:wirkungskontrollespontaneffort} zeigt, für welche Kalenderwochen in welchen Jahren für eine Struktur ein Spurenpapier vorhanden ist. Dabei stellt jedes Quadrat eine Kalenderwoche einer Struktur dar und ist gelb eingefärbt, wenn ein Spurenpapier für diesen Zeitraum vorhanden ist.
+Da der Datensatz mit beachtlichem Aufwand erhoben wurde, wird er in den vorliegenden Bericht integriert. Abbildung \ref{fig:wirkungskontrollespontaneffort} zeigt, in welchen Kalenderwochen des jeweiligen Jahres für eine Struktur ein Spurenpapier ausgewechselt wurde. Dabei stellt jedes Quadrat eine Kalenderwoche einer Struktur dar und ist gelb eingefärbt, wenn ein Spurenpapier für die vorhergehenden Wochen ausgewertet werden konnte.
 
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{images/wirkungskontrolle_spontan_effort} \caption{Visualisierung der fortlaufend kontrollierten Asthaufen (nach Ansatz 1). Jedes Quadrat stellt eine Kalenderwoche aus einem Jahr einer Struktur dar. Das Quadrat ist gelb eingefärbt, wenn in der entsprechenden Kalenderwoche ein Spurenpapier vorhanden ist und grau, wenn keines vorhanden ist.}\label{fig:wirkungskontrollespontaneffort}
+\includegraphics[width=1\linewidth]{images/wirkungskontrolle_spontan_effort} \caption{Visualisierung der fortlaufend kontrollierten Asthaufen (nach Ansatz 1). Jedes Quadrat stellt eine Kalenderwoche aus einem Jahr einer Struktur dar. Das Quadrat ist gelb eingefärbt, wenn in der entsprechenden Kalenderwoche ein Spurenpapier ausgewertet wurde.}\label{fig:wirkungskontrollespontaneffort}
 \end{figure}
 
 \hypertarget{methode-datensatz-b}{%
@@ -429,7 +464,7 @@ Auf diese Weise sind über 500 Meldungen zusammengetragen worden. Alle Meldungen
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{images/beobachtungsmeldungen_histogramm} \caption{Anzahl gemeldete Beobachtungen pro Jahr, in dem die Meldung in die Datenbank eingetragen wurden. Die hohen Spitzen sind dadurch begründet, dass mehrere, schriftlich vorliegende Meldungen vom Projektleiter in der Datenbank erfasst wurden.}\label{fig:beobachtungsmeldungenhistogramm}
+\includegraphics[width=1\linewidth]{images/beobachtungsmeldungen_histogramm} \caption{Anzahl gemeldete Beobachtungen pro Jahr, in dem die Meldung in die Datenbank eingetragen wurden. Die Spitzen sind hauptsächlich dadurch begründet, dass vorliegende Meldungen vom Projektleiter gesammelt und dann in der Datenbank erfasst wurden.}\label{fig:beobachtungsmeldungenhistogramm}
 \end{figure}
 
 \hypertarget{resultate}{%
@@ -438,7 +473,7 @@ Auf diese Weise sind über 500 Meldungen zusammengetragen worden. Alle Meldungen
 \hypertarget{erhebung-1-attraktivituxe4tskontrolle-von-asthaufen-mittels-spurentunneln-1}{%
 \section{Erhebung 1: Attraktivitätskontrolle von Asthaufen mittels Spurentunneln}\label{erhebung-1-attraktivituxe4tskontrolle-von-asthaufen-mittels-spurentunneln-1}}
 
-Anhand der Spurenpapiere konnten im Herbst 2019 32 Einzelnachweise von Hermelinen, sowie 2 Einzelnachweise von Iltissen aufgezeichnet werden. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Im Frühling 2020 konnten 23 Einzelnachweise von Hermelinen gemacht werden, jedoch keine vom Iltis oder vom Mauswiesel. Über beide Studien konnten somit 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis gemacht werden (siehe Abbildung \ref{fig:wirkungskontrollesystematischeinzelnachweisewaffle}).
+Anhand der Spurenpapiere wurden im Herbst 2019 32 Einzelnachweise von Hermelinen, sowie 2 Einzelnachweise von Iltissen aufgezeichnet. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Im Frühling 2020 gab es 23 Einzelnachweise von Hermelinen, jedoch keine vom Iltis oder vom Mauswiesel. Aus den beiden Erhebungsperioden resultierten somit 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis (siehe Abbildung \ref{fig:wirkungskontrollesystematischeinzelnachweisewaffle}).
 
 
 
@@ -446,12 +481,12 @@ Anhand der Spurenpapiere konnten im Herbst 2019 32 Einzelnachweise von Hermeline
 \includegraphics[width=1\linewidth]{images/wirkungskontrolle_systematisch_einzelnachweise_waffle} \caption{Anzahl Einzelnachweise pro Zielart über beide Untersuchungsperioden (Herbst 2019 und Frühling 2020): Insgesamt wurde das Hermelin 55-mal, der Iltis 2-mal und das Mauswiesel gar nicht nachgewiesen.}\label{fig:wirkungskontrollesystematischeinzelnachweisewaffle}
 \end{figure}
 
-Da es sich bei gewissen Nachweisen vermutlich um Mehrfachbeobachtung des gleichen Individuums handelt, ist der Anteil an Strukturen mit mindestens einem Nachweis aussagekräftiger. Im Herbst 2019 konnte in 19 von 39 Asthaufen (49 \%) mindestens eine Zielart nachgewiesen werden. In 18 von 39 Asthaufen (46 \%) wurde das Hermelin detektiert, in 2 von 39 Asthaufen (5 \%) der Iltis. Im Frühling 2020 wurde in 14 von 39 Asthaufen (36 \%) eine Zielart detektiert, wobei es sich immer um Hermeline handelte (siehe Abbildung \ref{fig:strukturenmitzielart}). Über beide Untersuchungsperioden hinweg konnte in 27 von 39 Asthaufen (69 \%) mindestens eine Zielart detektiert werden.
+Da es sich bei gewissen Nachweisen vermutlich um Mehrfachbeobachtungen des gleichen Individuums handelt, ist der Anteil an Strukturen mit mindestens einem Nachweis aussagekräftiger. Im Herbst 2019 konnte in 19 von 39 Asthaufen (49 \%) mindestens eine Zielart nachgewiesen werden. In 18 von 39 Asthaufen (46 \%) wurde das Hermelin detektiert, in 2 von 39 Asthaufen (5 \%) der Iltis. Im Frühling 2020 wurde in 14 von 39 Asthaufen (36 \%) eine Zielart detektiert, wobei es sich immer um Hermeline handelte (siehe Abbildung \ref{fig:strukturenmitzielart}). Über beide Untersuchungsperioden hinweg konnte in 27 von 39 Asthaufen (69 \%) mindestens eine Zielart detektiert werden.
 
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{images/strukturen_mit_zielart} \caption{Anzahl sowie Anteil der untersuchten Strukturen, in denen mindestens eine Zielart nachgewiesen werden konnte.}\label{fig:strukturenmitzielart}
+\includegraphics[width=1\linewidth]{images/strukturen_mit_zielart} \caption{Anzahl sowie Anteil der untersuchten Asthaufen, in denen mindestens eine Zielart nachgewiesen werden konnte.}\label{fig:strukturenmitzielart}
 \end{figure}
 
 
@@ -465,19 +500,17 @@ Da es sich bei gewissen Nachweisen vermutlich um Mehrfachbeobachtung des gleiche
 \hypertarget{erhebung-2-attraktivituxe4tskontrolle-von-winterquartieren-mittels-fotofallen-1}{%
 \section{Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen}\label{erhebung-2-attraktivituxe4tskontrolle-von-winterquartieren-mittels-fotofallen-1}}
 
-Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \ref{fig:winterquartiereresultate}). Im Folgejahr (2020) gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Frühling 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45\%) mindestens eine Zielart festgestellt werden konnte (4 Hermelin- und 3 Iltis-Nachweise). Alle 3 Winterquartiere in Feldscheunen (sanierte Streuhütten) wiesen Nachweise auf (2 des Hermelins, 3 des Iltis).
+Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \ref{fig:winterquartiereresultate}). Im Folgejahr (2020) gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Herbst 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45\%) mindestens eine Zielart festgestellt werden konnte (4 Hermelin- und 3 Iltis-Nachweise). Alle 3 Winterquartiere in Feldscheunen (sanierte Streuhütten) wiesen Nachweise auf (2 des Hermelins, 3 des Iltis).
 Jedes Winterquartier wurde von zahlreichen Tierarten genutzt: Dachse, Eichhörnchen, Füchse, Marder, Frösche, Vögel und Mäusen wurden von den Kameras abgelichtet.
 
 Die Daten der Standorte Str116 und Str198 konnten 2019 und die von Str12747 im Jahr 2020 nicht ausgewertet werden. Die Kameras an den genannten Standorten wiesen eine Fehlfunktion auf und erfassten so viele Bilder, dass eine Auswertung der Daten unverhältnismässig viel Zeit in Anspruch genommen hätte.
-
-
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{images/winterquartiere_resultate} \caption{Zusammenfassung der Resultate aus der Überwachung der Winterquartiere mit sämtlichen Tierarten}\label{fig:winterquartiereresultate}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.49\linewidth]{images/str238/10040255} \includegraphics[width=0.49\linewidth]{images/str238/10040261} \includegraphics[width=0.49\linewidth]{images/str238/10040263} \includegraphics[width=0.49\linewidth]{images/str238/10040267} \caption{Bilderserien zeugen davon, dass die Winterquartiere von den Zielarten genutzt werden. Das Hermelin im Bild nutzt das kleine Schlupfloch und erkundet den geschützten Hohlraum, der durch die Anordnung der Strohballen besteht (Str. 238)}\label{fig:unnamed-chunk-5}
+\includegraphics[width=0.49\linewidth]{images/str238//10040255} \includegraphics[width=0.49\linewidth]{images/str238//10040261} \includegraphics[width=0.49\linewidth]{images/str238//10040263} \includegraphics[width=0.49\linewidth]{images/str238//10040267} \caption{Bilderserien zeugen davon, dass die Winterquartiere von den Zielarten genutzt werden. Das Hermelin im Bild nutzt das kleine Schlupfloch und erkundet den geschützten Hohlraum, der durch die Anordnung der Strohballen besteht (Str. 238)}\label{fig:unnamed-chunk-5}
 \end{figure}
 
 \begin{figure}[hbt!] \centering \includegraphics{images/youtube/YomCsy1olBs.jpg} \caption{Der Video ist in voller Länge hier abgespeichert: \url{https://youtu.be/YomCsy1olBs}} \end{figure}\begin{figure}[hbt!] \centering \includegraphics{images/youtube/ttv-LHkzc18.jpg} \caption{Der Video ist in voller Länge hier abgespeichert: \url{https://youtu.be/ttv-LHkzc18}} \end{figure}
@@ -488,56 +521,66 @@ Die Daten der Standorte Str116 und Str198 konnten 2019 und die von Str12747 im J
 
 \begin{figure}[hbt!] \centering \includegraphics{images/youtube/O5la_63_u_w.jpg} \caption{Der Video ist in voller Länge hier abgespeichert: \url{https://youtu.be/O5la_63_u_w}} \end{figure}\begin{figure}[hbt!] \centering \includegraphics{images/youtube/VCjIpFX3TO0.jpg} \caption{Der Video ist in voller Länge hier abgespeichert: \url{https://youtu.be/VCjIpFX3TO0}} \end{figure}\begin{figure}[hbt!] \centering \includegraphics{images/youtube/VCjIpFX3TO0.jpg} \caption{Der Video ist in voller Länge hier abgespeichert: \url{https://youtu.be/VCjIpFX3TO0}} \end{figure}\begin{figure}[hbt!] \centering \includegraphics{images/youtube/Hi7ddE5r7B4.jpg} \caption{Der Video ist in voller Länge hier abgespeichert: \url{https://youtu.be/Hi7ddE5r7B4}} \end{figure}\begin{figure}[hbt!] \centering \includegraphics{images/youtube/ISg0ZA5Fvgo.jpg} \caption{Der Video ist in voller Länge hier abgespeichert: \url{https://youtu.be/ISg0ZA5Fvgo}} \end{figure}
 
-\hypertarget{erhebung-3-erhebung-von-asthaufen-eigenschaften-zur-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren-1}{%
-\section{Erhebung 3: Erhebung von Asthaufen Eigenschaften zur Ermittlung attraktivitätsfördernder Faktoren}\label{erhebung-3-erhebung-von-asthaufen-eigenschaften-zur-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren-1}}
+\hypertarget{erhebung-3-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren-von-asthaufen-1}{%
+\section{Erhebung 3: Ermittlung attraktivitätsfördernder Faktoren von Asthaufen}\label{erhebung-3-ermittlung-attraktivituxe4tsfuxf6rdernder-faktoren-von-asthaufen-1}}
 
-In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung \emph{Astmaterial: sehr fein} oder \emph{benachbarten Kleinstrukturen: sehr wenig}). Dieser Umstand erschwert das Erkennen von Effekten, deshalb werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (\texttt{mittel}) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden neuen Klassen möglichst ausgewogen (gleich gross) zu halten. In Abbildung \ref{fig:asthaufenqualcount} sind die ursprünglichen sowie die neu gebildeten Klassen (farblich gekennzeichnet) ersichtlich.
+Die nachstehende Visualisierung (Abbildung \ref{fig:attraktivitaet}) stellt die Anzahl Nachweise (y-Achse) der Beurteilung (x-Achse) für jeden Asthaufen (Punkte) sowie für jeden erhobenen Parameter (Teilplots) gegenüber. Visuell sind für die meisten Parameter keine klare Tendenzen ersichtlich. Die Ausnahme bildet der Parameter ``Astmaterial'', wo folgende Tendenz ersichtlich zu sein scheint: Je gröber das Astmaterial, desto mehr Nachweise (überwiegend Hermeline).
 
 \begin{figure}
-\includegraphics[width=41in]{images/asthaufen_qualitaet_histogramm} \caption{Anzahl Asthaufen pro Merkmalsausprägung}\label{fig:asthaufenqualcount}
+\includegraphics[width=49.21in]{images/attraktivitaet_plot} \caption{Anzahl Nachweise pro Asthaufen und Merkmalsausprägung. Jeder Punkt stellt einen Asthaufen dar, auf jedem Teilplot sind somit 25 Punkte ersichtlich. Die Punkte sind zudem leicht "geschüttelt"  damit sich die Punkte nicht überlagern.}\label{fig:attraktivitaet}
 \end{figure}
 
-Um den Einfluss der erhobenen Parameter auf die Hermelinbesuche zu prüfen, berechnen wir ein \texttt{poisson} basiertes Generalized Linear Model. Dieses Modell zeigt, dass sich das Hermelinvorkommen durch die Anzahl beanachbarter Korridore (schwach signifikant \texttt{p\ =\ 0.1}, negative Korrelation), vor allem aber durch die Stärke des verwendeten Astmaterials (hoch signifikant, \texttt{p\ =\ 0.01}, positive Korrelation) erklären lässt. Letzteres Resultat besagt, dass die Nachweisquote der Zielarten bei Asthaufen mit einem hohen Bestandteil an grobem Holz hoch signifikant grösser ist.
-Der vollständige Modelloutput ist hier ersichtlich:
+Um den Einfluss der erhobenen Parameter auf die Nachweise statistisch zu prüfen, wurden verschiedene Verfahren angewendet.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Logistische Regression in zwei Varianten (\emph{Binomial} und \emph{Poisson}): Hier wird überprüft, welche Faktoren Einfluss darauf haben, ob ein Asthaufen überhaupt besucht wird (\emph{Binomial}) bzw. wie häufig er besucht wird (\emph{Poisson}).
+\item
+  Zero-Inflation-Modell: Hier wird mitberücksichtigt, dass viele 0 Werte (keine Nachweise) festgestellt wurden.
+\item
+  Lineare Regression (OLS)
+\item
+  Fishers Exakt Test
+\end{enumerate}
+
+Über alle Verfahren hinweg kommt zum Ausdruck, dass nur der Faktor \emph{Asthaufen} ein Einfluss auf das Hermelinvorkommen hat: \textbf{Bei Asthaufen mit grobem Astmaterial ist ein Nachweis wahrscheinlicher als bei Asthaufen mit feinem Astmaterial}.
+
+An dieser Stelle zeigen wir das Resultat nur einer solchen statistischen Modellierung: Eine logistische Regression des Typs \emph{Binomial}, unter der Berücksichtigung korrelierter Faktoren. Dieses Modell zeigt, dass \emph{Astmaterial} einen signifikaten Einfluss (p \textless{} 5\%) auf das Hermelinvorkommen hat. Die Resultate der restlichen Modelle sind in Anhang \ref{anhang-attraktivitaet-modell} ersichtlich.
 
 \begin{verbatim}
 ## 
 ## Call:
-## glm(formula = total_nach_weise_wk_2019_2020 ~ ., family = "poisson", 
-##     data = .)
+## glm(formula = nachweise_bool ~ astmaterial + storung + beute_angebot, 
+##     family = "binomial", data = .)
 ## 
 ## Deviance Residuals: 
 ##     Min       1Q   Median       3Q      Max  
-## -1.9579  -0.6978  -0.5812   0.3511   2.1507  
+## -2.2826  -0.5107   0.3918   0.7716   1.6545  
 ## 
 ## Coefficients:
-##                                  Estimate Std. Error z value Pr(>|z|)   
-## (Intercept)                      -0.36079    0.39102  -0.923  0.35617   
-## astmaterial.L                     1.58297    0.54235   2.919  0.00351 **
-## volumen.L                        -0.02659    0.29225  -0.091  0.92751   
-## storung.L                         0.31363    0.37483   0.837  0.40275   
-## beute_angebot.L                  -0.23423    0.24796  -0.945  0.34486   
-## katzen.L                          0.25120    0.48997   0.513  0.60818   
-## andere_feinde.L                   0.13374    0.40013   0.334  0.73819   
-## benachbarte_kleinstr.L            0.16059    0.33675   0.477  0.63344   
-## benachbarte_korridore_habitate.L -0.55770    0.33119  -1.684  0.09220 . 
-## pflege_aufstockung.L             -0.07310    0.39578  -0.185  0.85346   
+##                 Estimate Std. Error z value Pr(>|z|)  
+## (Intercept)      -0.4559     0.6373  -0.715   0.4744  
+## astmaterial.L    -2.5480     1.0266  -2.482   0.0131 *
+## storung.L        -1.0388     0.8831  -1.176   0.2395  
+## beute_angebot.L   0.6336     0.7624   0.831   0.4059  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## (Dispersion parameter for poisson family taken to be 1)
+## (Dispersion parameter for binomial family taken to be 1)
 ## 
-##     Null deviance: 65.194  on 24  degrees of freedom
-## Residual deviance: 27.958  on 15  degrees of freedom
-## AIC: 86.887
+##     Null deviance: 34.617  on 24  degrees of freedom
+## Residual deviance: 21.972  on 21  degrees of freedom
+## AIC: 29.972
 ## 
-## Number of Fisher Scoring iterations: 6
+## Number of Fisher Scoring iterations: 5
 \end{verbatim}
 
 \hypertarget{datensatz-a-unsystematische-attraktivituxe4tskontrolle-von-asthaufen-1}{%
 \section{Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen}\label{datensatz-a-unsystematische-attraktivituxe4tskontrolle-von-asthaufen-1}}
 
-In den insgesamt 32 beobachteten Asthaufen konnte das Hermelin 51 und der Iltis 23-mal nachgewiesen werden (siehe Abbildung \ref{fig:wirkungskontrollespontaneinzelnachweisewaffle}): Wie auch schon in der systematischen Wirkungskontrolle, konnte auch in dieser Erhebung das Mauswiesel nicht nachgewiesen werden. Dafür wurde der Iltis einiges häufiger detektiert, in der systematischen Wirkungskontrolle konnten nur zwei Iltisnachweise erbracht werden.
+In den insgesamt 32 beobachteten Asthaufen konnte das Hermelin 51 und der Iltis 23-mal nachgewiesen werden (siehe Abbildung \ref{fig:wirkungskontrollespontaneinzelnachweisewaffle}): Wie schon in der systematischen Wirkungskontrolle, konnte auch in dieser Erhebung das Mauswiesel nicht nachgewiesen werden. Dafür wurde der Iltis einiges häufiger detektiert; in der systematischen Wirkungskontrolle konnten nur zwei Iltisnachweise erbracht werden.
 
 
 
@@ -558,9 +601,9 @@ Wie bereits erwähnt, kann es sich bei den Einzelnachweisen oft um Mehrfachnachw
 
 Von den 555 Meldungen, die im Projekt gesammelt wurden, handelt es sich bei 546 um Meldungen der Zielarten Hermelin, Iltis und Mauswiesel. Davon wurden 506 Meldungen vom Projektleiter als ``plausibel'' bzw. ``sicher'' eingestuft und davon wiederum liegen 428 Meldungen innerhalb des Projektperimeters, dem Bezirk Horgen (siehe Abbildung \ref{fig:beobachtungsmeldungenfilter}).
 
-Ganz grundsätzlich muss betont werden, dass die Interpretation dieser Meldungen mit einer gewissen Vorsicht gemacht werden muss. Es handelt sich um ein Produkt aus einem ``Citizen Science'' Ansatz, und wie immer liefern solche Datenerzeugnissen ein verzerrtes Bild der Realität. Die Verzerrung entsteht, weil die Meldungen nicht systematisch erfasst und unterschiedliche Räume ungleich intensiv beobachtet werden. Ein Hermelin in einem stark frequentierten und offenen Gebiet hat eine höhere Wahrscheinlichkeit, beobachtet zu werden als ein Tier in einer schlecht frequentierten, strukturreichen Landschaft. Zudem ist davon auszugehen, dass es sich bei sehr dicht beieinanderliegenden Meldungen um Mehrfachmeldungen des gleichen Tiers (womöglich durch den gleichen Beobachter) handelt.
+Ganz grundsätzlich muss betont werden, dass die Interpretation dieser Meldungen mit einer gewissen Vorsicht erfolgen muss. Es handelt sich um ein Produkt aus einem ``Citizen Science'' Ansatz, und wie immer liefern solche Datenerzeugnisse ein verzerrtes Bild der Realität. Die Verzerrung entsteht, weil die Meldungen nicht systematisch erfasst und unterschiedliche Räume ungleich intensiv beobachtet werden. Ein Hermelin in einem stark frequentierten und offenen Gebiet wird wahrscheinlicher beobachtet als ein Tier in einer schlecht frequentierten, strukturreichen Landschaft. Zudem ist davon auszugehen, dass es sich bei sehr dicht beieinanderliegenden Meldungen um Mehrfachmeldungen des gleichen Tiers (womöglich durch den gleichen Beobachter) handelt.
 
-Die grösste Unsicherheit in Bezug auf ihre Plausibilität besteht bei den Mauswiesel-Sichtungsmeldungen. Die Tierart ist aufgrund der geringen Grösse sehr schwer zu beobachten und zudem für Laien kaum vom Hermelin zu unterscheiden. Während lediglich 1.1 \% der Hermelin- und 3.4 \% der Iltismeldungen als ``unsicher'' eingestuft werden, fallen 53.1\% aller Mauswiesel-Sichtungsmeldungen in diese Kategorie. So liegen lediglich 23 verwertbare Mauswiesel-Meldungen vor.
+Die grösste Unsicherheit in Bezug auf ihre Plausibilität besteht bei den Mauswiesel-Sichtungsmeldungen. Die Tierart ist für Laien kaum vom Hermelin zu unterscheiden. Während lediglich 1.1 \% der Hermelin- und 3.4 \% der Iltismeldungen als ``unsicher'' eingestuft werden, fallen 53.1\% aller Mauswiesel-Sichtungsmeldungen in diese Kategorie. So liegen lediglich 23 verwertbare Mauswiesel-Meldungen vor.
 
 
 
@@ -568,7 +611,7 @@ Die grösste Unsicherheit in Bezug auf ihre Plausibilität besteht bei den Mausw
 \includegraphics[width=1\linewidth]{images/beobachtungsmeldungen_filter} \caption{Von den 555 Meldungen, die seit Projektbeginn eingetroffen sind, handelt es sich bei 546 Meldungen um die Zielarten, davon können 506 Meldungen als ``plausibel'' bzw. ``sicher'' eingestuft werden. Von diesen Meldungen liegen 428 innerhalb des Bezirks Horgen.}\label{fig:beobachtungsmeldungenfilter}
 \end{figure}
 
-Das Hermelin konnte weitestgehend im ganzen Bezirk beobachtet werden, so auch in stark fragmentierten und dicht besiedelten Kulturflächen der Gemeinde Kilchberg und der Halbinsel Au (siehe Abbildung \ref{fig:layoutbeobachtungsmeldungen}). Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften wie Horgenberg, Hirzel, Schönenberg zu verzeichnen. Weitestgehend ohne Meldungen sind die Siedlungsgebiete selbst sowie der Sihlwald und das Gemeindegebiet Hütten. Während das Fehlen in Siedlungsgebieten und grösseren Waldflächen ökologisch bedingt ist, ist das Ausbleiben von Meldungen in der Gemeinde Hütten mit grösster Wahrscheinlichkeit ein Artefakt davon, dass in Hütten weniger intensiv beobachtet und gemeldet wird.
+Das Hermelin konnte weitestgehend im ganzen Bezirk beobachtet werden, so auch in stark fragmentierten und dicht besiedelten Kulturflächen der Gemeinde Kilchberg und der Halbinsel Au (siehe Abbildung \ref{fig:layoutbeobachtungsmeldungen}). Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften wie Horgenberg, Hirzel und Schönenberg zu verzeichnen. Weitestgehend ohne Meldungen sind die Siedlungsgebiete sowie der Sihlwald und das Gemeindegebiet Hütten. Während das Fehlen in Siedlungsgebieten und grösseren Waldflächen ökologisch bedingt ist, ist das Ausbleiben von Meldungen in der Gemeinde Hütten mit grösster Wahrscheinlichkeit ein Artefakt davon, dass in Hütten weniger intensiv beobachtet und gemeldet wird.
 
 Deutlich weniger Sichtungsmeldungen sind zum Iltis eingegangen. Dies wiederspiegelt einerseits die tiefere Anzahl Individuen im Vergleich zur Hermelinpopulation, ist aber auch mit Sicherheit der Lebensweise dieser Tierart geschuldet: Als dämmerungs- und nachtaktives Tier, welches sich auch gerne im Waldrandbereich aufhaltet, ist der Iltis seltener zu beobachten als das Hermelin.
 
@@ -600,23 +643,23 @@ Nr & Zieldefinition & Beurteilung & Bemerkung\\
 \midrule
 \cellcolor{gray!6}{1} & \cellcolor{gray!6}{In jedem Populationsraum sollen zu jeder Kontrollperiode Mauswiesel und Hermelin nachgewiesen werden.} & \cellcolor{gray!6}{}\includegraphics[width=0.67in, height=0.24in]{images/ampel_gelb.png} & \cellcolor{gray!6}{Es konnten zwar Hermeline, aber keine Mauswiesel nachgewiesen werden.}\\
 2 & Mind. 50 \% der aufgewerteten Kleinstrukturen sollen von Wieseln (Hermelin oder Mauswiesel) begangen werden. & \includegraphics[width=0.67in, height=0.24in]{images/ampel_gelb.png} & Bei getrennter Betrachtung der Jahre: 49 \% resp. 36 \%. Kumulativ über beide Jahre: knapp 70 \%\\
-\cellcolor{gray!6}{3} & \cellcolor{gray!6}{In mind. 75 \% der untersuchten Patches1 des Populationsraums sollen Nachweise von Hermelinen erbracht werden.} & \cellcolor{gray!6}{}\includegraphics[width=0.67in, height=0.24in]{images/ampel_gruen.png} & \cellcolor{gray!6}{In 10 von 11 untersuchten Patches (91 \%) konnten Nachweise von Hermelinen erbracht werden.}\\
-4 & In mind. 25 \% der untersuchten Patches1 des Populationsraums sollen Nachweise von Mauswieseln erbracht werden. & \includegraphics[width=0.67in, height=0.24in]{images/ampel_rot.png} & In Erhebung 1 konnten keine Mauswiesel3 nachgewiesen werden.\\
-\cellcolor{gray!6}{5} & \cellcolor{gray!6}{In jeder untersuchten Verbindungsachse sollen mindestens einmal pro Jahr Wiesel (mindestens Hermeline) nachgewiesen werden.} & \cellcolor{gray!6}{}\includegraphics[width=0.67in, height=0.24in]{images/ampel_gelb.png} & \cellcolor{gray!6}{Gemäss Datensatz A2 konnten auf 4 von 5 kontrollierten Korridoren Nachweise von Hermelin und Iltis gemacht werden}\\
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{In mind. 75 \% der untersuchten Patches des Populationsraums sollen Nachweise von Hermelinen erbracht werden.} & \cellcolor{gray!6}{}\includegraphics[width=0.67in, height=0.24in]{images/ampel_gruen.png} & \cellcolor{gray!6}{In 10 von 11 untersuchten Patches (91 \%) konnten Nachweise von Hermelinen erbracht werden.}\\
+4 & In mind. 25 \% der untersuchten Patches des Populationsraums sollen Nachweise von Mauswieseln erbracht werden. & \includegraphics[width=0.67in, height=0.24in]{images/ampel_rot.png} & Es konnten keine Mauswiesel nachgewiesen werden.\\
+\cellcolor{gray!6}{5} & \cellcolor{gray!6}{In jeder untersuchten Verbindungsachse sollen mindestens einmal pro Jahr Wiesel (mindestens Hermeline) nachgewiesen werden.} & \cellcolor{gray!6}{}\includegraphics[width=0.67in, height=0.24in]{images/ampel_gelb.png} & \cellcolor{gray!6}{Gemäss Datensatz A konnten auf 4 von 5 kontrollierten Korridoren Nachweise von Hermelin und Iltis gemacht werden}\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Der Zielvergleich fällt folgendermassen aus: Ein Ziel wurden erreicht (Ziel 3), drei Ziele wurden teils erreicht (Ziel 1, 2 und 5) und ein weiteres Ziel konnte nicht erreicht werden (Ziel 4). Grund für die Nicht- bzw. Teilerreichung der Ziele 1 und 4 ist das Fehlen von Mauswieselnachweisen in Erhebung 1 (Systematische Beobachtung der Asthaufen). Dabei ist jedoch zu betonen, dass der Nachweis bei kleinen, fragilen Populationen ungleich schwieriger zu erbringen ist als in Gebieten mit höherem Mauswiesel Vorkommen. Das Projekt hat, insbesondere in der kurzen Laufzeit, nur einen kleinen Einfluss auf die Mauswiesel-Populationsstärke. In diesem Sinne ist das Teilerreichen der Ziele 1 und 5 nicht durch Fehler im Projekt zu erklären, sondern vielmehr eine ökologische Gegebenheit.
+Der Zielvergleich fällt folgendermassen aus: Ein Ziel wurde erreicht (Ziel 3), drei Ziele wurden teils erreicht (Ziel 1, 2 und 5) und ein weiteres Ziel konnte nicht erreicht werden (Ziel 4). Grund für die Nicht- bzw. Teilerreichung der Ziele 1 und 4 ist das Fehlen von Mauswieselnachweisen in Erhebung 1 (Systematische Beobachtung der Asthaufen). Dabei ist jedoch zu betonen, dass der Nachweis bei kleinen, fragilen Populationen ungleich schwieriger zu erbringen ist als in Gebieten mit höherem Mauswiesel Vorkommen. Das Projekt hat, insbesondere in der kurzen Laufzeit, nur einen kleinen Einfluss auf die Mauswiesel-Populationsstärke. In diesem Sinne ist das Teilerreichen der Ziele 1 und 5 nicht durch Fehler im Projekt zu erklären, sondern vielmehr eine ökologische Gegebenheit.
 
 \hypertarget{nachweisquote-im-vergleich-mit-anderen-studien}{%
 \section{Nachweisquote im Vergleich mit anderen Studien}\label{nachweisquote-im-vergleich-mit-anderen-studien}}
 
 Der Austausch mit Projektleitern und Ökologen anderer Wieselprojekte in der Schweiz zeigt, dass die gesetzten Nachweisziele von WIN Wieselnetz (Tabelle \ref{tab:winziele}) sehr hoch gesteckt sind. Aus diesem Grund wurden die Resultate anderer Studien zusammengetragen und in Abbildung \ref{fig:kontext} visualisiert. Dargestellt sind die ``Nachweiserfolge'' von verschiedenen Studien, definiert als der Anteil der Spurentunnel, die mindestens einen Hermelinnachweis erbracht haben. Die Abbildung macht deutlich, dass die vorliegende Studie einen sehr hohen Nachweiserfolg zu verzeichnen hat.
 Der Anteil der Spurentunnel mit Hermelinnachweisen im Vergleich zur totalen Anzahl eingesetzter Spurentunnel ist ausserordentlich hoch und liegt bei 49 \% (2019) bzw. 36 \% (2020).
-Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz B, siehe @ref(\#methode-datensatz-b)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden), die Vergleichbarkeit einschränken.
+Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz A, siehe @ref(datensatz-a-unsystematische-attraktivitätskontrolle-von-asthaufen-1)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden) die Vergleichbarkeit einschränken.
 
-Eine Erklärungsmöglichkeit für die hohen Nachweisquoten ist die grosse Dichte an Schermäusen, welche eine vorzügliche Nahrungsgrundlage für Hermeline (und Mauswiesel) bildet. Die hinzukommenden Kleinstrukturen in der streckenweise strukturarmen Zimmerberglandschaft üben eine starke Anziehungskraft aus. Wären viele andere Kleinstrukturen vorhanden, könnte der Nachweiserfolg kleiner sein, auch wenn zugleich die Hermelinpopulation grösser wäre.
+Eine Erklärungsmöglichkeit für die hohen Nachweisquoten ist die grosse Dichte an Schermäusen, welche eine vorzügliche Nahrungsgrundlage für Hermeline (und Mauswiesel) bilden. Die hinzukommenden Kleinstrukturen in der streckenweise strukturarmen Zimmerberglandschaft üben eine starke Anziehungskraft aus. Wären viele andere Kleinstrukturen vorhanden, könnte der Nachweiserfolg kleiner sein, auch wenn zugleich die Hermelinpopulation grösser wäre.
 
 
 
@@ -627,19 +670,19 @@ Eine Erklärungsmöglichkeit für die hohen Nachweisquoten ist die grosse Dichte
 \hypertarget{interpretation-der-nachweiszahlen}{%
 \section{Interpretation der Nachweiszahlen}\label{interpretation-der-nachweiszahlen}}
 
-\hypertarget{hermlin-vs.-mauswiesel}{%
-\subsection{Hermlin vs.~Mauswiesel}\label{hermlin-vs.-mauswiesel}}
+\hypertarget{hermelin-vs.-mauswiesel}{%
+\subsection{Hermelin vs.~Mauswiesel}\label{hermelin-vs.-mauswiesel}}
 
 Die Nachweiszahlen zeigen, dass das Hermelin am Zimmerberg die deutlich häufigste der drei Zielarten ist. Datensatz B zeigt bei den Beobachtungsmeldungen ca. ein Verhältnis von 1 Mauswiesel und 1 Iltis auf 20 Hermeline.
 Gegenüber 59 Hermelinnachweisen während der Wirkungskontrolle wurde der Iltis 5 Mal nachgewiesen und das Mauswiesel wurde nur 1 Mal mit Spurentunnel ausserhalb der regulären Wirkungskontrolle festgestellt.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-11}Summe der Nachweise je Tierart in Erhebung 1 (Asthaufen) und 2 (Winterquartiere)}
+\caption{\label{tab:unnamed-chunk-10}Summe der Nachweise je Zielart in Erhebung 1 (Asthaufen) und 2 (Winterquartiere)}
 \centering
 \begin{tabular}[t]{l|r|r|r}
 \hline
-typ & Hermelin & Iltis & Mauswiesel\\
+Typ & Hermelin & Iltis & Mauswiesel\\
 \hline
 Asthaufen & 55 & 2 & 0\\
 \hline
@@ -656,7 +699,7 @@ Zwei Gründe könnten für das Mauswiesel ungünstigere Verhältnis verantwortli
 \item
   \textbf{Dominanz des Hermelin aufgrund der idealen Nahrungsgrundlage}: Die grossen Schermausbestände in der grünlandbasierten Zimmerberglandschaft sind vom Hermelin effizient zu bejagen. Das schwächere Mauswiesel zieht sich bei Anwesenheit des Hermelins an Orte mit kleineren Wühlmausarten zurück, die sich vor allem auf Nischenvorkommen wie Feuchtgebieten, kleinräumigen Halboffenlandschaften etc. beschränken.
 \item
-  \textbf{Benachteiligung des Mauswiesels durch mangelnde Kleinräumigkeit bzw. Vernetzung}: Das Mauswiesel hat einen kleineren Aktionsradius und die vorherrschende Lebensraumqualität erschwert ihm, auf kleinem Raum zugleich geeignete Nahrung, genügend Deckung und funktionale Vernetzungskorridore zu finden. Gleichzeitig dürfte es gegenüber dem Hermelin noch anfälliger gegenüber Katzen und anderen Feinden sein.
+  \textbf{Benachteiligung des Mauswiesels durch mangelnde Kleinräumigkeit bzw. Vernetzung}: Das Mauswiesel hat einen kleineren Aktionsradius und die vorherrschende Lebensraumqualität erschwert ihm auf kleinem Raum zugleich geeignete Nahrung, genügend Deckung und funktionale Vernetzungskorridore zu finden. Gleichzeitig dürfte es gegenüber dem Hermelin noch anfälliger gegenüber Katzen und anderen Feinden sein.
 \end{itemize}
 
 Diese Gründe sind allerdings mit einiger Unsicherheit belegt, und auch nach Durchführung des Projekts ist über die Populationsdynamik im Bezirk Horgen nicht viel bekannt. Das Projekt hat aber einige sichere Mauswiesel-Beobachtungen hervorgebracht und zur Weiterentwicklung effektiverer Methoden für den Nachweis von Mauswieseln und anderen Kleinsäugern beigetragen (siehe \href{https://www.zhaw.ch/iunr/tubecam}{zhaw.ch/iunr/tubecam} und \href{http://wieselundco.ch/wissenschaft}{wieselundco.ch/wissenschaft}).
@@ -673,14 +716,18 @@ Interessant ist die Erkenntnis, dass grobes Material bei Holzstrukturen die Attr
 Idealerweise wird ein Asthaufen von Beginn weg aus grobem, massivem Material wie Wurzelstöcken, Stamm- und Stangenholz aufgebaut - bestenfalls aus beständigen Holzarten. Denn die realisierten Asthaufen sollen auch möglichst lange bestehen. Zu bedenken ist, dass selbst voluminöse Asthaufen innert weniger Jahren stark zerfallen, sofern sie aus Weichholz aufgebaut werden. Diesem Zerfall kann mit einer periodischen Aufstockung begegnet werden.
 Um die Nachaltigkeit zu fördern, wurde das Knowhow mit persönlicher Beratung und anlässlich Dutzender Aktionstage interessierten Landwirtinnen und weiteren interessierten Personen vermittelt. Zudem gaben die zweijährlich wiederkehrenden Vergütungen Anreiz für Pflegemassnahmen.
 
+\begin{figure}
+\includegraphics[width=20.83in]{images/hermelin_asthaufen_2} \caption{Die Analyse der Daten aus Erhebung 3 zeigt, dass ein Nachweis von den Zielarten bei jenen Asthaufen wahrscheinlicher ist, die aus grobem Astmaterial aufgebaut sind.}\label{fig:unnamed-chunk-11}
+\end{figure}
+
 \hypertarget{fazit-und-ausblick}{%
 \section{Fazit und Ausblick}\label{fazit-und-ausblick}}
 
 Es muss davon ausgegangen werden, dass die sich immer mehr ausbreitende ``Normallandschaft'' im Schweizer Mittelland nicht nur bei Artengruppen wie Vögeln, sondern auch bei Kleinraubtieren die Generalisten gegenüber den Spezialisten begünstigt. So könnte das im Mittelland ohnehin seltenere Mauswiesel zukünftig grossräumig in seiner Existenz gefährdet sein. Es scheint, dass eine kleinräumigere Landschaft mit einer extensiver betriebenen Landwirtschaft den Bestand des Mauswiesel gegenüber jenem des Hermelins vergrössern könnte. Davon würde dank verbesserten Deckungsmöglichkeiten und Nahrungsgrundlagen wahrscheinlich auch der Iltis profitieren.
 
-Dahingehende Fördermassnahmen, die im Rahmen des Projektes realisiert wurden, werden von zwei der drei Zielarten nachweislich stark frequentiert. Diese Tatsache wiederspiegelt die sinnvolle Planung und Umsetzung der Strukturen. Es existieren nach unserem Wissen wenige Projekte in der Schweiz, die eine solch hohe Anzahl an Asthaufen zur Förderung von Kleinraubtieren erstellt wurden.
+Dahingehende Fördermassnahmen, die im Rahmen des Projektes realisiert wurden, werden von zwei der drei Zielarten nachweislich stark frequentiert. Diese Tatsache wiederspiegelt die sinnvolle Planung und Umsetzung der Strukturen. Es existieren nach unserem Wissen wenige Projekte in der Schweiz, die eine solch hohe Anzahl an Asthaufen zur Förderung von Kleinraubtieren realisierten.
 
-Das Projekt Wiesel \& Co am Zimmerberg hat einen nennenswerten Beitrag zur Förderung der Tierarten im Bezirk Horgen geleistet. In sozialer Hinsicht ist es der Trägerschaft gelungen, die Kräfte aller lokalen Naturschutzvereine zu bündeln und den Kontakt zu zahlreichen Landwirten*innen, Jäger*innen, Förster*innen, Schulklassen und Freiwilligen zu finden und die Sensibilisierung für die Zielarten zu fördern. Aus ökologischer Hinsicht ist die Umsetzung einer beachtlichen Anzahl von Aufwertungsmassnahmen gelungen, welche nachweislich durch zwei der drei im Projekt festgesetzten Tierarten genutzt wurden.
+Das Projekt Wiesel \& Co am Zimmerberg hat einen nennenswerten Beitrag zur Förderung der Tierarten im Bezirk Horgen geleistet. In sozialer Hinsicht ist es der Trägerschaft gelungen, die Kräfte aller lokalen Naturschutzvereine zu bündeln und den Kontakt zu zahlreichen Landwirten*innen, Jäger*innen, Förster*innen, Schulklassen und Freiwilligen zu finden und die Sensibilisierung für die Zielarten zu fördern. Aus ökologischer Hinsicht ist die Umsetzung einer beachtlichen Anzahl von Aufwertungsmassnahmen gelungen, welche nachweislich durch zwei der drei im Projekt definierten Zielarten genutzt wurden.
 
 Für eine langfristige Sicherstellung von Naturschutzmassnahmen ist die Projektträgerschaft bemüht, das Projekt nach Abschluss in eine langfristige, breit abgestützte Form zu überführen. Dazu wurde 2020 die Initiative Naturnetz Zimmerberg lanciert.
 
@@ -956,5 +1003,308 @@ Mosli Nordeck & 15944 & 2018-08-20 & 4 & 3 & 3 & 3 & 2 & 1 & 4 & 2 & 1 & 7 & 7 &
 \end{table}
 
 \includegraphics[width=41in]{images/asthaufen_qualitaet_histogramm_newclasses}
+
+\hypertarget{anhang-attraktivitaet-modell}{%
+\section{Anhang G: Statistische Modellierung attraktivitätsfördernder Faktoren}\label{anhang-attraktivitaet-modell}}
+
+\hypertarget{korrelationsmatrix-der-faktoren}{%
+\subsection{Korrelationsmatrix der Faktoren}\label{korrelationsmatrix-der-faktoren}}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Störung}, \emph{Katzen} und \emph{andere Feinde} sind stark korreliert
+\item
+  \emph{Volumen}, \emph{Pflege / Aufstockung} sind stark korreliert
+\item
+  \emph{Astmaterial}, \emph{Volumen} und \emph{Beuteangebot} sind schwach korreliert
+\end{itemize}
+
+\includegraphics{Wiesel_und_Co_Schlussbericht_files/figure-latex/unnamed-chunk-20-1.pdf}
+
+\hypertarget{logistischre-regression}{%
+\subsection{Logistischre Regression}\label{logistischre-regression}}
+
+\hypertarget{poisson}{%
+\subsubsection{Poisson}\label{poisson}}
+
+Einfaches Modell, um die Korrelationen zu berücksichtigen
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{asthaufen\_qualitaet\_df3 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{glm}\NormalTok{(nachweise\_int}\SpecialCharTok{\textasciitilde{}}
+\NormalTok{        astmaterial}\SpecialCharTok{+}\NormalTok{storung}\SpecialCharTok{+}\NormalTok{beute\_angebot,}\AttributeTok{data=}\NormalTok{.,}
+      \AttributeTok{family=}\StringTok{"poisson"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{summary}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## glm(formula = nachweise_int ~ astmaterial + storung + beute_angebot, 
+##     family = "poisson", data = .)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.9045  -0.7324  -0.4952   0.4167   1.9101  
+## 
+## Coefficients:
+##                 Estimate Std. Error z value Pr(>|z|)    
+## (Intercept)      -0.3297     0.3670  -0.898 0.368990    
+## astmaterial.L    -1.7551     0.5143  -3.413 0.000644 ***
+## storung.L        -0.5535     0.2246  -2.464 0.013727 *  
+## beute_angebot.L   0.1933     0.2180   0.887 0.375299    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for poisson family taken to be 1)
+## 
+##     Null deviance: 65.194  on 24  degrees of freedom
+## Residual deviance: 33.959  on 21  degrees of freedom
+## AIC: 80.887
+## 
+## Number of Fisher Scoring iterations: 5
+\end{verbatim}
+
+Overdispersion (die Varianz sollte ungefähr gleich gross sein wie der Mittelwert)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{asthaufen\_qualitaet\_df3 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{select}\NormalTok{(nachweise\_int) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}
+    \AttributeTok{sd =} \FunctionTok{sd}\NormalTok{(nachweise\_int),}
+    \AttributeTok{var =} \FunctionTok{var}\NormalTok{(nachweise\_int),}
+    \AttributeTok{mean =} \FunctionTok{mean}\NormalTok{(nachweise\_int)}
+\NormalTok{    )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 3
+##      sd   var  mean
+##   <dbl> <dbl> <dbl>
+## 1  2.05  4.21  1.72
+\end{verbatim}
+
+Der Vergleich zwischen der tatsächlichen und der theoretischen Verteilung zeigt, dass die Daten tendentziell \emph{overdispersed} sind:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{asthaufen\_qualitaet\_df3 }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(nachweise\_int) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ungroup}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{complete}\NormalTok{(}\AttributeTok{nachweise\_int =} \FunctionTok{full\_seq}\NormalTok{(nachweise\_int,}\DecValTok{1}\NormalTok{), }\AttributeTok{fill =} \FunctionTok{list}\NormalTok{(}\AttributeTok{n =} \DecValTok{0}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{poisson =} \FunctionTok{dpois}\NormalTok{(nachweise\_int, }\AttributeTok{lambda =} \FloatTok{1.72}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{pivot\_longer}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{nachweise\_int) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(nachweise\_int, value, }\AttributeTok{fill =}\NormalTok{ name)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{name, }\AttributeTok{scales =} \StringTok{"free\_y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Wiesel_und_Co_Schlussbericht_files/figure-latex/unnamed-chunk-23-1.pdf}
+
+\emph{Goodness of fit test} mit \emph{poisson distribution} zeigt, dass die empirische Verteilung nicht gut zur theoretischen Verteilung passt.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(}
+  \FunctionTok{table}\NormalTok{(}\FunctionTok{factor}\NormalTok{(asthaufen\_qualitaet\_df3}\SpecialCharTok{$}\NormalTok{nachweise\_int,}\AttributeTok{levels=}\DecValTok{1}\SpecialCharTok{:}\DecValTok{7}\NormalTok{)),}
+  \AttributeTok{p=}\FunctionTok{dpois}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{7}\NormalTok{,}\FloatTok{1.72}\NormalTok{),}
+  \AttributeTok{rescale.p =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Chi-squared test for given probabilities
+## 
+## data:  table(factor(asthaufen_qualitaet_df3$nachweise_int, levels = 1:7))
+## X-squared = 55.631, df = 6, p-value = 3.456e-10
+\end{verbatim}
+
+\hypertarget{zero-inflation-sihe-httpsstats.idre.ucla.edurdaezip}{%
+\subsection{\texorpdfstring{Zero-inflation (sihe \url{https://stats.idre.ucla.edu/r/dae/zip/})}{Zero-inflation (sihe https://stats.idre.ucla.edu/r/dae/zip/)}}\label{zero-inflation-sihe-httpsstats.idre.ucla.edurdaezip}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(pscl)}
+\FunctionTok{zeroinfl}\NormalTok{(nachweise\_int}\SpecialCharTok{\textasciitilde{}}\NormalTok{astmaterial}\SpecialCharTok{+}\NormalTok{storung}\SpecialCharTok{+}\NormalTok{beute\_angebot,}
+                       \AttributeTok{data=}\NormalTok{asthaufen\_qualitaet\_df3,}\AttributeTok{link =} \StringTok{"logit"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summary}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## zeroinfl(formula = nachweise_int ~ astmaterial + storung + beute_angebot, 
+##     data = asthaufen_qualitaet_df3, link = "logit")
+## 
+## Pearson residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.8342 -0.4947 -0.1516  0.4880  1.7209 
+## 
+## Count model coefficients (poisson with log link):
+##                 Estimate Std. Error z value Pr(>|z|)
+## (Intercept)       0.5785     0.5028   1.150    0.250
+## astmaterial.L    -0.7993     0.6894  -1.159    0.246
+## storung.L        -0.4304     0.2758  -1.560    0.119
+## beute_angebot.L   0.1863     0.2700   0.690    0.490
+## 
+## Zero-inflation model coefficients (binomial with logit link):
+##                 Estimate Std. Error z value Pr(>|z|)  
+## (Intercept)       0.1141     0.7706   0.148   0.8822  
+## astmaterial.L     2.3519     1.2422   1.893   0.0583 .
+## storung.L         0.8761     1.0633   0.824   0.4100  
+## beute_angebot.L  -0.5849     0.9475  -0.617   0.5370  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## Number of iterations in BFGS optimization: 12 
+## Log-likelihood: -32.57 on 8 Df
+\end{verbatim}
+
+\hypertarget{ols-regression}{%
+\subsection{OLS regression}\label{ols-regression}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{asthaufen\_qualitaet\_df3 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{lm}\NormalTok{(nachweise\_int}\SpecialCharTok{\textasciitilde{}}
+\NormalTok{                   astmaterial}\SpecialCharTok{+}\NormalTok{volumen}\SpecialCharTok{+}\NormalTok{storung}\SpecialCharTok{+}\NormalTok{beute\_angebot,}\AttributeTok{data=}\NormalTok{.) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summary}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = nachweise_int ~ astmaterial + volumen + storung + 
+##     beute_angebot, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.2905 -0.7005 -0.0602  0.5298  4.0177 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(>|t|)   
+## (Intercept)       1.3804     0.4125   3.346  0.00321 **
+## astmaterial.L    -1.8044     0.6188  -2.916  0.00854 **
+## volumen.L         0.1909     0.6256   0.305  0.76337   
+## storung.L        -0.8700     0.4984  -1.746  0.09624 . 
+## beute_angebot.L   0.2179     0.5182   0.421  0.67857   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.711 on 20 degrees of freedom
+## Multiple R-squared:  0.4208, Adjusted R-squared:  0.305 
+## F-statistic: 3.633 on 4 and 20 DF,  p-value: 0.02212
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{asthaufen\_qualitaet\_df3 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{lm}\NormalTok{(}\FunctionTok{sqrt}\NormalTok{(nachweise\_int)}\SpecialCharTok{\textasciitilde{}}
+\NormalTok{             astmaterial}\SpecialCharTok{+}\NormalTok{volumen}\SpecialCharTok{+}\NormalTok{storung}\SpecialCharTok{+}\NormalTok{beute\_angebot,}\AttributeTok{data=}\NormalTok{.) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summary}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = sqrt(nachweise_int) ~ astmaterial + volumen + storung + 
+##     beute_angebot, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.6145 -0.3113  0.1470  0.4810  1.2542 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)       0.7337     0.1828   4.013 0.000682 ***
+## astmaterial.L    -0.9363     0.2743  -3.414 0.002751 ** 
+## volumen.L         0.1725     0.2773   0.622 0.540937    
+## storung.L        -0.3241     0.2209  -1.467 0.157871    
+## beute_angebot.L   0.1576     0.2297   0.686 0.500402    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.7582 on 20 degrees of freedom
+## Multiple R-squared:  0.4716, Adjusted R-squared:  0.3659 
+## F-statistic: 4.463 on 4 and 20 DF,  p-value: 0.009695
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{asthaufen\_qualitaet\_df3 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{lm}\NormalTok{(nachweise\_bool}\SpecialCharTok{\textasciitilde{}}
+\NormalTok{             astmaterial}\SpecialCharTok{+}\NormalTok{volumen}\SpecialCharTok{+}\NormalTok{storung}\SpecialCharTok{+}\NormalTok{beute\_angebot,}\AttributeTok{data=}\NormalTok{.) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summary}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = nachweise_bool ~ astmaterial + volumen + storung + 
+##     beute_angebot, data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.83664 -0.14962  0.00916  0.30763  0.70611 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)       0.4137     0.1003   4.126 0.000524 ***
+## astmaterial.L    -0.5047     0.1504  -3.355 0.003153 ** 
+## volumen.L         0.1209     0.1521   0.795 0.435948    
+## storung.L        -0.1123     0.1212  -0.927 0.365188    
+## beute_angebot.L   0.1020     0.1260   0.810 0.427576    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.4159 on 20 degrees of freedom
+## Multiple R-squared:  0.4457, Adjusted R-squared:  0.3349 
+## F-statistic: 4.021 on 4 and 20 DF,  p-value: 0.01494
+\end{verbatim}
+
+\hypertarget{fishers-exakter-test}{%
+\subsection{Fishers Exakter Test}\label{fishers-exakter-test}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kt }\OtherTok{=} \FunctionTok{with}\NormalTok{(asthaufen\_qualitaet\_df3, }\FunctionTok{table}\NormalTok{(nachweise\_bool, astmaterial ))}
+\NormalTok{kt}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##               astmaterial
+## nachweise_bool grob fein
+##              0    4    8
+##              1   12    1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{fisher.test}\NormalTok{(kt,}\AttributeTok{alternative =} \StringTok{"less"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Fisher's Exact Test for Count Data
+## 
+## data:  kt
+## p-value = 0.003258
+## alternative hypothesis: true odds ratio is less than 1
+## 95 percent confidence interval:
+##  0.0000000 0.4108968
+## sample estimates:
+## odds ratio 
+## 0.04891419
+\end{verbatim}
 
 \end{document}

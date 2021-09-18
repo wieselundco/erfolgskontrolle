@@ -21,9 +21,10 @@ fig:layoutbeobachtungsmeldungen
 tab:winziele
 fig:kontext
 tab:unnamed-chunk-10
-tab:unnamed-chunk-11
+fig:unnamed-chunk-11
 tab:unnamed-chunk-12
-tab:unnamed-chunk-14
+tab:unnamed-chunk-13
+tab:unnamed-chunk-15
 ausgangslage
 konzept-der-vorliegenden-wirkungskontrolle
 methode
@@ -43,7 +44,7 @@ diskussion-und-fazit
 vergleich-mit-den-zielsetzungen-von-win-wieselnetz
 nachweisquote-im-vergleich-mit-anderen-studien
 interpretation-der-nachweiszahlen
-hermlin-vs.-mauswiesel
+hermelin-vs.-mauswiesel
 iltis
 erkenntnisse-für-die-anlagen-von-asthaufen
 fazit-und-ausblick
