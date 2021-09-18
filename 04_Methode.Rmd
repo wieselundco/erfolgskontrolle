@@ -68,7 +68,7 @@ knitr::include_graphics("images/Erhebungswochen.png")
 
 Die Überwachung der Winterquartiere wurde während sechs Wochen zwischen dem 26.08.2019 und 06.10.2019 sowie zwischen dem 30.3.2020 und 10.04.2020 durchgeführt. Untersucht wurden 11 Winterquartiere (alle in der Region Südost, siehe Abbildung \@ref(fig:layoutstrukturen)).
 
-Zur Untersuchung der Winterquartiere wurden Fotofallen mit Infrarotblitz von Bushnell verwendet. Als Setup wurde pro Auslösung ein Foto, sowie ein Film von 5 bis 10 Sekunden aufgenommen. Die Kameras wurden an einem eigens dafür eingeschlagenen Pfosten montiert, ergänzt mit einem Informationsblatt für Passanten.
+Zur Untersuchung der Winterquartiere wurden Fotofallen mit Infrarotblitz von Bushnell verwendet. Als Setup wurde pro Auslösung ein Foto, sowie ein Film von 5 bis 10 Sekunden aufgenommen. Die Kameras wurden an einem eigens dafür eingeschlagenen Pfosten montiert, ergänzt mit einem Informationsblatt für Passanten. Der Aufnahmewinkel wurde bestmöglich gewählt, um die Bewegungen direkt beim Winterquartier zu registrieren. Als Besuche gelten Erkundungen, die nicht zwingend ein Eindringen ins Winterquartier beinhalten müssen.
 
 Zur Auswertung der Bild- und Videoaufnahmen wurden sämtliche Dateien einzeln durchgeschaut und alle gefundenen Tiergruppen (ausser Mäusen und Katzen) aufaddiert. Die nachfolgende Analyse der Zahlen beschränkt sich jedoch auf die Zielarten. 
 
@@ -99,9 +99,9 @@ knitr::include_graphics(c("images/feines_astmaterial.jpg","images/grobes_astmate
 ```
 
 
-In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung *Astmaterial: sehr fein* oder *benachbarten Kleinstrukturen: sehr wenig*). Dieser Umstand erschwert das Erkennen von Effekten, deshalb werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (`mittel`) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden neuen Klassen möglichst ausgewogen (gleich gross) zu halten. In Abbildung \@ref(fig:asthaufenqualcount) sind die ursprünglichen sowie die neu gebildeten Klassen (farblich gekennzeichnet) ersichtlich.
+In der Erhebung der Asthaufen Eigenschaften ist bei einer relativ kleinen Stichprobe (25 Asthaufen) für jedes Merkmal zwischen einer relativ hohe Anzahl Kategorien (5 Stufen) unterschieden worden. Dies führt dazu, dass gewisse Merkmalausprägungen unterrepräsentiert sind (z.B. gibt es keine Asthaufen mit der Ausprägung *Astmaterial: sehr fein* oder *benachbarten Kleinstrukturen: sehr wenig*). Dieser Umstand erschwert das Erkennen von Effekten, deshalb werden die 5 Klassen in jeweils 2 Klassen zusammengefasst. Die ursprünglich mittlere Klasse (*mittel*) wird der jeweils kleineren Klasse zugewiesen in der Bemühung, die beiden neuen Klassen möglichst ausgewogen (gleich gross) zu halten. In Abbildung \@ref(fig:asthaufenqualcount) sind die ursprünglichen sowie die neu gebildeten Klassen (farblich gekennzeichnet) ersichtlich.
 
-```{r asthaufenqualcount, fig.cap="Anzahl Asthaufen pro Merkmalsausprägung"}
+```{r asthaufenqualcount, fig.cap="Reklassifizierung der Anzahl Asthaufen pro Merkmalsausprägung"}
 
 
 
@@ -164,12 +164,12 @@ knitr::include_graphics("images/asthaufen_qualitaet_histogramm.png")
 Im Datensatz werden alle 32 Asthaufen berücksichtigt, die unmittelbar nach der Erstellung im Rahmen von Aktionstagen mit Spurentunnel ausgestattet und über einen variablen Zeitraum kontrolliert wurden (siehe Anhang C \@ref(#anhang-datensatz-a)). In ca. 50% der Erhebungen wurden ergänzend Fotofallen eingesetzt. Die Erhebung dauerte in der Regel deutlich länger als 6 Wochen (höhere Detektionswahrscheinlichkeit), die Kontrollintervalle waren oft grösser als 2 Wochen (vermehrter Datenausfall). Die Beobachtung der Asthaufen verteilt sich über die Jahre 2014 bis 2019, wobei es 2016 zu einer Häufung kam. Es kam zu allen Jahreszeiten zu Kontrollaktivitäten, vermehrt im Frühling. Folgende Faktoren erschweren die Verwendung dieser Daten für einen Zielvergleich:
 
 - die Kontrollen in der Kontrollphase (Dauer und Regelmässigkeit) wurden nicht einheitlich durchgeführt
-- leere Spurenpapiere wurden nicht systematisch dokumentiert. Es ist nicht genau nachvollziehbar, wie intensiv eine Struktur beobachtet wurde. Der Nachweiserfolg kann somit nicht in den Kontext des Nachweisefforts gesetzt werden.
+- leere bzw. nicht auswertbare Spurenpapiere wurden nicht systematisch dokumentiert. Es ist nicht genau nachvollziehbar, wie intensiv eine Struktur beobachtet wurde. Der Nachweiserfolg kann somit nicht in den Kontext des Nachweisefforts gesetzt werden.
 - die Auswahl der Standorte erfolgte vor allem aus praktischen Überlegungen (z.B. Interesse der Teilnehmenden an Aktionstagen)
 
-Da der Datensatz mit beachtlichem Aufwand erhoben wurde, wird er in den vorliegenden Bericht integriert. Abbildung \@ref(fig:wirkungskontrollespontaneffort) zeigt, für welche Kalenderwochen in welchen Jahren für eine Struktur ein Spurenpapier vorhanden ist. Dabei stellt jedes Quadrat eine Kalenderwoche einer Struktur dar und ist gelb eingefärbt, wenn ein Spurenpapier für diesen Zeitraum vorhanden ist.
+Da der Datensatz mit beachtlichem Aufwand erhoben wurde, wird er in den vorliegenden Bericht integriert. Abbildung \@ref(fig:wirkungskontrollespontaneffort) zeigt, in welchen Kalenderwochen des jeweiligen Jahres für eine Struktur ein Spurenpapier ausgewechselt wurde. Dabei stellt jedes Quadrat eine Kalenderwoche einer Struktur dar und ist gelb eingefärbt, wenn ein Spurenpapier für die vorhergehenden Wochen ausgewertet werden konnte.
 
-(ref:wirkungskontrollespontaneffort) Visualisierung der fortlaufend kontrollierten Asthaufen (nach Ansatz 1). Jedes Quadrat stellt eine Kalenderwoche aus einem Jahr einer Struktur dar. Das Quadrat ist gelb eingefärbt, wenn in der entsprechenden Kalenderwoche ein Spurenpapier vorhanden ist und grau, wenn keines vorhanden ist.
+(ref:wirkungskontrollespontaneffort) Visualisierung der fortlaufend kontrollierten Asthaufen (nach Ansatz 1). Jedes Quadrat stellt eine Kalenderwoche aus einem Jahr einer Struktur dar. Das Quadrat ist gelb eingefärbt, wenn in der entsprechenden Kalenderwoche ein Spurenpapier ausgewertet wurde.
 
 ```{r wirkungskontrollespontaneffort, fig.cap="(ref:wirkungskontrollespontaneffort)", out.width="100%"}
 
@@ -204,7 +204,7 @@ Seit Anbeginn des Projekts wurde die örtliche Bevölkerung dazu aufgerufen, Beo
 
 Auf diese Weise sind über 500 Meldungen zusammengetragen worden. Alle Meldungen, die über andere Kanäle als das Webtool erfasst wurden, sind vom Projektleiter gesammelt und periodisch in die Datenbank integriert worden. Diese erhielten als "Erfassungsdatum" jeweils das Datum dieser Überführung in die Datenbank, so sind im zeitlichen Verlauf der Meldungen deutliche Spitzen erkennbar (siehe Abbildung \@ref(fig:beobachtungsmeldungenhistogramm)).
 
-(ref:beobachtungsmeldungenhistogramm) Anzahl gemeldete Beobachtungen pro Jahr, in dem die Meldung in die Datenbank eingetragen wurden. Die hohen Spitzen sind dadurch begründet, dass mehrere, schriftlich vorliegende Meldungen vom Projektleiter in der Datenbank erfasst wurden.
+(ref:beobachtungsmeldungenhistogramm) Anzahl gemeldete Beobachtungen pro Jahr, in dem die Meldung in die Datenbank eingetragen wurden. Die Spitzen sind hauptsächlich dadurch begründet, dass vorliegende Meldungen vom Projektleiter  gesammelt und dann in der Datenbank erfasst wurden.
 
 ```{r beobachtungsmeldungenhistogramm, fig.cap="(ref:beobachtungsmeldungenhistogramm)", out.width="100%"}
 
