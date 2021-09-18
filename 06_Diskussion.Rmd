@@ -35,7 +35,7 @@ win_ziele %>%
 ```
 
 
-Der Zielvergleich fällt folgendermassen aus: Ein Ziel wurden erreicht (Ziel 3), drei Ziele wurden teils erreicht (Ziel 1, 2 und 5) und ein weiteres Ziel konnte nicht erreicht werden (Ziel 4). Grund für die Nicht- bzw. Teilerreichung der Ziele 1 und 4 ist das Fehlen von Mauswieselnachweisen in Erhebung 1 (Systematische Beobachtung der Asthaufen). Dabei ist jedoch zu betonen, dass der Nachweis bei kleinen, fragilen Populationen ungleich schwieriger zu erbringen ist als in Gebieten mit höherem Mauswiesel Vorkommen. Das Projekt hat, insbesondere in der kurzen Laufzeit, nur einen kleinen Einfluss auf die Mauswiesel-Populationsstärke. In diesem Sinne ist das Teilerreichen der Ziele 1 und 5 nicht durch Fehler im Projekt zu erklären, sondern vielmehr eine ökologische Gegebenheit. 
+Der Zielvergleich fällt folgendermassen aus: Ein Ziel wurde erreicht (Ziel 3), drei Ziele wurden teils erreicht (Ziel 1, 2 und 5) und ein weiteres Ziel konnte nicht erreicht werden (Ziel 4). Grund für die Nicht- bzw. Teilerreichung der Ziele 1 und 4 ist das Fehlen von Mauswieselnachweisen in Erhebung 1 (Systematische Beobachtung der Asthaufen). Dabei ist jedoch zu betonen, dass der Nachweis bei kleinen, fragilen Populationen ungleich schwieriger zu erbringen ist als in Gebieten mit höherem Mauswiesel Vorkommen. Das Projekt hat, insbesondere in der kurzen Laufzeit, nur einen kleinen Einfluss auf die Mauswiesel-Populationsstärke. In diesem Sinne ist das Teilerreichen der Ziele 1 und 5 nicht durch Fehler im Projekt zu erklären, sondern vielmehr eine ökologische Gegebenheit. 
 
 ## Nachweisquote im Vergleich mit anderen Studien
 
@@ -43,9 +43,9 @@ Der Austausch mit Projektleitern und Ökologen anderer Wieselprojekte in der Sch
 Der Anteil der Spurentunnel mit Hermelinnachweisen im Vergleich zur totalen Anzahl eingesetzter Spurentunnel ist ausserordentlich hoch und liegt bei 49 % (2019) bzw. 36 % (2020). 
 <!-- [FOLGENDES WEGLASSEN DA NICHT VERGLEICHBAR MIT DEN EK'S IN ABB 5.1?? -->
 <!-- und bei knapp 70 % über beide Jahre kummuliert. ]  -->
-Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz B, siehe \@ref(methode-datensatz-b)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden), die Vergleichbarkeit einschränken.
+Das Ergebnis der unsystematischen Wirkungskontrolle (Datensatz A, siehe \@ref(datensatz-a-unsystematische-attraktivitätskontrolle-von-asthaufen-1)) hebt sich noch stärker von anderen Untersuchungen ab, wobei die methodischen Eigenschaften (insbesondere die langen Kontrollperioden) die Vergleichbarkeit einschränken.
 
-Eine Erklärungsmöglichkeit für die hohen Nachweisquoten ist die grosse Dichte an Schermäusen, welche eine vorzügliche Nahrungsgrundlage für Hermeline (und Mauswiesel) bildet. Die hinzukommenden Kleinstrukturen in der streckenweise strukturarmen Zimmerberglandschaft üben eine starke Anziehungskraft aus. Wären viele andere Kleinstrukturen vorhanden, könnte der Nachweiserfolg kleiner sein, auch wenn zugleich die Hermelinpopulation grösser wäre.
+Eine Erklärungsmöglichkeit für die hohen Nachweisquoten ist die grosse Dichte an Schermäusen, welche eine vorzügliche Nahrungsgrundlage für Hermeline (und Mauswiesel) bilden. Die hinzukommenden Kleinstrukturen in der streckenweise strukturarmen Zimmerberglandschaft üben eine starke Anziehungskraft aus. Wären viele andere Kleinstrukturen vorhanden, könnte der Nachweiserfolg kleiner sein, auch wenn zugleich die Hermelinpopulation grösser wäre.
 
 (ref:kontext) Der Nachweiserfolg aus Spurentunneluntersuchungen anderer Studien (für Quellenangaben siehe Anhang \@ref(anhang-zusammenstellung))
 
@@ -107,7 +107,7 @@ if(run_full){
 
 ## Interpretation der Nachweiszahlen
 
-### Hermlin vs. Mauswiesel
+### Hermelin vs. Mauswiesel
 
 Die Nachweiszahlen zeigen, dass das Hermelin am Zimmerberg die deutlich häufigste der drei Zielarten ist. Datensatz B zeigt bei den Beobachtungsmeldungen ca. ein Verhältnis von 1 Mauswiesel und 1 Iltis auf 20 Hermeline. 
 Gegenüber 59 Hermelinnachweisen während der Wirkungskontrolle wurde der Iltis 5 Mal nachgewiesen und das Mauswiesel wurde nur 1 Mal mit Spurentunnel ausserhalb der regulären Wirkungskontrolle festgestellt. 
@@ -118,7 +118,7 @@ tribble(
   "Asthaufen", 55L, 2L, 0L,
   "Winterquartiere", 4L, 3L, 0L
 ) %>%
-  kableExtra::kable(caption = "Summe der Nachweise je Tierart in Erhebung 1 (Asthaufen) und 2 (Winterquartiere)") %>%
+  kableExtra::kable(caption = "Summe der Nachweise je Zielart in Erhebung 1 (Asthaufen) und 2 (Winterquartiere)") %>%
   kableExtra::kable_styling()
 ```
 
@@ -126,7 +126,7 @@ Bei vergleichbaren Wirkungskontrollen ist nach Meinung von Experten ein Nachweis
 Zwei Gründe könnten für das Mauswiesel ungünstigere Verhältnis verantwortlich sein. 
 
 - **Dominanz des Hermelin aufgrund der idealen Nahrungsgrundlage**:  Die grossen Schermausbestände in der grünlandbasierten Zimmerberglandschaft sind vom Hermelin effizient zu bejagen. Das schwächere Mauswiesel zieht sich bei Anwesenheit des Hermelins an Orte mit kleineren Wühlmausarten zurück, die sich vor allem auf Nischenvorkommen wie Feuchtgebieten, kleinräumigen Halboffenlandschaften etc. beschränken.
-- **Benachteiligung des Mauswiesels durch mangelnde Kleinräumigkeit bzw. Vernetzung**: Das Mauswiesel hat einen kleineren Aktionsradius und die vorherrschende Lebensraumqualität erschwert ihm, auf kleinem Raum zugleich geeignete Nahrung, genügend Deckung und funktionale Vernetzungskorridore zu finden. Gleichzeitig dürfte es gegenüber dem Hermelin noch anfälliger gegenüber Katzen und anderen Feinden sein. 
+- **Benachteiligung des Mauswiesels durch mangelnde Kleinräumigkeit bzw. Vernetzung**: Das Mauswiesel hat einen kleineren Aktionsradius und die vorherrschende Lebensraumqualität erschwert ihm auf kleinem Raum zugleich geeignete Nahrung, genügend Deckung und funktionale Vernetzungskorridore zu finden. Gleichzeitig dürfte es gegenüber dem Hermelin noch anfälliger gegenüber Katzen und anderen Feinden sein. 
 
 Diese Gründe sind allerdings mit einiger Unsicherheit belegt, und auch nach Durchführung des Projekts ist über die Populationsdynamik im Bezirk Horgen nicht viel bekannt. Das Projekt hat aber einige sichere Mauswiesel-Beobachtungen hervorgebracht und zur Weiterentwicklung effektiverer Methoden für den Nachweis von Mauswieseln und anderen Kleinsäugern beigetragen (siehe [zhaw.ch/iunr/tubecam](https://www.zhaw.ch/iunr/tubecam) und [wieselundco.ch/wissenschaft](http://wieselundco.ch/wissenschaft)).
 
@@ -150,9 +150,9 @@ knitr::include_graphics("images/hermelin_asthaufen_2.jpg")
 
 Es muss davon ausgegangen werden, dass die sich immer mehr ausbreitende "Normallandschaft" im Schweizer Mittelland nicht nur bei Artengruppen wie Vögeln, sondern auch  bei Kleinraubtieren die Generalisten gegenüber den Spezialisten begünstigt. So könnte das im Mittelland ohnehin seltenere Mauswiesel zukünftig grossräumig in seiner Existenz gefährdet sein. Es scheint, dass eine kleinräumigere Landschaft mit einer extensiver betriebenen Landwirtschaft den Bestand des Mauswiesel gegenüber jenem des Hermelins vergrössern könnte. Davon würde  dank verbesserten Deckungsmöglichkeiten und Nahrungsgrundlagen wahrscheinlich auch der Iltis profitieren.
 
-Dahingehende Fördermassnahmen, die im Rahmen des Projektes realisiert wurden, werden von zwei der drei Zielarten nachweislich stark frequentiert. Diese Tatsache wiederspiegelt die sinnvolle Planung und Umsetzung der Strukturen. Es existieren nach unserem Wissen wenige Projekte in der Schweiz, die eine solch hohe Anzahl an Asthaufen zur Förderung von Kleinraubtieren erstellt wurden.
+Dahingehende Fördermassnahmen, die im Rahmen des Projektes realisiert wurden, werden von zwei der drei Zielarten nachweislich stark frequentiert. Diese Tatsache wiederspiegelt die sinnvolle Planung und Umsetzung der Strukturen. Es existieren nach unserem Wissen wenige Projekte in der Schweiz, die eine solch hohe Anzahl an Asthaufen zur Förderung von Kleinraubtieren realisierten.
 
-Das Projekt Wiesel & Co am Zimmerberg hat einen nennenswerten Beitrag zur Förderung der Tierarten im Bezirk Horgen geleistet. In sozialer Hinsicht ist es der Trägerschaft gelungen, die Kräfte aller lokalen Naturschutzvereine zu bündeln und den Kontakt zu zahlreichen Landwirten\*innen, Jäger\*innen, Förster\*innen, Schulklassen und Freiwilligen zu finden und die Sensibilisierung für die Zielarten zu fördern. Aus ökologischer Hinsicht ist die Umsetzung einer beachtlichen Anzahl von Aufwertungsmassnahmen gelungen, welche nachweislich durch zwei der drei im Projekt festgesetzten Tierarten genutzt wurden.
+Das Projekt Wiesel & Co am Zimmerberg hat einen nennenswerten Beitrag zur Förderung der Tierarten im Bezirk Horgen geleistet. In sozialer Hinsicht ist es der Trägerschaft gelungen, die Kräfte aller lokalen Naturschutzvereine zu bündeln und den Kontakt zu zahlreichen Landwirten\*innen, Jäger\*innen, Förster\*innen, Schulklassen und Freiwilligen zu finden und die Sensibilisierung für die Zielarten zu fördern. Aus ökologischer Hinsicht ist die Umsetzung einer beachtlichen Anzahl von Aufwertungsmassnahmen gelungen, welche nachweislich durch zwei der drei im Projekt definierten Zielarten genutzt wurden.
 
 Für eine langfristige Sicherstellung von Naturschutzmassnahmen ist die Projektträgerschaft bemüht, das Projekt nach Abschluss in eine langfristige, breit abgestützte Form zu überführen. Dazu wurde 2020 die Initiative Naturnetz Zimmerberg lanciert. 
 
