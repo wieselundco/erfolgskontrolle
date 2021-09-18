@@ -152,9 +152,9 @@ knitr::include_graphics("images/asthaufen_qualitaet_histogramm_newclasses.png")
 ### Korrelationsmatrix der Faktoren
 
 
-- *Störung*, *Katzen* und *andere Feinde* sind stark korreliert
-- *Volumen*, *Pflege / Aufstockung* sind stark korreliert
-- *Astmaterial*, *Volumen* und *Beuteangebot* sind schwach korreliert
+<!-- - *Störung*, *Katzen* und *andere Feinde* sind stark korreliert -->
+<!-- - *Volumen*, *Pflege / Aufstockung* sind stark korreliert -->
+<!-- - *Astmaterial*, *Volumen* und *Beuteangebot* sind schwach korreliert -->
 
 ```{r}
 #correlation plots
