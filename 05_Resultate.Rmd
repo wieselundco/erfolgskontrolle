@@ -2,7 +2,7 @@
 
 ## Erhebung 1: Attraktivitätskontrolle von Asthaufen mittels Spurentunneln
 
-Anhand der Spurenpapiere konnten im Herbst 2019 32 Einzelnachweise von Hermelinen, sowie 2 Einzelnachweise von Iltissen aufgezeichnet werden. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Im Frühling 2020 konnten 23 Einzelnachweise von Hermelinen gemacht werden, jedoch keine vom Iltis oder vom Mauswiesel. Über beide Studien konnten somit 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis gemacht werden (siehe Abbildung \@ref(fig:wirkungskontrollesystematischeinzelnachweisewaffle)).
+Anhand der Spurenpapiere wurden im Herbst 2019 32 Einzelnachweise von Hermelinen, sowie 2 Einzelnachweise von Iltissen aufgezeichnet. Die dritte Zielart, das Mauswiesel, konnte an keinem Standort nachgewiesen werden. Im Frühling 2020 gab es 23 Einzelnachweise von Hermelinen, jedoch keine vom Iltis oder vom Mauswiesel. Aus den beiden Erhebungsperioden resultierten somit 55 Einzelnachweise vom Hermelin und zwei Einzelnachweise vom Iltis (siehe Abbildung \@ref(fig:wirkungskontrollesystematischeinzelnachweisewaffle)).
 
 (ref:wirkungskontrollesystematischeinzelnachweisewaffle) Anzahl Einzelnachweise pro Zielart über beide Untersuchungsperioden (Herbst 2019 und Frühling 2020): Insgesamt wurde das Hermelin 55-mal, der Iltis 2-mal und das Mauswiesel gar nicht nachgewiesen.
 
@@ -32,7 +32,7 @@ if(run_full){
 ```
 
 
-Da es sich bei gewissen Nachweisen vermutlich um Mehrfachbeobachtung des gleichen Individuums handelt, ist der Anteil an Strukturen mit mindestens einem Nachweis aussagekräftiger. Im Herbst 2019 konnte in 19 von 39 Asthaufen (49 %) mindestens eine Zielart nachgewiesen werden. In 18 von 39 Asthaufen (46 %) wurde das Hermelin detektiert, in 2 von 39 Asthaufen (5 %) der Iltis. Im Frühling 2020 wurde in 14 von 39 Asthaufen (36 %) eine Zielart detektiert, wobei es sich immer um Hermeline handelte (siehe Abbildung \@ref(fig:strukturenmitzielart)). Über beide Untersuchungsperioden hinweg konnte in 27 von 39 Asthaufen (69 %) mindestens eine Zielart detektiert werden.
+Da es sich bei gewissen Nachweisen vermutlich um Mehrfachbeobachtungen des gleichen Individuums handelt, ist der Anteil an Strukturen mit mindestens einem Nachweis aussagekräftiger. Im Herbst 2019 konnte in 19 von 39 Asthaufen (49 %) mindestens eine Zielart nachgewiesen werden. In 18 von 39 Asthaufen (46 %) wurde das Hermelin detektiert, in 2 von 39 Asthaufen (5 %) der Iltis. Im Frühling 2020 wurde in 14 von 39 Asthaufen (36 %) eine Zielart detektiert, wobei es sich immer um Hermeline handelte (siehe Abbildung \@ref(fig:strukturenmitzielart)). Über beide Untersuchungsperioden hinweg konnte in 27 von 39 Asthaufen (69 %) mindestens eine Zielart detektiert werden.
 
 
 (ref:strukturenmitzielart) Anzahl sowie Anteil der untersuchten Asthaufen, in denen mindestens eine Zielart nachgewiesen werden konnte.
@@ -124,7 +124,7 @@ youtube("4gVpcvPIrNA", "Die ganze Sequenz des Hermelins in Str.196")
 
 ## Erhebung 2: Attraktivitätskontrolle von Winterquartieren mittels Fotofallen
 
-Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \@ref(fig:winterquartiereresultate)). Im Folgejahr (2020) gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Frühling 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45%) mindestens eine Zielart festgestellt werden konnte (4 Hermelin- und 3 Iltis-Nachweise). Alle 3 Winterquartiere in Feldscheunen (sanierte Streuhütten) wiesen Nachweise auf (2 des Hermelins, 3 des Iltis).
+Aus der Fotofallen-Überwachung der Winterquartiere resultierten 2019 an zwei Standorten Aufnahmen von Hermelinen, sowie an zwei Standorten von Iltissen (siehe Abbildung \@ref(fig:winterquartiereresultate)). Im Folgejahr (2020) gelangen Nachweise vom Hermelin an einem neuen Standort und vom Iltis an einem Standort mit Nachweis im Herbst 2019. Zusammenfassend über beide Jahre kann gesagt werden, dass in 5 von 11 untersuchten Winterquartieren (45%) mindestens eine Zielart festgestellt werden konnte (4 Hermelin- und 3 Iltis-Nachweise). Alle 3 Winterquartiere in Feldscheunen (sanierte Streuhütten) wiesen Nachweise auf (2 des Hermelins, 3 des Iltis).
 Jedes Winterquartier wurde von zahlreichen Tierarten genutzt: Dachse, Eichhörnchen, Füchse, Marder, Frösche, Vögel und Mäusen wurden von den Kameras abgelichtet.
 
 Die Daten der Standorte Str116 und Str198 konnten 2019 und die von Str12747 im Jahr 2020 nicht ausgewertet werden. Die Kameras an den genannten Standorten wiesen eine Fehlfunktion auf und erfassten so viele Bilder, dass eine Auswertung der Daten unverhältnismässig viel Zeit in Anspruch genommen hätte.
@@ -215,9 +215,9 @@ youtube("ISg0ZA5Fvgo", "Die ganze Sequenz des Hermelins in Str.13956")
 ## Erhebung 3: Ermittlung attraktivitätsfördernder Faktoren von Asthaufen
 
 
-Die nachstehende Visualisierung (Abbildung \@ref(fig:attraktivitaet)) stellt die Anzahl Nachweise (y-Achse) der Beurteilung (x-Achse) für jeden Asthaufen (Punkte) sowie für jeden erhobenen Parameter (Teilplots) gegenüber. Visuell sind für die meisten Parameter keine klare Tendenzen ersichtlich. Die Ausnahme bildet der Parameter "Astmaterial", wo folgende Tendenz ersichtlich zu sein scheint: Je gröber das Astmaterial, desto mehr Hermlin-Nachweise.
+Die nachstehende Visualisierung (Abbildung \@ref(fig:attraktivitaet)) stellt die Anzahl Nachweise (y-Achse) der Beurteilung (x-Achse) für jeden Asthaufen (Punkte) sowie für jeden erhobenen Parameter (Teilplots) gegenüber. Visuell sind für die meisten Parameter keine klare Tendenzen ersichtlich. Die Ausnahme bildet der Parameter "Astmaterial", wo folgende Tendenz ersichtlich zu sein scheint: Je gröber das Astmaterial, desto mehr Nachweise (überwiegend Hermeline).
 
-```{r attraktivitaet, fig.cap='Anzahl Hermelin-Nachweise pro Asthaufen und Merkmalsausprägung. Jeder Punkt stellt einen Asthaufen dar, auf jedem Teilplot sind somit 25 Punkte ersichtlich. Die Punkte sind zudem leicht "geschüttelt"  damit sich die Punkte nicht überlagern'}
+```{r attraktivitaet, fig.cap='Anzahl Nachweise pro Asthaufen und Merkmalsausprägung. Jeder Punkt stellt einen Asthaufen dar, auf jedem Teilplot sind somit 25 Punkte ersichtlich. Die Punkte sind zudem leicht "geschüttelt"  damit sich die Punkte nicht überlagern.'}
 attraktivitaet_plot <- imap(asthaufen_qualitaet_list, function(df, fac){
   df %>%
     ggplot(aes(beurteilung, total_nach_weise_wk_2019_2020, color = beurteilung)) +
@@ -234,18 +234,18 @@ knitr::include_graphics("images/attraktivitaet_plot.png")
 
 ```
 
-Um den Einfluss der erhobenen Parameter auf die Hermelinbesuche statistisch prüfen wurden verschiedene Verfahren angewendet. 
+Um den Einfluss der erhobenen Parameter auf die Nachweise statistisch zu prüfen, wurden verschiedene Verfahren angewendet. 
 
-1. Logistische Regression in zwei Varianten (*Binomial* und *Poisson*): Hier wird überprüft, welche Faktoren Einfluss darauf haben ob ein Asthaufen überhaupt besucht wird (*Binomial*) bzw. wie häufig er besucht wird (*Poisson*)
-2. Zero-Inflation-Modell: Hier wird mitberücksichtigt, dass es viele 0 Werte (keine Nachweise) fest zu stellen sind
+1. Logistische Regression in zwei Varianten (*Binomial* und *Poisson*): Hier wird überprüft, welche Faktoren Einfluss darauf haben, ob ein Asthaufen überhaupt besucht wird (*Binomial*) bzw. wie häufig er besucht wird (*Poisson*).
+2. Zero-Inflation-Modell: Hier wird mitberücksichtigt, dass viele 0 Werte (keine Nachweise) festgestellt wurden.
 3. Lineare Regression (OLS)
 4. Fishers Exakt Test
 
-Über alle Verfahren hinweg kommt zum Ausdruck, dass nur der Faktor *Asthaufen* ein Einfluss auf das Hermelinvorkommen hat: **Bei Asthaufen mit groben Astmaterial ist eher ist mit einem Hermelin Nachweis zu rechnen als bei Asthaufen mit feinem Astmaterial**. 
+Über alle Verfahren hinweg kommt zum Ausdruck, dass nur der Faktor *Asthaufen* ein Einfluss auf das Hermelinvorkommen hat: **Bei Asthaufen mit grobem Astmaterial ist ein Nachweis wahrscheinlicher als bei Asthaufen mit feinem Astmaterial**. 
 
 
 
-An dieser Stelle zeigen wir das Resultat nur einer solchen statistischen Modellierung: Eine logistische Regression des typs *Binomial*, under der berücksichtigung korrelierter Faktoren. Dieses Modell zeigt, dass *Astmaterial* einen signifikaten Einfluss (p < 5%) auf das Hermelinvorkommen hat. Die Resultate der restlichen Modelle sind in Anhang \@ref(anhang-attraktivitaet-modell) ersichtlich.
+An dieser Stelle zeigen wir das Resultat nur einer solchen statistischen Modellierung: Eine logistische Regression des Typs *Binomial*, unter der Berücksichtigung korrelierter Faktoren. Dieses Modell zeigt, dass *Astmaterial* einen signifikaten Einfluss (p < 5%) auf das Hermelinvorkommen hat. Die Resultate der restlichen Modelle sind in Anhang \@ref(anhang-attraktivitaet-modell) ersichtlich.
 
 
 ```{r}
@@ -271,7 +271,7 @@ asthaufen_qualitaet_df3 %>%
 
 ## Datensatz A: Unsystematische Attraktivitätskontrolle von Asthaufen
 
-In den insgesamt 32 beobachteten Asthaufen konnte das Hermelin 51 und der Iltis 23-mal nachgewiesen werden (siehe Abbildung \@ref(fig:wirkungskontrollespontaneinzelnachweisewaffle)): Wie auch schon in der systematischen Wirkungskontrolle, konnte auch in dieser Erhebung das Mauswiesel nicht nachgewiesen werden. Dafür wurde der Iltis einiges häufiger detektiert, in der systematischen Wirkungskontrolle konnten nur zwei Iltisnachweise erbracht werden.
+In den insgesamt 32 beobachteten Asthaufen konnte das Hermelin 51 und der Iltis 23-mal nachgewiesen werden (siehe Abbildung \@ref(fig:wirkungskontrollespontaneinzelnachweisewaffle)): Wie  schon in der systematischen Wirkungskontrolle, konnte auch in dieser Erhebung das Mauswiesel nicht nachgewiesen werden. Dafür wurde der Iltis einiges häufiger detektiert; in der systematischen Wirkungskontrolle konnten nur zwei Iltisnachweise erbracht werden.
 
 (ref:wirkungskontrollespontaneinzelnachweisewaffle) Zusammenstellung aller Einzelnachweise der Zielarten Hermelin (51 Nachweise), Iltis (23 Nachweise) sowie Mauswiesel (keine Nachweise).
 
@@ -342,9 +342,9 @@ if(run_full){
 
 Von den 555 Meldungen, die im Projekt gesammelt wurden, handelt es sich bei 546 um Meldungen der Zielarten Hermelin, Iltis und Mauswiesel. Davon wurden 506 Meldungen vom Projektleiter als "plausibel" bzw. "sicher" eingestuft und davon wiederum liegen 428 Meldungen innerhalb des Projektperimeters, dem Bezirk Horgen (siehe Abbildung \@ref(fig:beobachtungsmeldungenfilter)).
 
-Ganz grundsätzlich muss betont werden, dass die Interpretation dieser Meldungen mit einer gewissen Vorsicht gemacht werden muss. Es handelt sich um ein Produkt aus einem "Citizen Science" Ansatz, und wie immer liefern solche Datenerzeugnissen ein verzerrtes Bild der Realität. Die Verzerrung entsteht, weil die Meldungen nicht systematisch erfasst und unterschiedliche Räume ungleich intensiv beobachtet werden. Ein Hermelin in einem stark frequentierten und offenen Gebiet hat eine höhere Wahrscheinlichkeit, beobachtet zu werden als ein Tier in einer schlecht frequentierten, strukturreichen Landschaft. Zudem ist davon auszugehen, dass es sich bei sehr dicht beieinanderliegenden Meldungen um Mehrfachmeldungen des gleichen Tiers (womöglich durch den gleichen Beobachter) handelt.
+Ganz grundsätzlich muss betont werden, dass die Interpretation dieser Meldungen mit einer gewissen Vorsicht erfolgen muss. Es handelt sich um ein Produkt aus einem "Citizen Science" Ansatz, und wie immer liefern solche Datenerzeugnisse ein verzerrtes Bild der Realität. Die Verzerrung entsteht, weil die Meldungen nicht systematisch erfasst und unterschiedliche Räume ungleich intensiv beobachtet werden. Ein Hermelin in einem stark frequentierten und offenen Gebiet wird wahrscheinlicher beobachtet als ein Tier in einer schlecht frequentierten, strukturreichen Landschaft. Zudem ist davon auszugehen, dass es sich bei sehr dicht beieinanderliegenden Meldungen um Mehrfachmeldungen des gleichen Tiers (womöglich durch den gleichen Beobachter) handelt.
 
-Die grösste Unsicherheit in Bezug auf ihre Plausibilität besteht bei den Mauswiesel-Sichtungsmeldungen. Die Tierart ist aufgrund der geringen Grösse sehr schwer zu beobachten und zudem für Laien kaum vom Hermelin zu unterscheiden. Während lediglich 1.1 % der Hermelin- und 3.4 % der Iltismeldungen als "unsicher" eingestuft werden, fallen 53.1% aller Mauswiesel-Sichtungsmeldungen in diese Kategorie. So liegen lediglich 23 verwertbare Mauswiesel-Meldungen vor.
+Die grösste Unsicherheit in Bezug auf ihre Plausibilität besteht bei den Mauswiesel-Sichtungsmeldungen. Die Tierart ist für Laien kaum vom Hermelin zu unterscheiden. Während lediglich 1.1 % der Hermelin- und 3.4 % der Iltismeldungen als "unsicher" eingestuft werden, fallen 53.1% aller Mauswiesel-Sichtungsmeldungen in diese Kategorie. So liegen lediglich 23 verwertbare Mauswiesel-Meldungen vor.
 
 (ref:beobachtungsmeldungenfilter) Von den 555 Meldungen, die seit Projektbeginn eingetroffen sind, handelt es sich bei 546 Meldungen um die Zielarten, davon können 506 Meldungen als "plausibel" bzw. "sicher" eingestuft werden. Von diesen Meldungen liegen 428 innerhalb des Bezirks Horgen.
 
@@ -352,7 +352,7 @@ Die grösste Unsicherheit in Bezug auf ihre Plausibilität besteht bei den Mausw
 knitr::include_graphics("images/beobachtungsmeldungen_filter.png")
 ```
 
-Das Hermelin konnte weitestgehend im ganzen Bezirk beobachtet werden, so auch in stark fragmentierten und dicht besiedelten Kulturflächen der Gemeinde Kilchberg und der Halbinsel Au (siehe Abbildung \@ref(fig:layoutbeobachtungsmeldungen)). Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften wie Horgenberg, Hirzel, Schönenberg zu verzeichnen. Weitestgehend ohne Meldungen sind die Siedlungsgebiete selbst sowie der Sihlwald und das Gemeindegebiet Hütten. Während das Fehlen in Siedlungsgebieten und grösseren Waldflächen ökologisch bedingt ist, ist das Ausbleiben von Meldungen in der Gemeinde Hütten mit grösster Wahrscheinlichkeit ein Artefakt davon, dass in Hütten weniger intensiv beobachtet und gemeldet wird.
+Das Hermelin konnte weitestgehend im ganzen Bezirk beobachtet werden, so auch in stark fragmentierten und dicht besiedelten Kulturflächen der Gemeinde Kilchberg und der Halbinsel Au (siehe Abbildung \@ref(fig:layoutbeobachtungsmeldungen)). Deutliche Häufungen von Meldungen sind aber in den weniger verbauten Landschaften wie Horgenberg, Hirzel und Schönenberg zu verzeichnen. Weitestgehend ohne Meldungen sind die Siedlungsgebiete sowie der Sihlwald und das Gemeindegebiet Hütten. Während das Fehlen in Siedlungsgebieten und grösseren Waldflächen ökologisch bedingt ist, ist das Ausbleiben von Meldungen in der Gemeinde Hütten mit grösster Wahrscheinlichkeit ein Artefakt davon, dass in Hütten weniger intensiv beobachtet und gemeldet wird.
 
 Deutlich weniger Sichtungsmeldungen sind zum Iltis eingegangen. Dies wiederspiegelt einerseits die tiefere Anzahl Individuen im Vergleich zur Hermelinpopulation, ist aber auch mit Sicherheit der Lebensweise dieser Tierart geschuldet: Als dämmerungs- und nachtaktives Tier, welches sich auch gerne im Waldrandbereich aufhaltet, ist der Iltis seltener zu beobachten als das Hermelin.
 
