@@ -58,7 +58,7 @@ anhang-e-geodaten-für-erhebung-1-2
 anhang-asthaufen-qualitaet
 anhang-attraktivitaet-modell
 korrelationsmatrix-der-faktoren
-logistischre-regression
+logistische-regression
 poisson
 zero-inflation-sihe-httpsstats.idre.ucla.edurdaezip
 ols-regression
